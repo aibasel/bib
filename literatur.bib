@@ -1,0 +1,2058 @@
+%%%%% Cross-referenced entries must come last.
+%%%%% Thus, we start with journal articles and conference papers
+%%%%% and finish with textbooks and collections.
+%%%%% Conference proceedings are found in "crossref.bib" (full listing)
+%%%%% and "crossref-short.bib" (short listing)
+
+%%% Old planning articles (-1995)
+%%%   Ordered by year. Within the same year, the order is
+%%%   Journal articles, then conference papers.
+%%%   with Journal and conference order as detailed in the
+%%%   following two sections. Journals and conferences not
+%%%   mentioned there appear latest.
+
+% Data taken from the reprint in \cite{readings} and citeseer.
+% Not available.
+@Article{strips,
+  author =       "Richard E. Fikes and Nils J. Nilsson",
+  title =        "{STRIPS}: {A} New Approach to the Application of
+		  Theorem Proving to Problem Solving",
+  journal =      aij,
+  year =         "1971",
+  volume =       "2",
+  pages =        "189--208"
+}
+
+% Data taken from the reprint in \cite{readings} and citeseer.
+% Not available.
+@InCollection{semantics-strips,
+  author =       "Vladimir Lifschitz",
+  title =        "On the Semantics of {STRIPS}",
+  booktitle =    "Reasoning about Actions and Plans",
+  publisher =    "Morgan Kaufmann",
+  year =         "1987",
+  editor =       "M. Georgeff and A. Lansky",
+  pages =        "1--9"
+}
+
+% Data taken from the postscript of the article.
+% Postscript available.
+@Article{complexity-blocksworld,
+  author =       "Naresh Gupta and Dana S. Nau",
+  title =        "On the Complexity of Blocks-World Planning",
+  journal =      aij,
+  year =         "1992",
+  volume =       "56",
+  number =       "2--3",
+  pages =        "223--254"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@Article{knoblock-abstractions,
+  author =       "Craig A. Knoblock",
+  title =        "Automatically Generating Abstractions for Planning",
+  journal =      aij,
+  volume =       "68",
+  number =       "2",
+  pages =        "243--302",
+  year =         "1994"
+}
+
+% Data taken from Prof. Nebel's article from Cyprus and citeseer.
+% Postscript available.
+@Article{complexity-bylander,
+  author =       "Tom Bylander",
+  title =        "The Computational Complexity of
+                  Propositional {STRIPS} Planning",
+  journal =      aij,
+  volume =       "69",
+  number =       "1--2",
+  pages =        "165--204",
+  year =         "1994"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@Article{bacchus-downward-refinement,
+  author =       "Fahiem Bacchus and Qiang Yang",
+  title =        "Downward Refinement and the Efficiency of Hierarchical
+                  Problem Solving",
+  journal =      aij,
+  volume =       "71",
+  number =       "1",
+  pages =        "43--100",
+  year =         "1994"
+}
+
+% Data taken from the postscript and Saarbruecken bib index.
+% Postscript available.
+@InProceedings{complexity-near-optimal-plans,
+  author =       "Bart Selman",
+  title =        "Near-Optimal Plans, Tractability, and Reactivity",
+  booktitle =    "Principles of Knowledge Representation and Reasoning:
+                  {Proceedings} of the Fourth International Conference
+                  ({KR}'94)",
+  publisher =    "Morgan Kaufmann",
+  year =         "1994",
+  editor =       "Jon Doyle and Erik Sandewall and Pietro Torasso",
+  pages =        "521--529"
+}
+
+% Data taken from Prof. Nebel's article from Cyprus and the first author's homepage.
+% Postscript available.
+@Article{complexity-erol,
+  author =       "Kutluhan Erol and Dana S. Nau and V. S. Subrahmanian",
+  title =        "Complexity, Decidability and Undecidability Results for
+                  Domain-Independent Planning.",
+  journal =      aij,
+  year =         "1995",
+  volume =       "76",
+  number =       "1--2",
+  pages =        "65--88"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@Article{bylander:aij-1981,
+  author =       "Tom Bylander",
+  title =        "A Probabilistic Analysis of Propositional
+                  {STRIPS} Planning",
+  journal =      aij,
+  volume =       "81",
+  number =       "1--2",
+  pages =        "241--271",
+  year =         "1996"
+}
+
+% Data obtained from second author.
+% TODO: Get postscript.
+@Article{complexity-sas,
+  author =       "Christer B{\"a}ckstr{\"o}m and Bernhard Nebel",
+  title =        "Complexity Results for {SAS$^{+}$} Planning",
+  journal =      compint,
+  year =         "1995",
+  volume =       "11",
+  number =       "4",
+  pages =        "625--655"
+}
+
+Discusses the complexity of planning in the SAS+ formalism, which is
+different from propositional STRIPS in allowing non-binary state
+variables. The paper discusses four restrictions to general SAS+
+planning (which has the same complexity as propositional STRIPS):
+
+- postuniqueness (P): For each variable/value pair, there is at most
+  one operator with this pair as an effect.
+- unariness (U): Each operator has only one effect.
+- binariness (B): All state variables are binary.
+- single-valuedness (S): For all variables, there is a dedicated value
+  such that all operators that have a precondition but no effect on
+  this variable have that value as a precondition (and not another
+  one).
+
+The authors show that restrictions PUS allow optimal planning in
+polynomial time and restrictions US allow non-optimal planning in
+polynomial time. These are minimal restrictions with these properties
+(if P != NP), and they are the only minimal ones. (In some cases, this
+is due to hardness proofs, in other cases due to exponential length
+shortest plans).
+
+Notes:
+* For some problems (those between P and PUB/PBS), complexity of
+  plan existence is open, but shortest plans can be exponentially
+  long, so this is not so relevant.
+* Unariness is related to causal graphs: It is necessary for
+  acyclicity. Acyclicity could be studied instead.
+* Postuniqueness is related to domain transition graphs: It means that
+  the reachable part of each DTG is a directed tree or a cycle.
+  Other restrictions on DTG shape could be studied instead (in fact,
+  acyclic DTGs have been studied by Bäckström and Jonsson.)
+* Single-valuedness could be generalized by requiring a strict or
+  non-strict total or partial order among values such that for any two
+  values d < d', if there is an operator with precondition v=d', then
+  there is a similar operator with precondition v=d. (Think of fuel
+  levels.)
+
+
+%%% Recent conference articles (1997-)
+%%%   Ordered by year. Within the same year, the order is
+%%%   ECP/AIPS - IJCAI - AAAI - KR. Within the same year and conference,
+%%%   the order is by page number in the proceedings. Workshop
+%%%   articles appear after conference articles.
+
+% Data obtained from second author.
+% TODO: Get postscript.
+@InProceedings{ipp,
+  author =       "Jana Koehler and Bernhard Nebel and J{\"o}rg Hoffmann and
+                  Yannis Dimopoulos",
+  title =        "Extending Planning Graphs to an {ADL} Subset",
+  pages =        "273--285",
+  crossref =     "ecp97"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{williams-nayak,
+  author =       "Brian C. Williams and P. Pandurang Nayak",
+  title =        "A Reactive Planner for a Model-based Executive",
+  pages =        "1178--1195",
+  crossref =     "ijcai97"
+}
+
+Discusses a planning model that is related to SAS+ planning (although
+there are a few differences motivated by the application domain, which
+is reactive control of physical devices). The paper shows that in
+unary SAS+-like domains with acyclic causal graphs and reversible
+operators (i.e., for each operator that sets v from d to d', there is
+an operator with identical preconditions that sets v from d' to d),
+incremental planning with polynomial delay is possible. The authors
+also note that in acyclic graphs, problems are always easily
+serializable (compare Korf's work).
+
+Williams' and Nayak's restrictions are obviously related to SAS+
+planning with acyclic causal graphs and strongly connected domain
+transition graphs. Reversibility means that DTGs are undirected, so it
+is a stronger condition than strong connectedness (at least if we
+limit DTGs to their reachable values, which is reasonable).
+
+As in Jonsson and Bäckström's work (jonsson-backstrom:amai98),
+generated plans can be exponentially long, however, even though
+Williams and Nayak do not discuss this. Therefore, the question
+whether there exist polynomial-delay approximation algorithms for plan
+generation with polynomially bounded performance ratio in this setting
+remains open.
+
+Idea: Work on this topic. The appropriate notions (polynomial delay
+and polynomial bound on performance ratio) are interesting and extend
+the standard approximation complexity notions which do not really
+apply to exponentially-sized solutions. The questions have been
+scratched by various people (Williams, Nayak, Jonsson, Bäckström,
+Nebel), but never answered. The problems are interesting.
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{asp,
+  author =       "Blai Bonet and G{\'a}bor Loerincs and H{\'e}ctor Geffner",
+  title =        "A Robust and Fast Action Selection Mechanism for Planning",
+  pages =        "714--719",
+  crossref =     "aaai97"
+} 
+
+% Data taken from first author's homepage.
+% TODO: Get postscript.
+@InProceedings{alfonso-state-constraints,
+  author = 	 "Alfonso Gerevini and Lenhart Schubert",
+  title = 	 "Inferring State Constraints for Domain-Independent
+                  Planning",
+  pages = 	 "905--912",
+  crossref =     "aaai98"
+}
+
+% Data verified (Bernhard's copy).
+% TODO: Get postscript.
+@InProceedings{jussi-invariants-old,
+  author =       "Jussi Rintanen",
+  title =        "A Planning Algorithm not Based on Directional Search",
+  booktitle =    "Principles of Knowledge Representation and Reasoning:
+                  {Proceedings} of the Sixth International Conference
+                  ({KR}'98)",
+  publisher =    "Morgan Kaufmann",
+  year =         "1998",
+  editor =       "Anthony G. Cohn and Lenhart Schubert and Stuart C. Shapiro",
+  pages =        "617--624"
+}
+
+% Data verified.
+% Postscript available.
+@InProceedings{minimize,
+  author =       "Stefan Edelkamp and Malte Helmert",
+  title =        "Exhibiting Knowledge in Planning Problems to Minimize
+                  State Encoding Length",
+  pages =        "135--147",
+  crossref =     "ecp99"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{nebel-compilation,
+  author =       "Bernhard Nebel",
+  title =        "What is the Expressive Power of Disjunctive Preconditions?",
+  pages =        "294--307",
+  crossref =     "ecp99"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{haslum-jonsson:ecp-1999,
+  author =       "Patrik Haslum and Peter Jonsson",
+  title =        "Some Results on the Complexity of Planning
+                  with Incomplete Information",
+  pages =        "308--318",
+  crossref =     "ecp99"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{grt,
+  author =       "Ioannis Refanidis and Ioannis Vlahavas",
+  title =        "{GRT}: {A} Domain Independent Heuristic for {STRIPS}
+                  Worlds Based on Greedy Regression Tables",
+  pages =        "347--359",
+  crossref =     "ecp99"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{hspr,
+  author =       "Blai Bonet and H{\'e}ctor Geffner",
+  title =        "Planning as Heuristic Search: {New} Results",
+  pages =        "360--372",
+  crossref =     "ecp99"
+}
+
+% Data taken from second author's homepage.
+% Postscript available.
+@InProceedings{hector-state-model,
+  author =       "Blai Bonet and H{\'e}ctor Geffner",
+  title =        "Planning with Incomplete Information as
+                  Heuristic Search in Belief Space",
+  pages =        "52--61",
+  crossref =     "aips2000"
+}
+
+% Data verified.
+% Postscript available.
+@InProceedings{generic-types,
+  author =       "Derek Long and Maria Fox",
+  title =        "Automatic Synthesis and Use of Generic Types in Planning",
+  pages =        "196--205",
+  crossref =     "aips2000"
+}
+
+% Data verified.
+% Postscript available.
+@InProceedings{miconic,
+  author =       "Jana Koehler and Kilian Schuster",
+  title =        "Elevator Control as a Planning Problem",
+  pages =        "331--338",
+  crossref =     "aips2000"
+}
+
+% Data verified.
+% Postscript available.
+@Misc{edelkamp:helmert:aips-ws-2000,
+  author =       "Stefan Edelkamp and Malte Helmert",
+  title =        "On the Implementation of {MIPS}",
+  crossref =     "aips2000ws"
+}
+
+% Data taken from first author's homepage.
+% TODO: Get postscript.
+@InProceedings{jussi-invariants,
+  author = 	 "Jussi Rintanen",
+  title = 	 "An Iterative Algorithm for Synthesizing Invariants",
+  pages = 	 "806--811",
+  crossref =     "aaai2000"
+}
+
+% Data verified (from preprints).
+% TODO: Update when final print is available.
+% TODO: Get postscript.
+@InProceedings{sapa,
+  author =       "Minh Binh Do and Subbarao Kambhampati",
+  title =        "Sapa: {A} Domain-Independent Heuristic Metric
+                  Temporal Planner",
+  pages =        "109--120",
+  crossref =     "ecp2001"
+}
+
+% Data verified (from preprints).
+% TODO: Update when final print is available.
+% TODO: Get postscript.
+@InProceedings{haslum-numbers,
+  author =       "Patrik Haslum and H{\'e}ctor Geffner",
+  title =        "Heuristic Planning with Time and Resources",
+  pages =        "121--132",
+  crossref =     "ecp2001"
+}
+
+% Data verified (from preprints).
+% TODO: Update when final print is available.
+% TODO: Get postscript.
+@InProceedings{carmel-ecp99,
+  author =       "Carmel Domshlak and Yefim Dinitz",
+  title =        "Multi-Agent Off-line Coordination: {S}tructure and Complexity",
+  pages =        "277--288",
+  crossref =     "ecp2001"
+}
+
+Discusses a problem which is very much like unary SAS+ planning, with
+only a few, mostly unimportant differences (completely defined goal
+state). The problem is called "STS" for "state-transition support";
+the idea is that the state variables are agents, e.g. in a military
+scenario, that require support from other agents to achieve some of
+their state transitions (preconditions on operators that change the
+value of that agent's variable).
+
+The paper uses domain transition graphs (as "strategy graphs")
+and causal graphs (as "dependence graphs") as central notions; it
+analyses the complexity of the plan existence problem for various
+causal graph shapes and some problem variants.
+
+In the central problem considered by the authors, *all* transitions
+must depend on *all* causal predecessors of that variable; this
+requirement can be compiled away by "multiplying out" transitions iff
+the causal graph indegrees are bounded. We call this the "fully
+defined preconditions" (FDP) case.
+
+The results are as follows:
+* polynomial cases:
+  - Causal graph is a chain with a constant number of variables
+    (Obvious; the state space is polynomial then. This should extend
+    to other causal graph shapes with a constant number of variables.)
+  - The causal graph is a star with one high-level variable and n
+    low-level variables (with FDP requirement).
+* NP-complete cases:
+  - Causal graph is a star with one high-level variable and n
+    low-level variables (without FDP requirement).
+  - Causal graph is a chain with two variables (in other words, any
+    causal graph with any kind of dependency!) and the additional
+    requirement that no variable may revisit the same value.
+* intractable cases (exponentially long solutions):
+  - Causal graph is a chain with an unbounded number of variables.
+    The result already holds for variables with three-valued domains
+    (it does *not* hold for binary domains, where the problem is
+    NP-complete; cf. the result for singly connected DAGs in
+    brafman-domshlak:jair2003).
+
+The authors also consider a variant where the set of *value sequences*
+(rather than values) for each variable is polynomially bounded. In
+this case, they get polynomiality for polytree causal graphs and
+NP-completeness for singly connected DAG causal graphs.
+
+% Data verified (from preprints).
+% Postscript available.
+% TODO: Update when final print is available.
+@InProceedings{malte-ecp-transportation,
+  author =       "Malte Helmert",
+  title =        "On the Complexity of Planning in Transportation Domains",
+  pages =        "349--360",
+  crossref =     "ecp2001"
+}
+
+% Data obtained from first author.
+% TODO: Get postscript.
+@InProceedings{joerg-topology,
+  author =       "J{\"o}rg Hoffmann",
+  title =        "Local Search Topology in Planning Benchmarks: {A}n Empirical
+                  Analysis",
+  pages =        "453--458",
+  crossref =     "ijcai2001"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{hoffmann:aips-02,
+  author =       "J{\"o}rg Hoffmann",
+  title =        "Local Search Topology in Planning Benchmarks: {A}
+                  Theoretical Analysis",
+  pages =        "92--100",
+  crossref =     "aips2002"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{carmel-unary,
+  author =       "Carmel Domshlak and Ronen I. Brafman",
+  title =        "Structure and Complexity in Planning with Unary Operators",
+  pages =        "34--43",
+  crossref =     "aips2002"
+}
+
+% Data verified.
+% TODO: Get postscript.
+% Note: No page numbers in these proceedings.
+@InProceedings{edelkamp-hoffmann:icaps-ws-2003,
+  author =       "Stefan Edelkamp and J{\"o}rg Hoffmann",
+  title =        "Quo Vadis, {IPC-4}? --- {Proposals} for the Classical
+                  Part of the 4th {International} {Planning}
+                  {Competition}",
+  crossref =     "icaps2003wscompetition"
+}
+
+% Data verified.
+% TODO: Get postscript.
+% TODO: The "P." in "P. de Lucena" is a last name. Find out how this
+%       should be treated in BibTeX and how it is currently treated.
+% Note: No page numbers in these proceedings.
+@InProceedings{milidiu-et-al:icaps-ws-2003,
+  author =       "Ruy Luiz Milidi{\'u} and Frederico dos Santos
+                  Liporace and Carlos Jos{\'e} P. de Lucena",
+  title =        "Pipesworld: {Planning} Pipeline Transportation of
+                  Petroleum Derivatives",
+  crossref =     "icaps2003wscompetition"
+}
+
+% Data verified.
+% TODO: Get postscript.
+% Note: No page numbers in these proceedings.
+@InProceedings{edelkamp:icaps-ws-2003,
+  author =       "Stefan Edelkamp",
+  title =        "Limits and Possibilities of {PDDL} for Model
+                  Checking Software",
+  crossref =     "icaps2003wscompetition"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{amir-engelhardt:ijcai-2003,
+  author =       "Eyal Amir and Barbara Engelhardt",
+  title =        "Factored Planning",
+  pages =        "929--935",
+  crossref =     "ijcai2003"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{rintanen:icaps-2004,
+  author =       "Jussi Rintanen",
+  title =        "Phase Transitions in Classical Planning:
+                  an Experimental Study",
+  pages =        "101--110",
+  crossref =     "icaps2004"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{vidal:icaps-2004,
+  author =       "Vincent Vidal",
+  title =        "A Lookahead Strategy for Heuristic Search Planning",
+  pages =        "150--159",
+  crossref =     "icaps2004"
+}
+
+% Data verified.
+% Postscript available.
+@InProceedings{malte-icaps-cg,
+  author =       "Malte Helmert",
+  title =        "A Planning Heuristic Based on Causal Graph Analysis",
+  pages =        "161--170",
+  crossref =     "icaps2004"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{rintanen:icaps-2004b,
+  author =       "Jussi Rintanen",
+  title =        "Complexity of Planning with Partial Observability",
+  pages =        "345--354",
+  crossref =     "icaps2004"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{boddy-et-al:icaps-2005,
+  author =       "Mark Boddy and Johnathan Gohde and Tom Haigh and
+                  Steven Harp",
+  title =        "Course of Action Generation for Cyber Security Using
+                  Classical Planning",
+  pages =        "12--21",
+  crossref =     "icaps2005"
+}
+
+%%% Recent journal articles (1997-)
+%%%   Ordered by year. Within the same year, the order is
+%%%   AI Journal - JAIR - AI Magazine - Others. Within the same year
+%%%   and journal, the order is by volume and page number.
+
+% Data taken from first author's homepage.
+% Postscript available.
+@Article{graphplan,
+  author =       "Avrim Blum and Merrick Furst",
+  title =        "Fast Planning through Planning Graph Analysis",
+  journal =      aij,
+  year =         "1997",
+  volume =       "90",
+  number =       "1--2",
+  pages =        "281--300"
+}
+
+% Data verified.
+% TODO: Get Postscript.
+@Article{jonsson-sas,
+  author =       "Peter Jonsson and Christer B{\"a}ckstr{\"o}m",
+  title =        "State-Variable Planning under Structural Restrictions:
+                  {Algorithms} and Complexity",
+  journal =      aij,
+  year =         "1998",
+  volume =       "100",
+  number =       "1--2",
+  pages =        "125--176"
+}
+
+Studies a subclass of SAS+ planning that allows for tractable plan
+generation, named SAS+-IAO. The "IAO" restrictions are less strict
+than the previously studied "PUS" restrictions (all PUS tasks are IAO
+tasks), so this is a generalization of an earlier result.
+
+The paper introduces domain transition graphs, and interestingly, the
+IAO conditions are mostly about properties of domain transition graphs
+(the "I" property requires "almost unariness" of the task). Unlike
+other tractability results, the DTGs are mostly required to be
+*sparse* (rather than, e.g., strongly connected); the intuition is
+that non-undoable choices need not be backtracked if there is no
+choice of operators.
+
+The paper also contains a complete complexity map for plan generation
+with the old SAS restrictions P, U, B and S and new restrictions I,
+A-, A, A+, and O. (Plan *existence* is not studied; exponential length
+shortest solution are enough evidence for a subclass to be "hard".)
+Unlike the rest of the paper, the base formalism is "SAS*", not SAS+.
+The difference is that the initial state may not contain unknown
+values and there may not be postconditions without preconditions on
+that variable. (This only makes a real difference compared to SAS+ in
+the context of some of the restrictions.)
+
+The complexity part shows that the IAO algorithm is actually optimal
+(or can be made optimal) and can even be generalized to IA-O. It is
+shown that IA-O is a unique maximal tractable subclass for optimal
+planning in SAS*, and that the maximal tractable subclasses for
+non-optimal planning in SAS* are IA-O and US (note that US implies IA
+and A implies A-, so the main difference is the absence of O).
+
+(Note on the lattice in Fig. 14: The lattice is somewhat misleading.
+With regarded to optimal plan generation, it would seem from the
+lattice that there are three maximal tractable subclasses:
+PA, IA-O, and ISO. However, S implies A- (so that ISO implies IA-O),
+P implies O, PA implies I and A implies A- (so that PA also implies
+IA-O). Thus, IA-O is a unique maximal tractable subclass for optimal
+plan generation. For non-optimal plan generation, the additional
+maximal tractable subclass US is easily seen on the lattice.)
+
+
+% Data taken from the first author's homepage.
+% TODO: Get Postscript.
+@Article{tim,
+  author =       "Maria Fox and Derek Long",
+  title =        "The Automatic Inference of State Invariants in {TIM}",
+  journal =      jair,
+  year =         "1998",
+  volume =       "9",
+  pages =        "367--421"
+}
+
+% Data taken from DBLP.
+% TODO: Get Postscript.
+@Article{jonsson-3s,
+  author =       "Peter Jonsson and Christer B{\"a}ckstr{\"o}m",
+  title =        "Tractable Plan Existence Does Not Imply
+                  Tractable Plan Generation",
+  journal =      annalsmathai,
+  year =         "1998",
+  volume =       "22",
+  number =       "3",
+  pages =        "281--296"
+}
+
+Extended version of jonsson-backstrom:amai98. Discusses a tractable
+(for a given definition of "tractable", see below) fragment of
+propositional STRIPS called "3S". The base formalism is STRIPS with
+negation. The paper introduces causal graphs under the name
+"dependency graphs", and using different kinds of arcs for different
+kinds of dependency (negative preconditions, positive preconditions,
+co-effects). (Knoblock is acknowledged for using the same concept
+earlier in a more restricted form.)
+
+The "3S" fragment is defined as follows:
+* The dependency graph is acyclic (this implies unariness of
+  operators).
+* Every atom has one of the following three properties:
+  - static: not used within an effect
+    (or it is easy to prove that it should never change value, e.g. if
+    it is initially true, needs to be true, and there are only deleting
+    operators, no adding operators).
+  - symmetrically reversible: For each operator that adds it there is
+    an operator with identical preconditions that deletes it, and vice
+    versa.
+  - splitting: Removing the variable from the dependency graph
+    disconnects the "positive precondition successors" from the
+    "negative precondition successors", with respect to weak
+    connectivity (i.e. disregarding arc directions).
+
+Observe that symmetric reversibility of atoms is related to strong
+connectivity of domain transition graphs. Splitting allows
+partitioning a planning problem into several independent parts.
+
+The 3S fragment has the following properties:
+- Plan existence is polynomial.
+- Bounded plan existence is NP-hard.
+- Plan generation is intractable because there are problems with
+  exponentially long solutions.
+- There exists an incremental planning algorithm with polynomial
+  delay, i.e., the algorithm decides plan existence in polynomial time
+  and then generates a plan step by step, taking polynomial time
+  between steps. However, the generated solution may be exponentially
+  long even though polynomial solutions might exist, so this is not
+  necessarily a polynomial approximation algorithm. (Jonsson and
+  Bäckström do not give an example of this and only state that this
+  problem might exist.)
+
+
+% Data verified.
+% TODO: Get Postscript.
+@Article{unpop,
+  author =       "Drew McDermott",
+  title =        "Using Regression-Match Graphs to Control Search
+                  in Planning",
+  journal =      aij,
+  year =         "1999",
+  volume =       "109",
+  number =       "1--2",
+  pages =        "111--159"
+}
+
+% Data taken from the homepage of the magazine.
+@Article{aipscomp-1998-b,
+  author =       "Derek Long and Henry Kautz and Bart Selman and Blai Bonet
+                  and H{\'e}ctor Geffner and Jana Koehler and Michael
+                  Brenner and J{\"o}rg Hoffmann and Frank Rittinger and
+                  Corin R. Anderson and Daniel S. Weld and David E. Smith
+                  and Maria Fox",
+  title  =       "The {AIPS}-98 Planning Competition",
+  journal =      aimag,
+  year =         "2000",
+  volume =       "21",
+  number =       "2",
+  pages =        "13--33"
+}
+
+% Data taken from the homepage of the magazine.
+%   Mainly covers PDDL (only printed source on PDDL I'm aware of),
+%   and briefly introduces the AIPScomp 1998 planning domains.
+@Article{aipscomp-1998,
+  author =       "Drew McDermott",
+  title  =       "The 1998 {AI} {Planning} {Systems} Competition",
+  journal =      aimag,
+  year =         "2000",
+  volume =       "21",
+  number =       "2",
+  pages =        "35--55"
+}
+
+% Data taken from Joerg's .bib file.
+% TODO: Verify and get postscript; add "number" entry?
+@Article{blocksworld-revisited,
+  author =       "John Slaney and Sylvie Thi{\'e}baux",
+  title =        "{B}locks {W}orld Revisited",
+  journal =      aij,
+  year =         "2001",
+  volume =       "125",
+  pages =        "119--153"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@Article{hsp,
+  author =       "Blai Bonet and H{\'e}ctor Geffner",
+  title =        "Planning as Heuristic Search",
+  journal =      aij,
+  year =         "2001",
+  volume =       "129",
+  number =       "1",
+  pages =        "5--33"
+}
+
+% Data obtained from first author.
+% TODO: Get postscript.
+@Article{ff,
+  author =       "J{\"o}rg Hoffmann and Bernhard Nebel",
+  title =        "The {FF} Planning System: {Fast} Plan Generation Through
+                  Heuristic Search",
+  journal =      jair,
+  year =         "2001",
+  volume =       "14",
+  pages =        "253--302"
+}
+
+% Data verified.
+% Printed source available.
+@Article{aipscomp-2000,
+  author =       "Fahiem Bacchus",
+  title =        "The {AIPS}'00 Planning Competition",
+  journal =      aimag,
+  year =         "2001",
+  volume =       "22",
+  number =       "3",
+  pages =        "47--56"
+}
+
+% Data verified.
+% Printed source and postscript available.
+@Article{aimag01-mips,
+  author =       "Stefan Edelkamp and Malte Helmert",
+  title =        "The Model Checking Integrated Planning System ({MIPS})",
+  journal =      aimag,
+  year =         "2001",
+  volume =       "22",
+  number =       "3",
+  pages =        "67--71"
+}
+
+% Data verified.
+% Printed source available.
+@Article{talplanner,
+  author =       "Patrick Doherty and Jonas Kvarnstr{\"o}m",
+  title =        "{TAL}planner: {A} Temporal Logic Based Planner",
+  journal =      aimag,
+  year =         "2001",
+  volume =       "22",
+  number =       "3",
+  pages =        "95--102"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@Article{altalt,
+  author =       "XuanLong Nguyen and Subbarao Kambhampati and Romeo S.
+                  Nigenda",
+  title =        "Planning Graph as the Basis for Deriving Heuristics for Plan
+                  Synthesis by State Space and {CSP} Search",
+  journal =      aij,
+  year =         "2002",
+  volume =       "135",
+  number =       "1--2",
+  pages =        "73--123"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@Article{lpg,
+  author =       "Alfonso Gerevini and Alessandro Saetti and Ivan Serina",
+  title =        "Planning Through Stochastic Local Search and
+                  Temporal Action Graphs in {LPG}",
+  journal =      jair,
+  year =         "2003",
+  volume =       "20",
+  pages =        "239--290"
+}
+
+%%% Various articles
+%%%   Ordered by year.
+
+% Data (partially) taken from first author's homepage.
+% Contains a proof of undecidability for the PCP with seven pairs.
+% TODO: Get postscript.
+@InProceedings{pcp7,
+  author =       "Yuri Matiyasevich and G{\'e}reaud Senizerguez",
+  title =        "Decision Problems for Semi-{Thue} Systems with a Few Rules",
+  booktitle =    "Proceedings of the Eleventh Annual Symposium on Logic
+                  in Computer Science ({LICS} '96)",
+  year =         "1996",
+  pages =        "523--531"
+}
+
+% Data grabbed from the web.
+% Concerned with Mixed Integer Programming.
+% TODO: Get postscript. Postscript available via ILOG web site.
+@InCollection{mip,
+  author =       "Robert Bixby and Mary Fenelon and Zonghao Gu
+                  and Ed Rothberg and Roland Wunderling",
+  title =        "{MIP}: {Theory} and Practice --- {Closing} the Gap",
+  booktitle =    "System Modelling and Optimization: {Methods}, Theory
+                  and Applications",
+  pages =        "19--49",
+  publisher =    "Kluwer Academic Press",
+  year =         "2000",
+  editor =       "Michael J. D. Powell and Stefan Scholtes",
+  volume =       "174",
+  series =       "International Federation for Information Processing"
+}
+
+% Data verified.
+@MastersThesis{diplomarbeit,
+  author =       "Malte Helmert",
+  title =        "On the Complexity of Planning in Transportation
+                  and Manipulation Domains",
+  school =       "Albert-Ludwigs-Universit{\"a}t Freiburg",
+  type =	 "Diplomarbeit",
+  year =         "2001",
+  note =         "Postscript available at
+                  http://www.informatik.uni-freiburg.de/{$\sim$}ki/theses.html"
+}
+
+% Data taken from JAIR homepage.
+@Article{pddl2,
+  author =       "Maria Fox and Derek Long",
+  title =        "{PDDL2.1}: {An} Extension to {PDDL} for Expressing
+                  Temporal Planning Domains",
+  journal =      jair,
+  year =         "2003",
+  volume =       "20",
+  pages =        "61--124"
+}
+
+% Data verified.
+% Postscript available.
+
+@TechReport{carmel-ecp99-tr,
+  author =       "Carmel Domshlak and Yefim Dinitz",
+  title =        "Multi-Agent Off-line Coordination:
+                  {Structure} and Complexity",
+  institution =  "Ben-Gurion University of the Negev",
+  year =         "2001",
+  number =       "CS-01-04"
+}
+
+%%% Textbooks and similar
+%%%   Ordered by year.
+
+% Data verified.
+% Available from the library and/or Bernhard.
+@Book{garey-johnson, 
+    author =     "Michael R. Garey and David S. Johnson", 
+    title =      "Computers and Intractability --- {A} Guide to the
+                  Theory of NP-Completeness",
+    publisher =  "Freeman", 
+    year =       "1979"
+}
+
+% Data verified.
+% Not available.
+%   Contains (among other things) an undecidability proof for
+%   the Diophantine equations problem.
+@Book{computability,
+    author =     "Nigel J. Cutland",
+    title =      "Computability --- {An} Introduction to Recursive
+                  Function Theory",
+    publisher =  "Cambridge University Press",
+    year =       "1980"
+}
+
+% Data verified.
+% Not available.
+%   Contains (among other things) the busy beaver function (and
+%   proof of incomputability), abacus programs and their equivalence
+%   to Turing Machines, and the halting problem.
+@Book{computability-logic,
+    author =     "George S. Boolos and Richard C. Jeffrey",
+    title =      "Computability and Logic",
+    publisher =  "Cambridge University Press",
+    year =       "1989"
+}
+
+% Data verified.
+% Not available.
+@Book{readings,
+  editor =       "James Allen and James Hendler and Austin Tate",
+  title =        "Readings in Planning",
+  publisher =    "Morgan Kaufmann",
+  year =         "1990"
+}
+
+% Data verified.
+% Not available.
+%   Contains (among other things) polynomial algorithms for
+%   minimum/maximum weight matchings in arbitrary graphs.
+@Book{leda,
+  author =       "Kurt Mehlhorn and Stefan N{\"a}her",
+  title =        "{LEDA} --- {A} Platform for Combinatorial and
+                  Geometric Computing",
+  publisher =    "Cambridge University Press",
+  year =         "1999"
+}
+
+% Data verified.
+@Book{russell-norvig,
+  author =       "Stuart Russell and Peter Norvig",
+  title =        "Artificial {I}ntelligence --- {A} Modern Approach",
+  publisher =    "Prentice Hall",
+  year =         "2003"
+}  
+
+%%% Stuff
+
+@TechReport{pddl2.2,
+  author =       "Stefan Edelkamp and J{\"o}rg Hoffmann",
+  title =        "{PDDL2.2}: {The} Language for the Classical Part of the
+                  4th {International} {Planning} {Competition}",
+  institution =  "Albert-Ludwigs-Universit{\"a}t Freiburg, Institut f{\"u}r
+                  Informatik",
+  number =       "195",
+  year = 	 "2004"
+}
+
+@TechReport{rintanen-et-al:tr-2004,
+  author =       "Jussi Rintanen and Keijo Heljanko and Ilkka
+                  Niemel{\"a}",
+  title =        "Parallel Encodings of Classical Planning as
+                  Satisfiability",
+  institution =  "Albert-Ludwigs-Universit{\"a}t Freiburg, Institut f{\"u}r
+                  Informatik",
+  number =       "198",
+  year = 	 "2004"
+}
+
+@TechReport{helmert-et-al:tr-2006,
+  author =       "Malte Helmert and Robert Mattm{\"u}ller and Gabi R{\"o}ger",
+  title =        "Approximation Properties of Planning Benchmarks",
+  institution =  "Albert-Ludwigs-Universit{\"a}t Freiburg, Institut f{\"u}r
+                  Informatik",
+  number =       "224",
+  year = 	 "2006"
+}
+
+% Data taken from JAIR homepage.
+@Article{ipc3,
+  author =       "Derek Long and Maria Fox",
+  title =        "The 3rd {I}nternational {P}lanning {C}ompetition:
+                  {R}esults and Analysis",
+  journal =      jair,
+  year =         "2003",
+  volume =       "20",
+  pages =        "1--59"
+}
+
+% Data taken from JAIR homepage.
+@Article{ipc4,
+  author =       "J{\"o}rg Hoffmann and Stefan Edelkamp",
+  title =        "The Deterministic Part of {IPC-4}: {A}n Overview",
+  journal =      jair,
+  year =         "2005",
+  volume =       "24",
+  pages =        "519--579"
+}
+
+@Article{helmert:jair-2006,
+  author =       "Malte Helmert",
+  title =        "The {Fast} {Downward} Planning System",
+  journal =      jair,
+  year =         "2006",
+  volume =       "26",
+  pages =        "191--246"
+}
+
+@InProceedings{menkes-ilp,
+  author =       "Menkes {van den Briel} and Thomas Vossen and
+                  Subbarao Kambhampati",
+  title =        "Reviving Integer Programming Approaches for {AI}
+                  Planning: {A} Branch-and-Cut Framework",
+  pages =        "310--319",
+  crossref =     "icaps2005"
+}
+
+@Article{helmert:aij-2003,
+  author =       "Malte Helmert",
+  title =        "Complexity results for standard benchmark domains
+                  in planning",
+  journal =      "Artificial Intelligence",
+  year =         "2003",
+  volume =       "143",
+  number =       "2",
+  pages =        "219--262"
+}
+
+@InProceedings{helmert:aips-2002,
+  author =       "Malte Helmert",
+  title = 	 "Decidability and Undecidability Results
+                  for Planning with Numerical State Variables",
+  pages =        "303--312",
+  crossref =     "aips2002"
+}
+
+@InProceedings{helmert:icaps-2006,
+  author =       "Malte Helmert",
+  title =        "New Complexity Results for Classical Planning Benchmarks",
+  pages =        "52--61",
+  crossref =     "icaps2006"
+}
+
+@InProceedings{helmert-et-al:ecai-2006,
+  author =       "Malte Helmert and Robert Mattm{\"u}ller and Gabi R{\"o}ger",
+  title =        "Approximation Properties of Planning Benchmarks",
+  pages =        "585--589",
+  crossref =     "ecai2006"
+}
+
+@InProceedings{rintanen:ecai-2006,
+  author =       "Jussi Rintanen",
+  title =        "Compact Representation of Sets of Binary Constraints",
+  pages =        "143--147",
+  crossref =     "ecai2006"
+}
+
+@Book{ausiello-et-al:1999,
+  author =       "Giorgio Ausiello and Pierluigi Crescenzi and Giorgo
+                  Gambosi and Viggo Kann and Alberto
+                  Marchetti-Spaccamela and Marco Protasi",
+  title =        "Complexity and Approximation",
+  publisher =    "Springer-Verlag",
+  year =         "1999"
+}
+
+% Data taken from Ausiello et al.'s textbook.
+@Article{min-vertex-cover-reference,
+  author =       "Christos H. Papadimitriou and Mihalis Yannakakis",
+  title =        "Optimization, Approximation, and Complexity
+                  Classes",
+  journal =      "Journal of Computer and System Sciences",
+  year =         "1991",
+  volume =       "43",
+  pages =        "425--440"
+}
+
+% Data verified (from preprints).
+% TODO: Update when final print is available.
+% TODO: Get postscript.
+@InProceedings{thiebaux-cordier:ecp-2001,
+  author =       "Sylvie Thi{\'e}baux and Marie-Odile Cordier",
+  title =        "Supply Restoration in Power Distribution Systems ---
+                  A Benchmark for Planning Under Uncertainty",
+  pages =        "85--95",
+  crossref =     "ecp2001"
+}
+
+% Data from ACM portal:
+% - http://portal.acm.org/citation.cfm?id=260902
+% TODO: Get postscript.
+@Article{holzmann:ieee-softeng-1997,
+  author =       "Gerard J. Holzmann",
+  title =        "The Model Checker {SPIN}",
+  journal =      "IEEE Transactions on Software Engineering",
+  year =         "1997",
+  volume =       "23",
+  number =       "5",
+  pages =        "279--295"
+}
+
+% Data verified.
+@Book{cormen-et-al:1990,
+  author =       "Thomas H. Cormen and Charles E. Leiserson and Ronald
+                  L. Rivest",
+  title =        "Introduction to Algorithms",
+  publisher =    "The MIT Press",
+  year =         "1990"
+}
+
+% Data from DBLP and Springer website.
+% TODO: Verify.
+% Note: BibTeX translates the name to Pessoa, A. A. Even though
+%       "Alves" might be a family name, this is how the Brazilians
+%       abbreviate the name in the references of the ICAPS 2003
+%       competition workshop paper, so this seems alright.
+@InProceedings{pessoa:isaac-2004,
+  author =       "Artur Alves Pessoa",
+  title =        "Planning the Transportation of Multiple Commodities
+                  in Bidirectional Pipeline Networks",
+  pages =        "766--777",
+  booktitle =    "Algorithms and Computation, 15th International
+                  Symposium (ISAAC 2004)",
+  editor =       "Rudolf Fleischer and Gerhard Trippen",
+  year = 	 "2004",
+  series =	 "Lecture Notes in Computer Science",
+  volume =	 "3341",
+  publisher = 	 "Springer-Verlag",
+  address =	 "New York"
+}
+
+% Data from second author's homepage.
+% TODO: Get postscript.
+@Article{hearn-demaine:tcs-2005,
+  author =       "Robert A. Hearn and Erik D. Demaine",
+  title =        "{PSPACE}-Completeness of Sliding-Block Puzzles and
+                  Other Problems through the Nondeterministic
+                  Constraint Logic Model of Computation",
+  journal =      "Theoretical Computer Science",
+  year =         "2005",
+  volume =       "343",
+  number =       "1--2",
+  pages =        "72--96"
+}
+
+% Data for next two entries verified (Bernhard's book).
+
+% Problem: The four authors are actually *authors*, not editors,
+% but we cannot reference a book chapter with a different author
+% than the author of the book. Might use the entries in the current
+% form and patch the bbl file manually by removing the "eds." note.
+
+@InCollection{tenenberg:1991,
+  author =       "Josh D. Tenenberg",
+  title =        "Abstraction in Planning",
+  pages =        "213--283",
+  chapter =      "4",
+  crossref =     "allen-et-al:1991"
+}
+
+Tenenberg defines abstractions as mappings from planning tasks to
+planning tasks. The paper discusses two (actually, three) general
+properties of abstractions of planning tasks, and gives examples for
+them:
+
+* Downward Solution Property: Every abstract solution is refinable
+  through an operator-by-operator specialization to a concrete
+  solution. "Operator by operator" actually means that every single
+  abstract operator corresponds to a single concrete operator in the
+  plan, so abstract operators are *not* "macro" operators. Example:
+  Actions such as "slice mushroom with chef knife" and "dice ham with
+  cleaver" are abstracted to "turn food to pieces".
+
+  The example of an abstraction with that property is "inheritance
+  abstraction", where specialized predicates such as "mushroom" and
+  "meat" are generalized to abstract predicates like "food", and
+  operators are generalized accordingly.
+
+  Tenenberg gives a formal account of when inheritance abstraction
+  satisfies the downward solution property; in general, it does not
+  satisfy the upward solution property.
+
+* Upward Solution Property: Whenever a concrete solution exists, there
+  also exists an abstract solution.
+
+  The example of an abstraction with that property is "abstraction
+  with relaxed models", where several layered abstractions are
+  produced by eliminating more and more predicates from consideration.
+
+  Tenenberg shows how the predicates to eliminate may be chosen (the
+  choice cannot be arbitrary in his formalism due to complications
+  arising in the presence of domain axioms) and shows that this
+  abstraction also satisfies the stricter "monotonicity property": The
+  abstract plans can be refined to concrete plans by only inserting
+  actions in certain locations, not removing or reordering any
+  actions. (The set of actions in the original and abstract problems
+  are identical.) This provides a formal background for earlier work
+  on ABSTRIPS.
+
+  Abstraction with relaxed models does not satisfy the downward
+  solution property in general.
+
+@Book{allen-et-al:1991,
+  author =       "James F. Allen and Henry A. Kautz and Richard N.
+                  Pelavin and Josh D. Tenenberg",
+  editor =       "James F. Allen and Henry A. Kautz and Richard N.
+                  Pelavin and Josh D. Tenenberg",
+  title =        "Reasoning About Plans",
+  booktitle =    "Reasoning About Plans",
+  publisher =    "Morgan Kaufmann",
+  year =         "1991",
+  address =      "San Mateo"
+}
+
+% Data verified (Bernhard's copy).
+@Article{joslin-roach:aij89,
+  author =       "David Joslin and John Roach",
+  title =        "A Theoretical Analysis of Conjunctive-Goal Problems",
+  journal =      "Artificial Intelligence",
+  year =         "1989",
+  volume =       "41",
+  number =       "1",
+  pages =        "97--106",
+  note =         "Research Note"
+}
+
+The authors provide a formal definition of "nonlinear" planning
+problems. Nonlinear planning problems are planning problems with a set
+of conjunctive goals such that no goal ordering is possible. "Goal
+ordering" means committing to a certain total order on the set of
+goals, such that goals appearing early in the order are subjected to
+"goal protection": If we are in the state where the first K goals are
+satisfied, we are not allowed to violate any of them. (We *are*,
+however, allowed to violate goal K+2 even if it is satisfied, provided
+that goal K+1 is not currently satisfied.
+
+Planners that commit to a goal ordering and use goal protection are
+called "linear planners". They cannot solve non-linear problems.
+
+The authors formalize the notion by means of state transition graphs,
+and in particular the subgraphs induced by the set of states in which
+a given goal holds. Problems may arise if these subgraphs contain
+several connected components, because then the planner may commit
+itself to the "wrong" connected component and then never leave it due
+to goal protection.
+
+They provide two examples of such planning problems, one being
+Sussman's anomaly in blocksworld, and the other being a robot motion
+planning problem involving pushing a box and closing a door.
+
+Notes:
+- Korf:aij-1987 observes that the non-linearity in Sussman's anomaly
+  depends on how exactly the goal is formalized; it goes away if
+  having a certain block on the table is declared an explicit goal.
+- "Non-linearity" is related to (the opposite of) Korf's notion of
+  "serializability", although there are some differences. Korf goes
+  further and defines serializability also for a set of subgoals,
+  rather than all subgoals. In his words, "a set of subgoals [is]
+  serializable if there exists an ordering among the subgoals such
+  that the subgoals can always be solved sequentially without ever
+  violating a previously solved subgoal in the order." (Korf:aij-1987,
+  p. 71) One key difference here is the "always": later on, Korf makes
+  it clear that he requires *all* subplans that satisfy the first
+  goals to be extendable to the others, unlike Joslin and Roach: "In
+  terms of our definition of a subgoal as a set of states, this means
+  that for every state in a subgoal set, there exists a path into the
+  next smaller subgoal set that lies entirely within the original
+  subgoal set." (p.71).
+- Joslin & Roach state that "a sufficient condition for goal ordering
+  is that, for the given order, the subgraph for the conjunction of
+  the first N + 1 subgoals is fully contained in the subgraph for the
+  first N subgoals" (p. 104). This is clearly wrong; the subgraph for
+  the *conjunction* will always be contained in the subgraphs for the
+  conjuncts. So something else is probably meant.
+
+Ideas:
+- There are several possible notions of "linearity" or serializability
+  that should probably be distinguished. (Apparently this is not done
+  in the literature.) There are at least two different axes for
+  classification here: whether or not *all* subgoal-achieving paths
+  must be extendable to a subgoal-protecting, goal-achieving path
+  (required by Korf, but not by Joslin & Roach), and whether the
+  existence of *one* goal ordering is good enough (required by Korf
+  and by Joslin & Roach) or *all* goal orderings should work. Problems
+  for which *some* serialization exists might be called "weakly
+  serializable", ones for which *any* serialization will do might be
+  called "strongly serializable". Or maybe these terms are better used
+  for the some path/all paths distinction. (Might be able to formalize
+  this in LTL?)
+- Both notions can be easily expressed through properties of (the
+  intersections of) subgraphs induced by individual goals.
+- Landmarks can probably also be integrated in this framework. (Have a
+  look at Jörg's work?)
+- There might be easily checkable sufficient criteria for (weak or
+  strong) serializability in the SAS+ world that apply to some of the
+  standard benchmarks.
+
+
+on knoblock-abstractions:
+
+This is the seminal work on the topic. It abstracts STRIPS-style
+planning domains by removing certain literals from the domain (i.e.
+from preconditions, effects, initial state and goal). A sequence of
+such abstraction is called an abstraction hierarchy.
+
+It introduces the "ordered monotonicity property" (OMP) (p. 246):
+"For all abstract plans, all refinements of those plans leave the
+literals established in the abstract space unchanged."
+This does not guarantee that a given abstract plan can be refined, but
+it does guarantee that if they can, then they can be refined in a
+certain way. Knoblock formalizes what "refinement" is, his notion
+capturing that mere replanning at each level of abstraction does not
+constitute refinement.
+
+Knoblock gives sufficient conditions for satisfying the OMP in a given
+domain and in a task of a given domain. The former (Restriction 2.7,
+p. 254) is equivalent to the condition that in no abstraction, there
+is a path in the causal graph from a variable present in the
+abstraction to a variable not present in the abstraction. The latter
+(Restriction 2.10, p. 255) is roughly equivalent to the same property,
+but only considering the subgraph of the causal graph that consists of
+those variables from which goal variables can be reached.
+
+Knoblock presents an algorithm for automatically creating an
+abstraction hierarchy (Table 3, p. 259). This is very similar to Fast
+Downward's approach: First generate the causal graph (Knoblock doesn't
+give it a name, but it is the causal graph with the arc direction
+reversed), then partition it into strongly connected components,
+assigning a level in the hierarchy to each component, then order the
+components according to a topological search of the graph. The
+approach generates a perfect abstraction in (a certain formulation of)
+Towers of Hanoi.
+
+In addition to the "abstract" abstraction hierarchy generation
+algorithm, Knoblock also presents ALPINE, a system for generating such
+abstractions within a version of Prodigy modified to take into account
+hierarchies. (This is basically depth-first search; the representation
+language is STRIPS + axioms.) Knoblock shows that in two domains
+(extended STRIPS robot motion planning and machine-shop scheduling)
+Prodigy + ALPINE performs much better than Prodigy without ALPINE and
+that it is better than or competitive to some other approaches to
+improving Prodigy.
+
+ALPINE differs from the abstract algorithm in that it makes use of
+some extensions. These are to a major extent specific to the
+representation (e.g. the distinction between "primary" and "secondary"
+effects) and Prodigy's solution algorithm. For example, two of the
+three enhancements for avoiding arcs in the causal graph ((1) and (3),
+p. 268f) do not apply in Fast Downward's setting, the former because
+it does not arise in a grounded representation, the latter because it
+does not arise for unary operators.
+
+A main difference is that ALPINE doesn't work on a fully grounded
+representation (indeed, using such a representation is difficult in a
+purely propositional setting), but instead groups together some
+literals of the same predicate. (ALPINE doesn't group all literals of
+the same predicate together, but makes distinctions based on type.)
+This leads to some complications; e.g. in Towers of Hanoi,
+abstractions can only be found if discs of different size are assumed
+to be of different type.
+
+However, there might be some generally exploitable ideas within
+ALPINE's recursive construction of the causal graph (Table 7, p. 268)
+as well. It would probably be a good idea to explicitly reformulate
+the ordering constraints implicit in the algorithm. It should be
+possible to do that by defining a notion of causal graph that uses arc
+labels for different causalities (e.g. precondition to primary effect,
+secondary effect to primary effect, etc.) and defines possible
+abstractions in terms of properties of that graph.
+
+
+on bacchus-downward-refinement:
+
+The paper makes the following contributions:
+
+* Bacchus & Yang define the "Downward Refinement Property" (DRP):
+  "Every abstract solution can be refined to a concrete-level
+  solution."
+
+* They also analytically analyse the performance of depth-first
+  refinement planning with abstraction hierarchies both in the
+  presence of the DRP and in a relaxed setting where an abstract
+  solution is only refinable to the next level with a certain
+  probability p. They show that (under some assumptions, some of which
+  are quite limiting) abstraction can exponentially reduce the running
+  time. This is true both if the refinement probability is 1 and if it
+  is very small (in which case abstraction can allow proving very
+  quickly that no solution exists). The analysis is very well
+  executed.
+
+* They also provide an alternative ("semantic") definition of
+  monotonic refinement which is less involved than Knoblock's and
+  captures the idea of refinement equally well.
+
+* They provide a new criterion for refinability called "k-ary
+  necessary connectivity": Two levels of an abstraction hierarchy are
+  "k-ary connected" iff for any two operators that can be applied in
+  sequence in the higher level (i.e., it is possible for the
+  preconditions of the second to be satisfied after the first is
+  applied) and for which the second operator is made more concrete in
+  the lower level, there must be a plan for reaching the preconditions
+  of the second operator from the state where
+  - *only* the preserved preconditions and effects of the first
+    operator can be assumed to be true,
+  - *no* variable of a higher level of abstraction is changed, and
+  - the length of the plan is at most k.
+  (Note that the second condition is related to the causal graph being
+  acyclic.)
+
+* Because the DRP is rarely satisfied in practice, they present the
+  concept of "near-DRP" for hierarchies where the refinability
+  probability from one level to the next is at least 0.5 and
+  monotonically increases across levels.
+
+* Algorithmically, the paper presents Highpoint, an extension of
+  Alpine. Highpoint starts with a causal-graph like representation as
+  used by Alpine (Knoblock's Restriction 2.7, which essentially
+  defines inverted Causal Graphs, reappears as Definition 4.1), but
+  instead of choosing an arbitrary topological sorting of that graph,
+  Highpoint incorporates additional information.
+
+  Because it respects the Causal Graph, Highpoint always generates
+  hierarchies that satisfy the ordered monotonicity property. However,
+  instead of choosing an arbitrary such hierarchy, breaking ties
+  arbitrarily, it also tries to find a hierarchy that is "as near-DRP
+  as possible". It does that by probabilistically estimating an
+  approximation to k-ary connectedness. Moreover, it can *merge*
+  connected components in the causal graph if the estimated
+  refinability probability is too low.
+
+  The experimental evaluation shows that Highpoint outperforms "plain
+  Alpine" in a number of domains (robot motion planning, a computer
+  domain, and machine-shop scheduling) in many cases, in particular
+  when refinability probabilities are lowered below 1. The hierarchies
+  are evaluated within the AbTweak planner.
+
+% Data verified.
+% Available in printed form in Bernhard's office.
+@Article{korf:aij-1987,
+  author =       "Richard E. Korf",
+  title =        "Planning as Search: {A} Quantitative Approach",
+  journal =      aij,
+  year =         "1987",
+  volume =       "33",
+  number =       "1",
+  pages =        "65--88"
+}
+
+Discusses the use of subgoals and macros for solving search problems.
+Contributions include:
+* Formalizations of subgoals as sets of states. Sequences of subgoals
+  are considered as monotonically decreasing; in planning lingo,
+  "subgoals" are conjunctions of individual goal literals with a
+  growing number of conjuncts.
+* The notion of "subgoal distance" as the maximal distance from a
+  state in one subgoal to the nearest state in another. The effects of
+  serial decomposition on runtime and solution length are analysed in
+  terms of subgoal distance and search space diameter.
+* The use and effect of abstractions, in particular abstractions using
+  macro operators.
+* Distinction between independent subgoals, serializable subgoals and
+  non-serializable subgoals. A sequence of subgoals is serializable if
+  for all states in all subgoals, the next subgoal is reachable
+  without leaving the subgoal.
+* Block-serializable subgoals: While individual subgoals may not be
+  serializable, they may be partitioned into blocks that are. Korf
+  gives a n^2-1 puzzle example.
+* Pathological subgoals: Subgoals with the property that states within
+  them have a *larger* average goal distance than random states. These
+  do occur in Rubik's Cube; the question is if these subgoals are
+  useful. They can still be useful because they limit the branching
+  factor of the search.
+* Macro actions: Korf discusses "total operator decomposability"
+  (present in Rubik's cube) and "serial operator decomposability"
+  (present in the Eight puzzle). Korf does not present an explicit
+  operator model, but it looks like he assumes precondition-free
+  operators which are defined by a set of conditional effects in a
+  SAS-like formalism. He also seems to assume that the state space is
+  "harmless", i.e., contains no dead ends.
+  The decomposability properties are then the following:
+  - Total decomposability:
+    Every operator effect is of the form "v = d => v := d'", i.e.,
+    only refers to the changed variable.
+  - Serial decomposability:
+    There is a total order among variables such that the condition of
+    an effect changing v only refers to variables ordered before v
+    (including v itself).
+  Note how serial decomposability is related to acyclicity of causal
+  graphs, if we do not include arcs between different effect variables
+  of an operator. This kind of causal graph definition allows for a
+  different kind of decomposition property than the stricter
+  definition: For each goal state, there exists a set of |V|*|D| macro
+  operators (where V are the variables and D is their domain) such
+  that the problem can be solved only using these operators, from any
+  state. (The idea is that there is one macro for setting v_1 to its
+  goal value for any current value of v_1, one for setting v_2 to its
+  goal value given that v_1 is initially at its goal value, etc.)
+  Korf provides these macros for the 8-puzzle.
+* Abstraction: Korf analyzes abstraction in general, showing how
+  one level of abstraction can reduce the complexity of the problem to
+  its square root, and how an optimal abstraction has ln N many levels
+  (note that the natural logarithm is better than logarithms to other
+  bases!). He also discusses the time/space trade-off of using
+  abstractions.
+
+
+% Data taken from the paper headings.
+% TODO: Get Postscript.
+@Article{brafman-domshlak:jair2003,
+  author =       "Ronen I. Brafman and Carmel Domshlak",
+  title =        "Structure and Complexity in Planning with Unary
+                  Operators",
+  journal =      jair,
+  year =         "2003",
+  volume =       "18",
+  pages =        "315--349"
+}
+
+The paper discusses planning in the Propositional STRIPS with Negation
+(PSN) formalism restricted to unary operators. It uses causal graphs
+as a central distinguishing criterion for subclasses of the problem,
+and proves the following results:
+
+* With arbitrary acyclic DAGs, minimal plans can be exponentially
+  long. (The examples has a causal graph which is a total order.)
+* Plan existence for acyclic, singly connected causal graphs is
+  NP-complete (the NP membership proof in particular shows that plans
+  cannot be exponentially long!). Hardness already holds for indegrees
+  bounded by 6; for bounds lower than 6, the hardness question is
+  open.
+* In general, minimal plan length can be bounded by a function of the
+  *number of paths* in the causal graph.
+* For polytrees with bounded indegree, the authors present a
+  polynomial planning algorithm.
+
+Note: The problem for polytrees with unbounded indegree is open.
+
+The authors also provide some results regarding the complexity of
+planning with serializable subgoals. With acyclic causal graphs,
+planning problems are always serializable, but determining the actual
+serialization ordering can still be hard. Moreover, even when it is
+known, planning can be difficult (e.g. due to exponentially long
+solutions).
+
+@Article{koehler-hoffmann:jair-2000,
+  author =       "Jana Koehler and J{\"o}rg Hoffmann",
+  title =        "On Reasonable and Forced Goal Orderings and their
+                  Use in an Agenda-Driven Planning Algorithm",
+  journal =      jair,
+  year =         "2000",
+  volume =       "12",
+  pages =        "338--386"
+}
+
+@Article{hoffmann:jair2005,
+  author =       "J{\"o}rg Hoffmann",
+  title =        "Where `Ignoring Delete Lists' Works: {Local} Search
+                  Topology in Planning Benchmarks",
+  journal =      jair,
+  year =         "2005",
+  volume =       "24",
+  pages =        "685--758"
+}
+
+% Data taken from reprint in "Readings in Planning" (Bernhard's copy).
+@InCollection{newell-simon:1963,
+  author =       "Allen Newell and Herbert A. Simon",
+  title =        "{GPS}: {A} Program that Simulates Human Thought",
+  booktitle =    "Computers and Thought",
+  publisher =    "Oldenbourg",
+  year =         "1963",
+  editor =       "E. A. Feigenbaum and J. Feldman",
+  pages =        "279--293"
+}
+
+% Data taken from reprint in "Readings in Planning" (Bernhard's copy).
+@Article{sacerdoti:aij74,
+  author =       "Earl D. Sacerdoti",
+  title =        "Planning in a Hierarchy of Abstraction Spaces",
+  journal =      aij,
+  year =         "1974",
+  volume =       "5",
+  pages =        "115--135"
+}
+
+
+% Copied from literatur-labels.bib
+@InProceedings{jonsson-backstrom:ewsp95,
+  author =       "Peter Jonsson and Christer B{\"a}ckstr{\"o}m",
+  title =        "Incremental Planning",
+  booktitle =    "New Directions in {AI} Planning: {EWSP} '95
+                  --- 3rd {European} Workshop on Planning",
+  publisher =    "IOS Press",
+  address =      "Amsterdam",
+  year =         "1995",
+  volume =       "31",
+  series =       "Frontiers in Artificial Intelligence and Applications",
+  editor =       "Malik Ghallab and Alfredo Milani",
+  pages =        "79--90",
+  printout =     "yes"
+}
+
+% Data verified (Bernhard's copy).
+@Article{ginsberg-harvey:aij92,
+  author =       "Matthew L. Ginsberg and William D. Harvey",
+  title =        "Iterative Broadening",
+  journal =      aij,
+  year =         "1992",
+  volume =       "55",
+  pages =        "367--383"
+}
+
+
+% TODO: Besorgen und nachlesen, dass da tatsächlich der
+% Markierungsalgorithmus erwähnt wird! (Ist über die
+% Mathematikbibliothek bestellt.)
+@Article{horn-marking,
+  author =       "William F. Dowling and Jean H. Gallier",
+  title =        "Linear-Time Algorithms for Testing the Satisfiability
+                  of Propositional {Horn} Formulae",
+  journal =      "Journal of Logic Programming",
+  year =         "1984",
+  volume =       "1",
+  number =       "3",
+  pages =        "367--383"
+}
+
+% Data from DBLP.
+@InProceedings{astar-partial-expansion,
+  author =       "Takayuki Yoshizumi and Teruhisa Miura and Toru Ishida",
+  title =        "A${}^*$ with Partial Expansion for Large Branching Factor
+                  Problems",
+  pages =        "923--929",
+  crossref  =    "aaai2000"
+}
+
+% Data from Russell/Norvig.
+% TODO: Bessere Referenz finden (z.B. Pearl: Heuristics Ch. 5?) oder
+%       Buch besorgen. Siehe Literaturangaben am Ende des
+%       Search-Kapitels in "Artificial Intelligence: A Modern Approach".
+
+@PhdThesis{beam-search,
+  author =       "Bruce T. Lowerre",
+  title =        "The \textsc{HARPY} Speech Recognition System",
+  school =       "Computer Science Department, Carnegie-Mellon University",
+  year =         "1976",
+  address =      "Pittsburgh, Pennsylvania"
+}
+
+% Data verified (book available in math library).
+@Book{polya:1945,
+  author =       "George P{\'o}lya",
+  title =        "How to Solve It: A New Aspect of Mathematical Method",
+  publisher =    "Princeton University Press",
+  year =         "1945",
+  address =      "Princeton, NJ"
+}
+
+% Data taken from first author's homepage and DBLP.
+% TODO: Verify, get postscript.
+@InProceedings{kautz-selman:ecai-1992,
+  author =       "Henry Kautz and Bart Selman",
+  title =        "Planning as Satisfiability",
+  pages =        "359--363",
+  crossref =     "ecai92"
+}
+
+% Data taken from first author's homepage and DBLP.
+% TODO: Verify, get postscript.
+@InProceedings{kautz-selman:aaai-1996,
+  author =       "Henry Kautz and Bart Selman",
+  title =        "Pushing the Envelope: Planning, Propositional Logic,
+                  and Stochastic Search",
+  pages =        "1194--1201",
+  crossref =     "aaai96"
+}
+
+% Data taken from first author's homepage and DBLP.
+% TODO: Verify, get postscript.
+@InProceedings{kautz-et-al:kr-1996,
+  author =       "Henry Kautz and David McAllester and Bart Selman",
+  title =        "Encoding Plans in Propositional Logic",
+  pages =        "374--384",
+  crossref =     "kr96"
+}
+
+% Data taken from first author's homepage and DBLP.
+% TODO: Verify, get postscript.
+@InProceedings{kautz-selman:ijcai-1999,
+  author =       "Henry Kautz and Bart Selman",
+  title =        "Unifying {SAT}-based and Graph-based Planning",
+  pages =        "318--325",
+  crossref =     "ijcai99"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{gerevini-serina:aips-2002,
+  author =       "Alfonso Gerevini and Ivan Serina",
+  title =        "{LPG}: A Planner Based on Local Search for Planning
+                  Graphs with Action Costs",
+  pages =        "13--22",
+  crossref =     "aips2002"
+}
+
+% Data obtained from first author.
+% TODO: Get postscript.
+@InProceedings{nebel-et-al:ecp-1997,
+  author =       "Bernhard Nebel and Yannis Dimopoulos and Jana
+                  Koehler",
+  title =        "Ignoring Irrelevant Facts and Operators in Plan
+                  Generation",
+  pages =        "338--350",
+  crossref =     "ecp97"
+}
+
+% Data obtained from first author.
+% TODO: Get postscript.
+@InProceedings{hoffmann-nebel:ecp-2001,
+  author =       "J{\"o}rg Hoffmann and Bernhard Nebel",
+  title =        "{RIFO} Revisited: Detecting Relaxed Irrelevance",
+  pages =        "325--336",
+  crossref =     "ecp2001"
+}
+
+% Data taken from the homepage of the magazine.
+@Article{weld:aimag-1999,
+  author =       "Daniel S. Weld",
+  title  =       "Recent Advances in {AI} Planning",
+  journal =      aimag,
+  year =         "1999",
+  volume =       "20",
+  number =       "2",
+  pages =        "93--123"
+}
+
+% Data taken from publisher's website.
+% TODO: Not to sure about publisher and address (name changes etc.)
+%       How does one find the proper information?
+@Book{ball-et-al:1995,
+  editor =       "Michael Ball and Tom Magnanti and Clyde Monma and
+                  George Nemhauser",
+  title =        "Network Models",
+  year =         "1995",
+  series =       "Handbooks in Operations Research and Management
+                  Science",
+  volume =       "8",
+  publisher =    "Elsevier",
+  address =      "Amsterdam"
+}
+
+% Data verified.
+% Available in printed form in Bernhard's office.
+@InProceedings{cheeseman-et-al:ijcai-1991,
+  author =       "Peter Cheeseman and Bob Kanefsky and William M. Taylor",
+  title =        "Where the Really Hard Problems Are",
+  pages =        "331--337",
+  crossref =     "ijcai91"
+}
+
+% Data verified.
+@MastersThesis{mattmueller:studienarbeit-2005,
+  author = 	 "Robert Mattm{\"u}ller",
+  title = 	 "{Approximatives} {Planen} in der {Grid}-{Dom\"ane}",
+  school = 	 "Albert-Ludwigs-Universit{\"a}t Freiburg",
+  year = 	 "2005",
+  type =	 "Studienarbeit"
+}
+
+% Data verified.
+@MastersThesis{drescher:diplomarbeit-2006,
+  author = 	 "Michael Drescher",
+  title = 	 "{Approximationseigenschaften} von {Transportproblemen}
+                  in der {Handlungsplanung}",
+  school = 	 "Albert-Ludwigs-Universit{\"a}t Freiburg",
+  year = 	 "2005",
+  type =	 "Diplomarbeit",
+  note =         "Postscript available at
+                  http://www.informatik.uni-freiburg.de/{$\sim$}ki/theses.html"
+}
+
+% Data verified.
+% Available from Bernhard.
+@Book{papadimitriou:1994,
+    author =     "Christos H. Papadimitriou",
+    title =      "Computational Complexity",
+    publisher =  "Addison-Wesley",
+    year =       "1994"
+}
+
+% Data verified.
+% Taken from JAIR website.
+@Article{hoffmann-et-al:jair-2006,
+  author =       "J{\"o}rg Hoffmann and Stefan Edelkamp and
+                  Sylvie Thi{\'e}baux and Roman Englert and
+                  Frederico dos Santos Liporace and
+                  Sebastian Tr{\"u}g",
+  title =        "Engineering Benchmarks for Planning: the Domains
+                  Used in the Deterministic Part of {IPC}-4",
+  journal =      jair,
+  year =         "2006",
+  volume =       "26",
+  pages =        "453--541"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{hatzack-nebel:ecp-2001,
+  author =       "Wolfgang Hatzack and Bernhard Nebel",
+  title =        "The Operational Traffic Control Problem:
+                  Computational Complexity and Solutions",
+  pages =        "49--60",
+  crossref =     "ecp2001"
+}
+
+% Data verified.
+% TODO: Get postscript.
+@InProceedings{edelkamp:ecp-2001,
+  author =       "Stefan Edelkamp",
+  title =        "Planning with Pattern Databases",
+  pages =        "13--24",
+  crossref =     "ecp2001"
+}
+
+% Data verified.
+@TechReport{goertz:tr-2006,
+  author =       "Inge Li G{\o}rtz",
+  title =        "Hardness of Preemptive Finite Capacity Dial-a-Ride",
+  institution =  "Syddansk Universitet",
+  type =         "IMADA Preprints",
+  number =       "4",
+  year =         "2006"
+}
+
+% Data verified.
+@Article{andrews-zhang:jcss-2006,
+  author =       "Matthew Andrews and Lisa Zhang",
+  title =        "Minimizing Maximum Fiber Requirement in Optical Networks",
+  journal =      "Journal of Computer and Systems Sciences",
+  year =         "2006",
+  volume =       "72",
+  pages =        "118--131"
+}
+
+% Data verified.
+% DOI: 10.1109/INFCOM.2005.1497910
+@InProceedings{andrews-zhang:infocom-2005,
+  author =       "Matthew Andrews and Lisa Zhang",
+  title =        "Bounds on Fiber Minimization in Optical Networks
+                  with Fixed Fiber Capacity",
+  booktitle =    "Proceedings of the 24th Annual Joint Conference of
+                  the IEEE Computer and Communications Societies
+                  (INFOCOM 2005)",
+  editor =       "Kia Makki and Edward W. Knightly",
+  pages =        "409--419",
+  year =         "2005"
+}
+
+% Data verified.
+% DOI: 10.1109/FOCS.2004.32
+@InProceedings{andrews:focs-2004,
+  author =       "Matthew Andrews",
+  title =        "Hardness of Buy-at-Bulk Network Design",
+  booktitle =    "Proceedings of the 45th Annual IEEE Symposium on
+                  Foundations of Computer Science (FOCS 2004)",
+  pages =        "115--124",
+  year =         "2004"
+}
+
+% Data verified.
+% DOI: 10.1137/S0097539795295468
+@Article{chalasani-motwani:sicomp-1999,
+  author =       "Prasad Chalasani and Rajeev Motwani",
+  title =        "Approximating Capacitated Routing and Delivery Problems",
+  journal =      sicomp,
+  year =         "1999",
+  volume =       "28",
+  number =       "6",
+  pages =        "2133--2149"
+}
+
+% Data verified.
+@InProceedings{penberthy-weld:kr-1992,
+  author =       "J. Scott Penberthy and Daniel S. Weld",
+  title =        "{UCPOP}: A Sound, Complete, Partial Order Planner
+                  for {ADL}",
+  pages =        "103--114",
+  crossref =     "kr92"
+}
+
+% Data verified (http://portal.acm.org/citation.cfm?id=792302).
+% Available in hardcopy and probably as scanned PS/PDF.
+@InProceedings{crescenzi:ccc-1997,
+  author =       "Pierluigi Crescenzi",
+  title =        "A Short Guide To Approximation Preserving Reductions",
+  booktitle =    "Proceedings of the 12th Annual IEEE Conference on
+                  Computational Complexity (CCC'97)",
+  pages =        "262--273",
+  year =         "1997"
+}
+
+% Data from ACM portal:
+% - http://portal.acm.org/citation.cfm?id=290180
+@Article{arora-jacm98,
+  author =       "Sanjeev Arora",
+  title  =       "Polynomial Time Approximation Schemes for {E}uclidean
+                  Traveling Salesman and other Geometric Problems",
+  journal =      jacm,
+  year =         "1998",
+  volume =       "45",
+  number =       "5",
+  pages =        "753--782",
+  printout =     "yes"
+}
+
+% Data from first author.
+@TechReport{gerevini-schubert:tr-2005,
+  author =       "Alfonso Gerevini and Lenhart Schubert",
+  title =        "Discovering State Constraints for Planning: {DISCOPLAN}",
+  institution =  "Department of Electronics for Automation, University of Brescia",
+  number =       "2005-09-48",
+  year =         "2005"
+}
+
+% Data from Strathclyde Planning Group webpage.
+@InProceedings{cresswell-et-al:aips02ws,
+  author =       "Stephen Cresswell and Maria Fox and Derek Long",
+  title =        "Extending {TIM} Domain Analysis to Handle {ADL}
+                  Constructs",
+  booktitle =    "AIPS '02 Workshop on Knowledge Engineering Tools and
+                  Techniques for A.I. Planning",
+  year =         "2002"
+}
+
+% Data taken from author's homepage.
+% TODO: Get postscript.
+@PhdThesis{rintanen:habilitation-2005,
+  author =       "Jussi Rintanen",
+  title =        "Planning: Algorithms and Complexity",
+  school =       "Albert-Ludwigs-Universit{\"a}t Freiburg",
+  year =         "2005",
+  type =         "Habilitation thesis"
+}
+
+% Data taken from second author's homepage.
+% page numbers deduced from page numbers and lengths of surrounding papers.
+% TODO: Get postscript.
+@InProceedings{brafman-domshlak:aaai-2006,
+  author =       "Ronen I. Brafman and Carmel Domshlak",
+  title =        "Factored Planning: How, When and When Not",
+  pages =        "809--814",
+  crossref  =    "aaai2006"
+}
+
+% Data verified.
+@PhdThesis{helmert:phd-2006,
+  author =       "Malte Helmert",
+  title =        "Solving Planning Tasks in Theory and Practice",
+  school =       "Albert-Ludwigs-Universit{\"a}t Freiburg",
+  year =         "2006"
+}
+
+@InProceedings{haslum-et-al:aaai-2007,
+  author =       "Patrik Haslum and Adi Botea and Malte Helmert and
+                  Blai Bonet and Sven Koenig",
+  title = 	 "Domain-Independent Construction of Pattern Database
+                  Heuristics for Cost-Optimal Planning",
+  crossref =     "aaai2007",
+  pages =        "1007--1012"
+}
+
+@InProceedings{helmert-et-al:icaps-2007,
+  author =       "Malte Helmert and Patrik Haslum and J{\"o}rg Hoffmann",
+  title = 	 "Flexible Abstraction Heuristics for Optimal Sequential
+                  Planning",
+  crossref =     "icaps2007",
+  pages =        "176--183"
+}
+
+@InProceedings{benton-et-al:icaps-2007,
+  author =       "J. Benton and Menkes {van den Briel} and Subbarao Kambhampati",
+  title = 	 "A Hybrid Linear Programming and Relaxed Plan
+                  Heuristic for Partial Satisfaction Planning Problems",
+  crossref =     "icaps2007",
+  pages =        "34--41"
+}
+
+% Data taken from DBLP.
+@InProceedings{van-den-briel-et-al:cp-2007,
+  author =       "Menkes {van den Briel} and J. Benton and Subbarao
+                  Kambhampati and Thomas Vossen",
+  title = 	 "An {LP}-Based Heuristic for Optimal Planning",
+  crossref =     "cp2007",
+  pages =        "651--665"
+}
+
+% Data taken from DBLP.
+@InProceedings{chen-et-al:ijcai-2007,
+  author =       "Yixin Chen and Xing Zhao and Weixiong Zhang",
+  title =        "Long-Distance Mutual Exclusion for Propositional Planning",
+  pages =        "1840--1845",
+  crossref =     "ijcai2007"
+}
+
+% Data taken from Bernhard's proceedings.
+@InProceedings{pednault:kr-1989,
+  author =       "Edwin P. D. Pednault",
+  title =        "{ADL}: {E}xploring the Middle Ground between
+                  {STRIPS} and the Situation Calculus",
+  pages =        "324--332",
+  crossref =     "kr1989"
+}
+
+% Data taken from Alfonso's homepage.
+@TechReport{gerevini-long:tr-2005,
+  author =       "Alfonso Gerevini and Derek Long",
+  title =        "Plan Constraints and Preferences in {PDDL3}",
+  institution =  "Dipartimento di Elettronica per l'Automazione,
+                  Universit\'a degli Studi di Brescia",
+  number =       "R.\,T.\ 2005-08-47",
+  year = 	 "2005"
+}
+
+% Data taken from Ebbinghaus's web page.
+@Book{ebbinghaus-et-al:1994,
+    author =     "Heinz-Dieter Ebbinghaus and J{\"o}rg Flum and
+                  Wolfgang Thomas",
+    title =      "Mathematical Logic",
+    edition =    "2nd",
+    publisher =  "Springer-Verlag",
+    year =       "1994"
+}
