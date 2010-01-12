@@ -1136,7 +1136,7 @@ The 3S fragment has the following properties:
   title =        "{PSPACE}-Completeness of Sliding-Block Puzzles and
                   Other Problems through the Nondeterministic
                   Constraint Logic Model of Computation",
-  journal =      "Theoretical Computer Science",
+  journal =      tcs,
   year =         "2005",
   volume =       "343",
   number =       "1--2",
@@ -2256,6 +2256,11 @@ solutions).
   crossref =     "aaai1996",
 }
 
+%% Both of the following articles discuss why averaging over
+%% clairvoyancy doesn't converge to optimal play in Bridge.
+%% The AIJ 1998 paper looks like a better historical reference,
+%% while the TCS 2001 paper looks more comprehensive.
+
 @Article{frank-basin:aij-1998,
   author =       "Ian Frank and David A. Basin",
   title =        "Search in Games With Incomplete Information: {A} Case Study
@@ -2266,6 +2271,19 @@ solutions).
   number =       "1--2",
   pages =        "87--123"
 }
+
+%% Data taken from DBLP.
+@Article{frank-basin:tcs-2001,
+  author =       "Ian Frank and David A. Basin",
+  title =        "A theoretical and empirical investigation of search
+                  in imperfect information games",
+  journal =      tcs,
+  year =         "2001",
+  volume =       "252",
+  number =       "1--2",
+  pages =        "217--256"
+}
+
 
 @Book{fudenberg-tirole:1991,
   author =       "Drew Fudenberg and Jean Tirole",
@@ -3231,7 +3249,7 @@ solutions).
 % From my own homepage.
 @InProceedings{kupferschmid-helmert:cg-2006,
   author =      "Sebastian Kupferschmid and Malte Helmert",
-  title =       "A {Skat} Player Based on Monte Carlo Simulation",
+  title =       "A {Skat} Player Based on {Monte} {Carlo} Simulation",
   booktitle =   "Proceedings of the Fifth International Conference on
                  Computers and Games (CG 2006)",
   year =        "2006",
@@ -3546,4 +3564,23 @@ solutions).
   title =        "Bandit Based {Monte}-{Carlo} Planning",
   crossref =     "ecml2006",
   pages =        "282--293"
+}
+
+% Data verified.
+@InProceedings{bjarnason-et-al:icaps-2009,
+  author =       "Ronald Bjarnason and Alan Fern and Prasad Tadepalli",
+  title =        "Lower Bounding Klondike Solitaire with {Monte}-{Carlo}
+                  Planning",
+  crossref =     "icaps2009",
+  pages =        "26--33"
+}
+
+% Data based on DBLP, with author's first name ("Sungwook") adapted
+% from the actual paper.
+@InProceedings{yoon-et-al:aaai-2008,
+  author =       "Sungwook Yoon and Alan Fern and Robert Givan and
+                  Subbarao Kambhampati",
+  title =        "Probabilistic Planning via Determinization in Hindsight",
+  pages =        "1010--1016",
+  crossref =     "aaai2008"
 }
