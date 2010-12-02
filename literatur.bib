@@ -56,7 +56,8 @@
   volume =       "68",
   number =       "2",
   pages =        "243--302",
-  year =         "1994"
+  year =         "1994",
+  keywords =     "has-annotation"
 }
 
 % Data taken from Prof. Nebel's article from Cyprus and citeseer.
@@ -81,7 +82,8 @@
   volume =       "71",
   number =       "1",
   pages =        "43--100",
-  year =         "1994"
+  year =         "1994",
+  keywords =     "has-annotation"
 }
 
 % Data taken from the postscript and Saarbruecken bib index.
@@ -126,46 +128,9 @@
   year =         "1995",
   volume =       "11",
   number =       "4",
-  pages =        "625--655"
+  pages =        "625--655",
+  keywords =     "has-annotation"
 }
-
-Discusses the complexity of planning in the SAS+ formalism, which is
-different from propositional STRIPS in allowing non-binary state
-variables. The paper discusses four restrictions to general SAS+
-planning (which has the same complexity as propositional STRIPS):
-
-- postuniqueness (P): For each variable/value pair, there is at most
-  one operator with this pair as an effect.
-- unariness (U): Each operator has only one effect.
-- binariness (B): All state variables are binary.
-- single-valuedness (S): For all variables, there is a dedicated value
-  such that all operators that have a precondition but no effect on
-  this variable have that value as a precondition (and not another
-  one).
-
-The authors show that restrictions PUS allow optimal planning in
-polynomial time and restrictions US allow non-optimal planning in
-polynomial time. These are minimal restrictions with these properties
-(if P != NP), and they are the only minimal ones. (In some cases, this
-is due to hardness proofs, in other cases due to exponential length
-shortest plans).
-
-Notes:
-* For some problems (those between P and PUB/PBS), complexity of
-  plan existence is open, but shortest plans can be exponentially
-  long, so this is not so relevant.
-* Unariness is related to causal graphs: It is necessary for
-  acyclicity. Acyclicity could be studied instead.
-* Postuniqueness is related to domain transition graphs: It means that
-  the reachable part of each DTG is a directed tree or a cycle.
-  Other restrictions on DTG shape could be studied instead (in fact,
-  acyclic DTGs have been studied by Bäckström and Jonsson.)
-* Single-valuedness could be generalized by requiring a strict or
-  non-strict total or partial order among values such that for any two
-  values d < d', if there is an operator with precondition v=d', then
-  there is a similar operator with precondition v=d. (Think of fuel
-  levels.)
-
 
 %%% Recent conference articles (1997-)
 %%%   Ordered by year. Within the same year, the order is
@@ -187,38 +152,9 @@ Notes:
   author =       "Brian C. Williams and P. Pandurang Nayak",
   title =        "A Reactive Planner for a Model-based Executive",
   pages =        "1178--1195",
-  crossref =     "ijcai97"
+  crossref =     "ijcai97",
+  keywords =     "has-annotation"
 }
-
-Discusses a planning model that is related to SAS+ planning (although
-there are a few differences motivated by the application domain, which
-is reactive control of physical devices). The paper shows that in
-unary SAS+-like domains with acyclic causal graphs and reversible
-operators (i.e., for each operator that sets v from d to d', there is
-an operator with identical preconditions that sets v from d' to d),
-incremental planning with polynomial delay is possible. The authors
-also note that in acyclic graphs, problems are always easily
-serializable (compare Korf's work).
-
-Williams' and Nayak's restrictions are obviously related to SAS+
-planning with acyclic causal graphs and strongly connected domain
-transition graphs. Reversibility means that DTGs are undirected, so it
-is a stronger condition than strong connectedness (at least if we
-limit DTGs to their reachable values, which is reasonable).
-
-As in Jonsson and Bäckström's work (jonsson-backstrom:amai98),
-generated plans can be exponentially long, however, even though
-Williams and Nayak do not discuss this. Therefore, the question
-whether there exist polynomial-delay approximation algorithms for plan
-generation with polynomially bounded performance ratio in this setting
-remains open.
-
-Idea: Work on this topic. The appropriate notions (polynomial delay
-and polynomial bound on performance ratio) are interesting and extend
-the standard approximation complexity notions which do not really
-apply to exponentially-sized solutions. The questions have been
-scratched by various people (Williams, Nayak, Jonsson, Bäckström,
-Nebel), but never answered. The problems are interesting.
 
 % Data verified.
 @InProceedings{bonet-et-al:aaai-1997,
@@ -226,7 +162,7 @@ Nebel), but never answered. The problems are interesting.
   title =        "A Robust and Fast Action Selection Mechanism for Planning",
   pages =        "714--719",
   crossref =     "aaai1997"
-} 
+}
 
 % Data taken from first author's homepage.
 @InProceedings{gerevini-schubert:aaai-1998,
@@ -362,52 +298,9 @@ Nebel), but never answered. The problems are interesting.
   author =       "Carmel Domshlak and Yefim Dinitz",
   title =        "Multi-Agent Off-line Coordination: {S}tructure and Complexity",
   pages =        "277--288",
-  crossref =     "ecp2001"
+  crossref =     "ecp2001",
+  keywords =     "has-annotation"
 }
-
-Discusses a problem which is very much like unary SAS+ planning, with
-only a few, mostly unimportant differences (completely defined goal
-state). The problem is called "STS" for "state-transition support";
-the idea is that the state variables are agents, e.g. in a military
-scenario, that require support from other agents to achieve some of
-their state transitions (preconditions on operators that change the
-value of that agent's variable).
-
-The paper uses domain transition graphs (as "strategy graphs")
-and causal graphs (as "dependence graphs") as central notions; it
-analyses the complexity of the plan existence problem for various
-causal graph shapes and some problem variants.
-
-In the central problem considered by the authors, *all* transitions
-must depend on *all* causal predecessors of that variable; this
-requirement can be compiled away by "multiplying out" transitions iff
-the causal graph indegrees are bounded. We call this the "fully
-defined preconditions" (FDP) case.
-
-The results are as follows:
-* polynomial cases:
-  - Causal graph is a chain with a constant number of variables
-    (Obvious; the state space is polynomial then. This should extend
-    to other causal graph shapes with a constant number of variables.)
-  - The causal graph is a star with one high-level variable and n
-    low-level variables (with FDP requirement).
-* NP-complete cases:
-  - Causal graph is a star with one high-level variable and n
-    low-level variables (without FDP requirement).
-  - Causal graph is a chain with two variables (in other words, any
-    causal graph with any kind of dependency!) and the additional
-    requirement that no variable may revisit the same value.
-* intractable cases (exponentially long solutions):
-  - Causal graph is a chain with an unbounded number of variables.
-    The result already holds for variables with three-valued domains
-    (it does *not* hold for binary domains, where the problem is
-    NP-complete; cf. the result for singly connected DAGs in
-    brafman-domshlak:jair-2003).
-
-The authors also consider a variant where the set of *value sequences*
-(rather than values) for each variable is polynomially bounded. In
-this case, they get polynomiality for polytree causal graphs and
-NP-completeness for singly connected DAG causal graphs.
 
 % Data verified (from preprints).
 % Postscript available.
@@ -546,11 +439,11 @@ NP-completeness for singly connected DAG causal graphs.
 }
 
 @InProceedings{blum-furst:ijcai-1995,
- author =         "Avrim Blum and Merrick L. Furst", 
- title =          "Fast Planning Through Planning Graph Analysis", 
+ author =         "Avrim Blum and Merrick L. Furst",
+ title =          "Fast Planning Through Planning Graph Analysis",
  pages =          "1636--1642",
  crossref =       "ijcai1995"
-} 
+}
 
 % Data verified.
 @Article{jonsson-backstrom:aij-1998,
@@ -561,48 +454,9 @@ NP-completeness for singly connected DAG causal graphs.
   year =         "1998",
   volume =       "100",
   number =       "1--2",
-  pages =        "125--176"
+  pages =        "125--176",
+  keywords =     "has-annotation"
 }
-
-Studies a subclass of SAS+ planning that allows for tractable plan
-generation, named SAS+-IAO. The "IAO" restrictions are less strict
-than the previously studied "PUS" restrictions (all PUS tasks are IAO
-tasks), so this is a generalization of an earlier result.
-
-The paper introduces domain transition graphs, and interestingly, the
-IAO conditions are mostly about properties of domain transition graphs
-(the "I" property requires "almost unariness" of the task). Unlike
-other tractability results, the DTGs are mostly required to be
-*sparse* (rather than, e.g., strongly connected); the intuition is
-that non-undoable choices need not be backtracked if there is no
-choice of operators.
-
-The paper also contains a complete complexity map for plan generation
-with the old SAS restrictions P, U, B and S and new restrictions I,
-A-, A, A+, and O. (Plan *existence* is not studied; exponential length
-shortest solution are enough evidence for a subclass to be "hard".)
-Unlike the rest of the paper, the base formalism is "SAS*", not SAS+.
-The difference is that the initial state may not contain unknown
-values and there may not be postconditions without preconditions on
-that variable. (This only makes a real difference compared to SAS+ in
-the context of some of the restrictions.)
-
-The complexity part shows that the IAO algorithm is actually optimal
-(or can be made optimal) and can even be generalized to IA-O. It is
-shown that IA-O is a unique maximal tractable subclass for optimal
-planning in SAS*, and that the maximal tractable subclasses for
-non-optimal planning in SAS* are IA-O and US (note that US implies IA
-and A implies A-, so the main difference is the absence of O).
-
-(Note on the lattice in Fig. 14: The lattice is somewhat misleading.
-With regarded to optimal plan generation, it would seem from the
-lattice that there are three maximal tractable subclasses:
-PA, IA-O, and ISO. However, S implies A- (so that ISO implies IA-O),
-P implies O, PA implies I and A implies A- (so that PA also implies
-IA-O). Thus, IA-O is a unique maximal tractable subclass for optimal
-plan generation. For non-optimal plan generation, the additional
-maximal tractable subclass US is easily seen on the lattice.)
-
 
 % Data taken from the first author's homepage.
 @Article{fox-long:jair-1998,
@@ -623,51 +477,9 @@ maximal tractable subclass US is easily seen on the lattice.)
   year =         "1998",
   volume =       "22",
   number =       "3",
-  pages =        "281--296"
+  pages =        "281--296",
+  keywords =     "has-annotation"
 }
-
-Extended version of jonsson-backstrom:amai98. Discusses a tractable
-(for a given definition of "tractable", see below) fragment of
-propositional STRIPS called "3S". The base formalism is STRIPS with
-negation. The paper introduces causal graphs under the name
-"dependency graphs", and using different kinds of arcs for different
-kinds of dependency (negative preconditions, positive preconditions,
-co-effects). (Knoblock is acknowledged for using the same concept
-earlier in a more restricted form.)
-
-The "3S" fragment is defined as follows:
-* The dependency graph is acyclic (this implies unariness of
-  operators).
-* Every atom has one of the following three properties:
-  - static: not used within an effect
-    (or it is easy to prove that it should never change value, e.g. if
-    it is initially true, needs to be true, and there are only deleting
-    operators, no adding operators).
-  - symmetrically reversible: For each operator that adds it there is
-    an operator with identical preconditions that deletes it, and vice
-    versa.
-  - splitting: Removing the variable from the dependency graph
-    disconnects the "positive precondition successors" from the
-    "negative precondition successors", with respect to weak
-    connectivity (i.e. disregarding arc directions).
-
-Observe that symmetric reversibility of atoms is related to strong
-connectivity of domain transition graphs. Splitting allows
-partitioning a planning problem into several independent parts.
-
-The 3S fragment has the following properties:
-- Plan existence is polynomial.
-- Bounded plan existence is NP-hard.
-- Plan generation is intractable because there are problems with
-  exponentially long solutions.
-- There exists an incremental planning algorithm with polynomial
-  delay, i.e., the algorithm decides plan existence in polynomial time
-  and then generates a plan step by step, taking polynomial time
-  between steps. However, the generated solution may be exponentially
-  long even though polynomial solutions might exist, so this is not
-  necessarily a polynomial approximation algorithm. (Jonsson and
-  Bäckström do not give an example of this and only state that this
-  problem might exist.)
 
 % Data verified.
 @Article{mcdermott:aij-1999,
@@ -881,11 +693,11 @@ The 3S fragment has the following properties:
 
 % Data verified.
 % Available from the library and/or Bernhard.
-@Book{garey-johnson:1979, 
-    author =     "Michael R. Garey and David S. Johnson", 
+@Book{garey-johnson:1979,
+    author =     "Michael R. Garey and David S. Johnson",
     title =      "Computers and Intractability --- {A} Guide to the
                   Theory of NP-Completeness",
-    publisher =  "Freeman", 
+    publisher =  "Freeman",
     year =       "1979"
 }
 
@@ -940,7 +752,7 @@ The 3S fragment has the following properties:
   title =        "Artificial {I}ntelligence --- {A} Modern Approach",
   publisher =    "Prentice Hall",
   year =         "1995"
-}  
+}
 
 % Data verified. This is the second edition.
 @Book{russell-norvig:2003,
@@ -948,7 +760,7 @@ The 3S fragment has the following properties:
   title =        "Artificial {I}ntelligence --- {A} Modern Approach",
   publisher =    "Prentice Hall",
   year =         "2003"
-}  
+}
 
 %%% Stuff
 
@@ -1156,50 +968,9 @@ The 3S fragment has the following properties:
   title =        "Abstraction in Planning",
   pages =        "213--283",
   chapter =      "4",
-  crossref =     "allen-et-al:1991"
+  crossref =     "allen-et-al:1991",
+  keywords =     "has-annotation"
 }
-
-Tenenberg defines abstractions as mappings from planning tasks to
-planning tasks. The paper discusses two (actually, three) general
-properties of abstractions of planning tasks, and gives examples for
-them:
-
-* Downward Solution Property: Every abstract solution is refinable
-  through an operator-by-operator specialization to a concrete
-  solution. "Operator by operator" actually means that every single
-  abstract operator corresponds to a single concrete operator in the
-  plan, so abstract operators are *not* "macro" operators. Example:
-  Actions such as "slice mushroom with chef knife" and "dice ham with
-  cleaver" are abstracted to "turn food to pieces".
-
-  The example of an abstraction with that property is "inheritance
-  abstraction", where specialized predicates such as "mushroom" and
-  "meat" are generalized to abstract predicates like "food", and
-  operators are generalized accordingly.
-
-  Tenenberg gives a formal account of when inheritance abstraction
-  satisfies the downward solution property; in general, it does not
-  satisfy the upward solution property.
-
-* Upward Solution Property: Whenever a concrete solution exists, there
-  also exists an abstract solution.
-
-  The example of an abstraction with that property is "abstraction
-  with relaxed models", where several layered abstractions are
-  produced by eliminating more and more predicates from consideration.
-
-  Tenenberg shows how the predicates to eliminate may be chosen (the
-  choice cannot be arbitrary in his formalism due to complications
-  arising in the presence of domain axioms) and shows that this
-  abstraction also satisfies the stricter "monotonicity property": The
-  abstract plans can be refined to concrete plans by only inserting
-  actions in certain locations, not removing or reordering any
-  actions. (The set of actions in the original and abstract problems
-  are identical.) This provides a formal background for earlier work
-  on ABSTRIPS.
-
-  Abstraction with relaxed models does not satisfy the downward
-  solution property in general.
 
 @Book{allen-et-al:1991,
   author =       "James F. Allen and Henry A. Kautz and Richard N.
@@ -1222,218 +993,9 @@ them:
   volume =       "41",
   number =       "1",
   pages =        "97--106",
-  note =         "Research Note"
+  note =         "Research Note",
+  keywords =     "has-annotation"
 }
-
-The authors provide a formal definition of "nonlinear" planning
-problems. Nonlinear planning problems are planning problems with a set
-of conjunctive goals such that no goal ordering is possible. "Goal
-ordering" means committing to a certain total order on the set of
-goals, such that goals appearing early in the order are subjected to
-"goal protection": If we are in the state where the first K goals are
-satisfied, we are not allowed to violate any of them. (We *are*,
-however, allowed to violate goal K+2 even if it is satisfied, provided
-that goal K+1 is not currently satisfied.
-
-Planners that commit to a goal ordering and use goal protection are
-called "linear planners". They cannot solve non-linear problems.
-
-The authors formalize the notion by means of state transition graphs,
-and in particular the subgraphs induced by the set of states in which
-a given goal holds. Problems may arise if these subgraphs contain
-several connected components, because then the planner may commit
-itself to the "wrong" connected component and then never leave it due
-to goal protection.
-
-They provide two examples of such planning problems, one being
-Sussman's anomaly in blocksworld, and the other being a robot motion
-planning problem involving pushing a box and closing a door.
-
-Notes:
-- Korf:aij-1987 observes that the non-linearity in Sussman's anomaly
-  depends on how exactly the goal is formalized; it goes away if
-  having a certain block on the table is declared an explicit goal.
-- "Non-linearity" is related to (the opposite of) Korf's notion of
-  "serializability", although there are some differences. Korf goes
-  further and defines serializability also for a set of subgoals,
-  rather than all subgoals. In his words, "a set of subgoals [is]
-  serializable if there exists an ordering among the subgoals such
-  that the subgoals can always be solved sequentially without ever
-  violating a previously solved subgoal in the order." (Korf:aij-1987,
-  p. 71) One key difference here is the "always": later on, Korf makes
-  it clear that he requires *all* subplans that satisfy the first
-  goals to be extendable to the others, unlike Joslin and Roach: "In
-  terms of our definition of a subgoal as a set of states, this means
-  that for every state in a subgoal set, there exists a path into the
-  next smaller subgoal set that lies entirely within the original
-  subgoal set." (p.71).
-- Joslin & Roach state that "a sufficient condition for goal ordering
-  is that, for the given order, the subgraph for the conjunction of
-  the first N + 1 subgoals is fully contained in the subgraph for the
-  first N subgoals" (p. 104). This is clearly wrong; the subgraph for
-  the *conjunction* will always be contained in the subgraphs for the
-  conjuncts. So something else is probably meant.
-
-Ideas:
-- There are several possible notions of "linearity" or serializability
-  that should probably be distinguished. (Apparently this is not done
-  in the literature.) There are at least two different axes for
-  classification here: whether or not *all* subgoal-achieving paths
-  must be extendable to a subgoal-protecting, goal-achieving path
-  (required by Korf, but not by Joslin & Roach), and whether the
-  existence of *one* goal ordering is good enough (required by Korf
-  and by Joslin & Roach) or *all* goal orderings should work. Problems
-  for which *some* serialization exists might be called "weakly
-  serializable", ones for which *any* serialization will do might be
-  called "strongly serializable". Or maybe these terms are better used
-  for the some path/all paths distinction. (Might be able to formalize
-  this in LTL?)
-- Both notions can be easily expressed through properties of (the
-  intersections of) subgraphs induced by individual goals.
-- Landmarks can probably also be integrated in this framework. (Have a
-  look at Jörg's work?)
-- There might be easily checkable sufficient criteria for (weak or
-  strong) serializability in the SAS+ world that apply to some of the
-  standard benchmarks.
-
-
-on knoblock-abstractions:
-
-This is the seminal work on the topic. It abstracts STRIPS-style
-planning domains by removing certain literals from the domain (i.e.
-from preconditions, effects, initial state and goal). A sequence of
-such abstraction is called an abstraction hierarchy.
-
-It introduces the "ordered monotonicity property" (OMP) (p. 246):
-"For all abstract plans, all refinements of those plans leave the
-literals established in the abstract space unchanged."
-This does not guarantee that a given abstract plan can be refined, but
-it does guarantee that if they can, then they can be refined in a
-certain way. Knoblock formalizes what "refinement" is, his notion
-capturing that mere replanning at each level of abstraction does not
-constitute refinement.
-
-Knoblock gives sufficient conditions for satisfying the OMP in a given
-domain and in a task of a given domain. The former (Restriction 2.7,
-p. 254) is equivalent to the condition that in no abstraction, there
-is a path in the causal graph from a variable present in the
-abstraction to a variable not present in the abstraction. The latter
-(Restriction 2.10, p. 255) is roughly equivalent to the same property,
-but only considering the subgraph of the causal graph that consists of
-those variables from which goal variables can be reached.
-
-Knoblock presents an algorithm for automatically creating an
-abstraction hierarchy (Table 3, p. 259). This is very similar to Fast
-Downward's approach: First generate the causal graph (Knoblock doesn't
-give it a name, but it is the causal graph with the arc direction
-reversed), then partition it into strongly connected components,
-assigning a level in the hierarchy to each component, then order the
-components according to a topological search of the graph. The
-approach generates a perfect abstraction in (a certain formulation of)
-Towers of Hanoi.
-
-In addition to the "abstract" abstraction hierarchy generation
-algorithm, Knoblock also presents ALPINE, a system for generating such
-abstractions within a version of Prodigy modified to take into account
-hierarchies. (This is basically depth-first search; the representation
-language is STRIPS + axioms.) Knoblock shows that in two domains
-(extended STRIPS robot motion planning and machine-shop scheduling)
-Prodigy + ALPINE performs much better than Prodigy without ALPINE and
-that it is better than or competitive to some other approaches to
-improving Prodigy.
-
-ALPINE differs from the abstract algorithm in that it makes use of
-some extensions. These are to a major extent specific to the
-representation (e.g. the distinction between "primary" and "secondary"
-effects) and Prodigy's solution algorithm. For example, two of the
-three enhancements for avoiding arcs in the causal graph ((1) and (3),
-p. 268f) do not apply in Fast Downward's setting, the former because
-it does not arise in a grounded representation, the latter because it
-does not arise for unary operators.
-
-A main difference is that ALPINE doesn't work on a fully grounded
-representation (indeed, using such a representation is difficult in a
-purely propositional setting), but instead groups together some
-literals of the same predicate. (ALPINE doesn't group all literals of
-the same predicate together, but makes distinctions based on type.)
-This leads to some complications; e.g. in Towers of Hanoi,
-abstractions can only be found if discs of different size are assumed
-to be of different type.
-
-However, there might be some generally exploitable ideas within
-ALPINE's recursive construction of the causal graph (Table 7, p. 268)
-as well. It would probably be a good idea to explicitly reformulate
-the ordering constraints implicit in the algorithm. It should be
-possible to do that by defining a notion of causal graph that uses arc
-labels for different causalities (e.g. precondition to primary effect,
-secondary effect to primary effect, etc.) and defines possible
-abstractions in terms of properties of that graph.
-
-
-on bacchus-downward-refinement:
-
-The paper makes the following contributions:
-
-* Bacchus & Yang define the "Downward Refinement Property" (DRP):
-  "Every abstract solution can be refined to a concrete-level
-  solution."
-
-* They also analytically analyse the performance of depth-first
-  refinement planning with abstraction hierarchies both in the
-  presence of the DRP and in a relaxed setting where an abstract
-  solution is only refinable to the next level with a certain
-  probability p. They show that (under some assumptions, some of which
-  are quite limiting) abstraction can exponentially reduce the running
-  time. This is true both if the refinement probability is 1 and if it
-  is very small (in which case abstraction can allow proving very
-  quickly that no solution exists). The analysis is very well
-  executed.
-
-* They also provide an alternative ("semantic") definition of
-  monotonic refinement which is less involved than Knoblock's and
-  captures the idea of refinement equally well.
-
-* They provide a new criterion for refinability called "k-ary
-  necessary connectivity": Two levels of an abstraction hierarchy are
-  "k-ary connected" iff for any two operators that can be applied in
-  sequence in the higher level (i.e., it is possible for the
-  preconditions of the second to be satisfied after the first is
-  applied) and for which the second operator is made more concrete in
-  the lower level, there must be a plan for reaching the preconditions
-  of the second operator from the state where
-  - *only* the preserved preconditions and effects of the first
-    operator can be assumed to be true,
-  - *no* variable of a higher level of abstraction is changed, and
-  - the length of the plan is at most k.
-  (Note that the second condition is related to the causal graph being
-  acyclic.)
-
-* Because the DRP is rarely satisfied in practice, they present the
-  concept of "near-DRP" for hierarchies where the refinability
-  probability from one level to the next is at least 0.5 and
-  monotonically increases across levels.
-
-* Algorithmically, the paper presents Highpoint, an extension of
-  Alpine. Highpoint starts with a causal-graph like representation as
-  used by Alpine (Knoblock's Restriction 2.7, which essentially
-  defines inverted Causal Graphs, reappears as Definition 4.1), but
-  instead of choosing an arbitrary topological sorting of that graph,
-  Highpoint incorporates additional information.
-
-  Because it respects the Causal Graph, Highpoint always generates
-  hierarchies that satisfy the ordered monotonicity property. However,
-  instead of choosing an arbitrary such hierarchy, breaking ties
-  arbitrarily, it also tries to find a hierarchy that is "as near-DRP
-  as possible". It does that by probabilistically estimating an
-  approximation to k-ary connectedness. Moreover, it can *merge*
-  connected components in the causal graph if the estimated
-  refinability probability is too low.
-
-  The experimental evaluation shows that Highpoint outperforms "plain
-  Alpine" in a number of domains (robot motion planning, a computer
-  domain, and machine-shop scheduling) in many cases, in particular
-  when refinability probabilities are lowered below 1. The hierarchies
-  are evaluated within the AbTweak planner.
 
 % Data verified.
 % Available in printed form in Bernhard's office.
@@ -1444,66 +1006,9 @@ The paper makes the following contributions:
   year =         "1987",
   volume =       "33",
   number =       "1",
-  pages =        "65--88"
+  pages =        "65--88",
+  keywords =     "has-annotation"
 }
-
-Discusses the use of subgoals and macros for solving search problems.
-Contributions include:
-* Formalizations of subgoals as sets of states. Sequences of subgoals
-  are considered as monotonically decreasing; in planning lingo,
-  "subgoals" are conjunctions of individual goal literals with a
-  growing number of conjuncts.
-* The notion of "subgoal distance" as the maximal distance from a
-  state in one subgoal to the nearest state in another. The effects of
-  serial decomposition on runtime and solution length are analysed in
-  terms of subgoal distance and search space diameter.
-* The use and effect of abstractions, in particular abstractions using
-  macro operators.
-* Distinction between independent subgoals, serializable subgoals and
-  non-serializable subgoals. A sequence of subgoals is serializable if
-  for all states in all subgoals, the next subgoal is reachable
-  without leaving the subgoal.
-* Block-serializable subgoals: While individual subgoals may not be
-  serializable, they may be partitioned into blocks that are. Korf
-  gives a n^2-1 puzzle example.
-* Pathological subgoals: Subgoals with the property that states within
-  them have a *larger* average goal distance than random states. These
-  do occur in Rubik's Cube; the question is if these subgoals are
-  useful. They can still be useful because they limit the branching
-  factor of the search.
-* Macro actions: Korf discusses "total operator decomposability"
-  (present in Rubik's cube) and "serial operator decomposability"
-  (present in the Eight puzzle). Korf does not present an explicit
-  operator model, but it looks like he assumes precondition-free
-  operators which are defined by a set of conditional effects in a
-  SAS-like formalism. He also seems to assume that the state space is
-  "harmless", i.e., contains no dead ends.
-  The decomposability properties are then the following:
-  - Total decomposability:
-    Every operator effect is of the form "v = d => v := d'", i.e.,
-    only refers to the changed variable.
-  - Serial decomposability:
-    There is a total order among variables such that the condition of
-    an effect changing v only refers to variables ordered before v
-    (including v itself).
-  Note how serial decomposability is related to acyclicity of causal
-  graphs, if we do not include arcs between different effect variables
-  of an operator. This kind of causal graph definition allows for a
-  different kind of decomposition property than the stricter
-  definition: For each goal state, there exists a set of |V|*|D| macro
-  operators (where V are the variables and D is their domain) such
-  that the problem can be solved only using these operators, from any
-  state. (The idea is that there is one macro for setting v_1 to its
-  goal value for any current value of v_1, one for setting v_2 to its
-  goal value given that v_1 is initially at its goal value, etc.)
-  Korf provides these macros for the 8-puzzle.
-* Abstraction: Korf analyzes abstraction in general, showing how
-  one level of abstraction can reduce the complexity of the problem to
-  its square root, and how an optimal abstraction has ln N many levels
-  (note that the natural logarithm is better than logarithms to other
-  bases!). He also discusses the time/space trade-off of using
-  abstractions.
-
 
 % Data taken from the paper headings.
 @Article{brafman-domshlak:jair-2003,
@@ -1513,34 +1018,9 @@ Contributions include:
   journal =      jair,
   year =         "2003",
   volume =       "18",
-  pages =        "315--349"
+  pages =        "315--349",
+  keywords =     "has-annotation"
 }
-
-The paper discusses planning in the Propositional STRIPS with Negation
-(PSN) formalism restricted to unary operators. It uses causal graphs
-as a central distinguishing criterion for subclasses of the problem,
-and proves the following results:
-
-* With arbitrary acyclic DAGs, minimal plans can be exponentially
-  long. (The examples has a causal graph which is a total order.)
-* Plan existence for acyclic, singly connected causal graphs is
-  NP-complete (the NP membership proof in particular shows that plans
-  cannot be exponentially long!). Hardness already holds for indegrees
-  bounded by 6; for bounds lower than 6, the hardness question is
-  open.
-* In general, minimal plan length can be bounded by a function of the
-  *number of paths* in the causal graph.
-* For polytrees with bounded indegree, the authors present a
-  polynomial planning algorithm.
-
-Note: The problem for polytrees with unbounded indegree is open.
-
-The authors also provide some results regarding the complexity of
-planning with serializable subgoals. With acyclic causal graphs,
-planning problems are always serializable, but determining the actual
-serialization ordering can still be hard. Moreover, even when it is
-known, planning can be difficult (e.g. due to exponentially long
-solutions).
 
 @Article{koehler-hoffmann:jair-2000,
   author =       "Jana Koehler and J{\"o}rg Hoffmann",
@@ -1676,9 +1156,9 @@ solutions).
 
 % Data taken from DBLP.
 @InProceedings{korf:aaai-1997,
-  author =       "Richard E. Korf", 
+  author =       "Richard E. Korf",
   title =        "Finding Optimal Solutions to {Rubik}'s {Cube} Using
-                  Pattern Databases", 
+                  Pattern Databases",
   pages =        "700--705",
   crossref =     "aaai1997"
 }
@@ -2198,7 +1678,7 @@ solutions).
 % Data verified.
 @Book{pearl:1984,
   author =       "Judea Pearl",
-  title =        "Heuristics: {Intelligent} Search Strategies for 
+  title =        "Heuristics: {Intelligent} Search Strategies for
                   Computer Problem Solving",
   publisher =    "Addison-Wesley",
   year =         "1984"
@@ -2207,7 +1687,7 @@ solutions).
 % Data taken from AAAI website.
 @InProceedings{dinh-et-al:aaai-2007,
   author =       "Hang Dinh and Alexander Russell and Yuan Su",
-  title =        "On the Value of Good Advice: {T}he Complexity of 
+  title =        "On the Value of Good Advice: {T}he Complexity of
                   {A}${}^*$ Search with Accurate Heuristics",
   crossref =     "aaai2007",
   pages =        "1140--1145"
@@ -2337,7 +1817,7 @@ solutions).
 
 @MastersThesis{kupferschmid:diplomarbeit-2003,
   author = 	 "Sebastian Kupferschmid",
-  title = 	 "Entwicklung eines {Double} {Dummy} {Skat} {Solvers} --- 
+  title = 	 "Entwicklung eines {Double} {Dummy} {Skat} {Solvers} ---
                   mit einer {Anwendung} {f\"ur} verdeckte {Skatspiele}",
   school = 	 "Albert-Ludwigs-Universit{\"a}t Freiburg",
   year = 	 2003
@@ -2694,9 +2174,9 @@ solutions).
 % Page numbers taken from an email by Derek Long.
 @InProceedings{porteous-cresswell:plansig-2002,
   author =       "Julie Porteous and Stephen Cresswell",
-  title =        "Extending Landmarks Analysis to Reason about Resources 
+  title =        "Extending Landmarks Analysis to Reason about Resources
                   and Repetition",
-  booktitle =    "Proceedings of the 21st Workshop of the UK Planning and 
+  booktitle =    "Proceedings of the 21st Workshop of the UK Planning and
                   Scheduling Special Interest Group (PLANSIG '02)",
   year =         "2002",
   pages =        "45--54"
@@ -2782,7 +2262,7 @@ solutions).
 %       consistently for other books either.
 @Book{helmert:2008,
   author =       "Malte Helmert",
-  title =        "Understanding Planning Tasks -- 
+  title =        "Understanding Planning Tasks --
                   {Domain} Complexity and Heuristic Decomposition",
   series =       lnai,
   volume =       "4929",
@@ -2885,7 +2365,7 @@ solutions).
 % Data taken from DBLP.
 @InProceedings{erol-et-al:aaai-1994,
   author =      "Kutluhan Erol and James A. Hendler and Dana S. Nau",
-  title =       "{HTN} Planning: Complexity and Expressivity", 
+  title =       "{HTN} Planning: Complexity and Expressivity",
   crossref =    "aaai1994",
   pages =       "1123--1128"
 }
@@ -3015,7 +2495,7 @@ solutions).
     author =     "Jeffrey D. Ullman",
     title =      "Principles of Database and Knowledge-Base Systems.
                   {Volume} {I}: {Classical} Database Systems",
-    publisher =  "Computer Science Press", 
+    publisher =  "Computer Science Press",
     year =       "1988"
 }
 
@@ -3023,7 +2503,7 @@ solutions).
     author =     "Jeffrey D. Ullman",
     title =      "Principles of Database and Knowledge-Base Systems.
                   {Volume} {II}: {The} New Technologies",
-    publisher =  "Computer Science Press", 
+    publisher =  "Computer Science Press",
     year =       "1989"
 }
 
@@ -3098,11 +2578,11 @@ solutions).
 % NOTE: richter-westphal:jair-2010 is a better reference for LAMA.
 @Misc{richter-westphal:ipc-2008,
   author =       "Silvia Richter and Matthias Westphal",
-  title =        "The {LAMA} Planner --- {Using} Landmark Counting in 
+  title =        "The {LAMA} Planner --- {Using} Landmark Counting in
                   Heuristic Search",
   year =         "2008",
-  howpublished = "IPC 2008 short papers, 
-                  \url{http://ipc.informatik.uni-freiburg.de/Planners}"  
+  howpublished = "IPC 2008 short papers,
+                  \url{http://ipc.informatik.uni-freiburg.de/Planners}"
 }
 
 % NOTE: eyerich-et-al:icaps-2009 is a better reference for Temporal
@@ -3148,7 +2628,7 @@ solutions).
 
 % Data taken from DBLP.
 @InProceedings{baier-et-al:ijcai-2007,
-  author =       "Jorge A. Baier and Fahiem Bacchus and 
+  author =       "Jorge A. Baier and Fahiem Bacchus and
                   Sheila A. McIlraith",
   title = 	 "A Heuristic Search Approach to Planning with
                   Temporally Extended Preferences",
@@ -3306,7 +2786,7 @@ solutions).
   title =        "Limited Discrepancy Search",
   pages =        "607--615",
   crossref =     "ijcai1995"
-} 
+}
 
 % Data taken from DBLP.
 @InProceedings{clarke-et-al:cav-2000,
@@ -3377,7 +2857,7 @@ solutions).
 % Data verified.
 @InProceedings{helmert-domshlak:icaps-2009,
   author =       "Malte Helmert and Carmel Domshlak",
-  title =        "Landmarks, Critical Paths and Abstractions: 
+  title =        "Landmarks, Critical Paths and Abstractions:
                   {What's} the Difference Anyway?",
   pages =        "162--169",
   crossref =     "icaps2009"
@@ -3425,7 +2905,7 @@ solutions).
 
 @InProceedings{cai-et-al:icaps-2009,
   author =       "Dunbo Cai and J{\"o}rg Hoffmann and Malte Helmert",
-  title =        "Enhancing the Context-Enhanced Additive Heuristic 
+  title =        "Enhancing the Context-Enhanced Additive Heuristic
                   with Precedence Constraints",
   crossref =     "icaps2009",
   pages =        "50--57"
@@ -3740,7 +3220,7 @@ solutions).
 
 % Data taken from DBLP.
 @InProceedings{felner-et-al:ijcai-2005,
-  author =       "Ariel Felner and Uzi Zahavi and Jonathan Schaeffer and 
+  author =       "Ariel Felner and Uzi Zahavi and Jonathan Schaeffer and
                   Robert C. Holte",
   title =        "Dual Lookups in Pattern Databases",
   pages =        "103--108",
@@ -3751,7 +3231,7 @@ solutions).
 % not correct.
 % Data taken from DBLP.
 @Article{zahavi-et-al:aij-2008,
-  author =       "Uzi Zahavi and Ariel Felner and Robert C. Holte and 
+  author =       "Uzi Zahavi and Ariel Felner and Robert C. Holte and
                   Jonathan Schaeffer",
   title =        "Duality in Permutation State Spaces and the Dual Search
                   Algorithm",
