@@ -3,10 +3,7 @@
 % Sorted by key. When adding new entries, also add a short form
 % to crossref-short.bib
 %
-% Entries with editors are for papers that want to cite the actual
-% proceedings volume, not individual publications. In the non-short
-% crossref version, these use "Book", not "Proceedings" entries, but
-% we don't do that here since books require publishers to be given.
+% Do not cite directly. Instead, add a Book entry in literatur.bib
 
 
 @Proceedings{aaai1993,
@@ -290,16 +287,6 @@
   year      = "2009"
 }
 
-% Use this to cite the whole book and use reasoningaboutplans1991 as crossref.
-@Book{allen-et-al-1991,
-  author =       "James F. Allen and Henry A. Kautz and Richard N.
-                  Pelavin and Josh D. Tenenberg",
-  title =        "Reasoning About Plans",
-  publisher =    "Morgan Kaufmann",
-  year =         "1991",
-  address =      "San Mateo"
-}
-
 @Proceedings{atva2009,
   editor =       "Zhiming Liu and Anders P. Ravn",
   title =        "Proceedings of the 7th International Symposium on
@@ -310,48 +297,6 @@
   volume =       "5799",
   publisher =    "Springer-Verlag",
   year =         "2009"
-}
-
-% Use this to cite the whole proceedings.
-@Book{biundo-et-al-2005,
-  editor =       "Susanne Biundo and Karen Myers and Kanna Rajan",
-  title =        "Proceedings of the Fifteenth International Conference on
-                  Automated Planning and Scheduling ({ICAPS} 2005)",
-  publisher =    "AAAI Press",
-  address =      "Menlo Park, CA",
-  year =         "2005"
-}
-
-% Use this to cite the whole proceedings.
-@Book{biundo-fox-1999,
-  editor =       "Susanne Biundo and Maria Fox",
-  title =        "Recent Advances in {AI} Planning. 5th European
-                  Conference on Planning ({ECP} 1999)",
-  series =       lnai,
-  volume =       "1809",
-  publisher =    "Springer-Verlag",
-  address =      "Heidelberg",
-  year =         "1999"
-}
-
-% Use this to cite the whole proceedings.
-@Book{boddy-et-al-2007,
-  editor =       "Mark Boddy and Maria Fox and Sylvie Thi{\'e}baux",
-  title =        "Proceedings of the Seventeenth International Conference on
-                  Automated Planning and Scheduling (ICAPS 2007)",
-  publisher =    "AAAI Press",
-  address =      "Menlo Park, CA",
-  year =         "2007"
-}
-
-% Use this to cite the whole proceedings.
-@Book{borrajo-kambhampati-2013,
-  editor =       "Daniel Borrajo and Subbarao Kambhampati
-                  and Angelo Oddi and Simone Fratini",
-  title =        "Proceedings of the Twenty-Third International Conference on
-                  Automated Planning and Scheduling (ICAPS 2013)",
-  year =         "2013",
-  publisher =    "AAAI Press"
 }
 
 @Proceedings{cav1993,
@@ -382,30 +327,6 @@
   series    = lncs,
   volume    = "5123",
   year      = "2008"
-}
-
-% Use this to cite the whole proceedings.
-% (Use Proceedings, not Book as for similar entries, since this one
-% isn't properly published and hence has no publisher.
-% A Book requires a publisher.)
-@Proceedings{cesta-borrajo-2001,
-  editor =       "Amedeo Cesta and Daniel Borrajo",
-  title =        "Pre-proceedings of the Sixth European
-                  Conference on Planning ({ECP} 2001)",
-  address =      "Toledo, Spain",
-  year =         "2001",
-}
-
-% Use this to cite the whole proceedings.
-@Book{chien-et-al-2000,
-  editor =       "Steve Chien and Subbarao Kambhampati and Craig
-                  A. Knoblock",
-  title =        "Proceedings of the Fifth International Conference
-                  on Artificial Intelligence Planning and Scheduling
-                  ({AIPS} 2000)",
-  publisher =    "AAAI Press",
-  address =      "Menlo Park, CA",
-  year =         "2000"
 }
 
 @Proceedings{cocomile2012,
@@ -590,36 +511,6 @@
   series =       lncs,
   volume =       "1708",
   year =         "1999",
-}
-
-% Use this to cite the whole proceedings.
-@Book{ghallab-et-al-2002,
-  editor =       "Malik Ghallab and Joachim Hertzberg and Paolo Traverso",
-  title =        "Proceedings of the Sixth International Conference
-                  on Artificial Intelligence Planning and Scheduling
-                  ({AIPS} 2002)",
-  publisher =    "AAAI Press",
-  address =      "Menlo Park, CA",
-  year =         "2002"
-}
-
-% Use this to cite the whole proceedings.
-@Book{giunchiglia-et-al-2003,
-  editor =       "Enrico Giunchiglia and Nicola Muscettola and Dana Nau",
-  title =        "Proceedings of the Thirteenth International Conference on
-                  Automated Planning and Scheduling ({ICAPS} 2003)",
-  publisher =    "AAAI Press",
-  address =      "Menlo Park, CA",
-  year =         "2003"
-}
-
-% Use this to cite the whole proceedings.
-@Book{helmert-roeger-2013,
-  editor =       "Malte Helmert and Gabriele R{\"o}ger",
-  title =        "Proceedings of the Sixth Annual Symposium on Combinatorial
-                  Search (SoCS 2013)",
-  publisher =    "AAAI Press",
-  year =         "2013"
 }
 
 % Data based on DBLP.
@@ -1289,17 +1180,6 @@
   year =      "2012"
 }
 
-% Use this to cite the whole proceedings.
-@Book{long-et-al-2006,
-  editor =       "Derek Long and Stephen F. Smith and Daniel Borrajo
-                  and Lee McCluskey",
-  title =        "Proceedings of the Sixteenth International Conference on
-                  Automated Planning and Scheduling ({ICAPS} 2006)",
-  publisher =    "AAAI Press",
-  address =      "Menlo Park, CA",
-  year =         "2006"
-}
-
 @Proceedings{miwai2012,
   editor    = "Chattrakul Sombattheera and Nguyen Kim Loi and
                Rajeev Wankar and Tho T. Quan",
@@ -1413,16 +1293,6 @@
   publisher =    "Morgan Kaufmann",
   year =         "1991",
   address =      "San Mateo"
-}
-
-% Use this to cite the whole book and use lecturespetri1998 as crossref.
-@Book{reisig-rozenberg-1998,
-  editor =      "Wolfgang Reisig and Grzegorz Rozenberg",
-  title =       "Lectures on {Petri} Nets {I}: Basic Models",
-  publisher =   "Springer-Verlag",
-  series =      lncs,
-  volume =      "1491",
-  year =        "1998"
 }
 
 % Data based on DBLP, but changed LNCS to the correct LNAI (verified
@@ -1665,12 +1535,3 @@
   year =         "1991"
 }
 
-% Use this to cite the whole proceedings.
-@Book{zilberstein-et-al-2004,
-  editor =       "Shlomo Zilberstein and Jana Koehler and Sven Koenig",
-  title =        "Proceedings of the Fourteenth International Conference on
-                  Automated Planning and Scheduling ({ICAPS} 2004)",
-  publisher =    "AAAI Press",
-  address =      "Menlo Park, CA",
-  year =         "2004"
-}
