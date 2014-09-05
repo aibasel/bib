@@ -6,13 +6,14 @@
 % instead. We have the following convention for keys:
 % <authors>-<venue>
 %
-% For authors, if there are only two others, we write out both
-% names and connect them with -, if there are three or more,
-% we abbreviate firstauthor-et-al.
+
+% For authors, if there are only two, we write out both names and
+% connect them with -, if there are three or more, we abbreviate
+% firstauthor-et-al.
 %
 % For books, venue is only the year of publication, for conference
 % papers, this is the conference name together with the year, with
-% no seperator. For conference workshops, we append ws after the
+% no separator. For conference workshops, we append "ws" after the
 % year, possibly together with an abbreviation.
 %
 % Examples:
@@ -268,9 +269,23 @@
   year =         "2000",
 }
 
+@Article{backstrom-klein-compint1991,
+  author =       "Christer B{\"a}ckstr{\"o}m and Inger Klein",
+  title =        "Planning in polynomial time: the {SAS-PUBS} class",
+  journal =      compint,
+  year =         "1991",
+  volume =       "7",
+  number =       "3",
+  pages =        "181--197"
+}
+
 % Data from author's websites:
 % - http://www.informatik.uni-freiburg.de/~nebel/journals.html
 % - http://www.ida.liu.se/~chrba/publications/article.html
+%
+% TODO: This key should be renamed from "ci" to "compint" for
+% consistency with other keys. However, we don't currently have
+% a good way to globally change bib keys across papers.
 @Article{backstrom-nebel-ci1995,
   author =       "Christer B{\"a}ckstr{\"o}m and Bernhard Nebel",
   title =        "Complexity Results for {SAS$^{+}$} Planning",
@@ -1898,6 +1913,16 @@
   title =       "{HTN} Planning: Complexity and Expressivity",
   crossref =    "aaai1994",
   pages =       "1123--1128"
+}
+
+@Article{emerson-sistla-fmsd1996,
+  author =       "E. Allen Emerson and A. Prasad Sistla",
+  title =        "Symmetry and Model Checking",
+  journal =      "Formal Methods in System Design",
+  volume =       "9",
+  number =       "1--2",
+  year =         "1996",
+  pages =        "105--131"
 }
 
 % Data taken from Prof. Nebel's article from Cyprus and the first author's homepage.
@@ -5081,6 +5106,15 @@
   crossref =     "ecp2001"
 }
 
+@InProceedings{puget-ismis1993,
+  author =       "Jean-Fran\c{c}ois Puget",
+  title =        "On the Satisfiability of Symmetrical Constrained
+                  Satisfaction Problems",
+  pages =        "350--361",
+  booktitle =    "Proceedings of the 7th International Symposium on
+                  Methodologies for Intelligent Systems (ISMIS 1993)",
+  year =         "1993"
+}
 
 @InProceedings{qian-nymeyer-tacas2004,
   author =	 "Kairong Qian and Albert Nymeyer",
