@@ -16,7 +16,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get install texlive-latex-base
+        sudo apt-get install texlive-latex-recommended
 
     - name: Check bibtex files
       run: |
