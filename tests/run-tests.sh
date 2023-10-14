@@ -2,6 +2,8 @@
 
 set -euxo pipefail
 
+export BIBINPUTS=../
+
 function test() {
     prefix=${1}
 
