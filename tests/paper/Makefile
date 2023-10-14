@@ -19,7 +19,7 @@ test:
 	($(BIBTEX) -min-crossrefs=99 $(PREFIX) | grep "Warning--" | grep -v "Warning--to sort, need") && exit 1 || exit 0
 
 test-short:
-	$(LATEX) $(PREFIXSHORT).tex > /dev/null
+	$(LATEX) $(PREFIXSHORT).tex
 	($(BIBTEX) -min-crossrefs=99 $(PREFIXSHORT) | grep "Warning--" | grep -v "Warning--to sort, need") && exit 1 || exit 0
 
 clean:
