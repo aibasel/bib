@@ -2,8 +2,6 @@
 
 set -euxo pipefail
 
-export BIBINPUTS=../
-
 function test() {
     prefix=${1}
 
@@ -23,6 +21,7 @@ function test() {
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 cd paper
+export BIBINPUTS=../../
 test "paper"
 test "paper-short"
 echo "All tests passed."
