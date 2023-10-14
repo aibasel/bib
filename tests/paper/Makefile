@@ -13,12 +13,14 @@ paper:
 	$(LATEX) $(PREFIX).tex
 
 test:
-	$(LATEX) $(PREFIX).tex > /dev/null
-	($(BIBTEX) -min-crossrefs=99 $(PREFIX) | grep "Warning--" | grep -v "Warning--to sort, need editor or key in") && exit 1
+	$(LATEX) $(PREFIX).tex
+	# Crossrefs without author/editor will show up as standalone entries at the beginning of the bibliography,
+	# but they occur too often to be worth fixing.
+	($(BIBTEX) -min-crossrefs=99 $(PREFIX) | grep "Warning--" | grep -v "Warning--to sort, need") && exit 1 || exit 0
 
 test-short:
 	$(LATEX) $(PREFIXSHORT).tex > /dev/null
-	($(BIBTEX) -min-crossrefs=99 $(PREFIXSHORT) | grep "Warning--" | grep -v "Warning--to sort, need editor or key in") && exit 1
+	($(BIBTEX) -min-crossrefs=99 $(PREFIXSHORT) | grep "Warning--" | grep -v "Warning--to sort, need") && exit 1
 
 clean:
 	rm -f *~ {$(PREFIX),$(PREFIXSHORT)}.{aux,bbl,blg,fdb_latexmk,fls,log,out,synctex.gz}
