@@ -20,6 +20,4 @@ jobs:
 
     - name: Check bibtex files
       run: |
-        cd tests/paper
-        make test
-        make test-short
+        ./tests/run-tests.sh
