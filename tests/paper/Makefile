@@ -20,7 +20,7 @@ test:
 
 test-short:
 	$(LATEX) $(PREFIXSHORT).tex > /dev/null
-	($(BIBTEX) -min-crossrefs=99 $(PREFIXSHORT) | grep "Warning--" | grep -v "Warning--to sort, need") && exit 1
+	($(BIBTEX) -min-crossrefs=99 $(PREFIXSHORT) | grep "Warning--" | grep -v "Warning--to sort, need") && exit 1 || exit 0
 
 clean:
 	rm -f *~ {$(PREFIX),$(PREFIXSHORT)}.{aux,bbl,blg,fdb_latexmk,fls,log,out,synctex.gz}
