@@ -16,7 +16,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get install texlive-fonts-recommended texlive-latex-recommended
+        sudo apt-get -y install -qq texlive-fonts-recommended texlive-latex-recommended
 
     - name: Check bibtex files
       run: |
