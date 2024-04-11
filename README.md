@@ -17,7 +17,8 @@ Within the main paper file, use
     \bibliography{abbrv-short,literatur,crossref-short}  # short versions
     \bibliography{abbrv,extra,literatur,crossref}  # if some citations are in extra.bib
 
-To add the bibliography files to your paper repo, you can use the following Makefile target:
+To add the bibliography files to your paper repo, you can use the following Makefile target
+(remember to indent with tabs):
 
     update-bib:
         for name in {abbrv-short,abbrv,literatur,crossref-short,crossref}; do \
