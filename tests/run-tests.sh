@@ -18,11 +18,31 @@ function test() {
     (bibtex -min-crossrefs=99 ${prefix} | grep "Warning--" | grep -v "Warning--to sort, need") && return 1 || return 0
 }
 
+function check_sorted() {
+    name=${1}
+    ./sort.py ../${name}.bib ${name}-sorted.bib
+    # Exit with 1 if the sorted files are different.
+    diff  ../${name}.bib ${name}-sorted.bib
+    rm ${name}-sorted.bib
+}
+
 # Change into the directory of this script.
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+# Compile all citations in a paper.
 cd paper
 export BIBINPUTS=../../
 test "paper"
 test "paper-short"
+cd ../
+
+# Check that the bibliography files are sorted.
+check_sorted literatur
+check_sorted crossref
+check_sorted crossref-short
+
+# Run some basic checks on the bibliography files.
+./lint.py ../abbrv.bib ../literatur.bib ../crossref.bib
+./lint.py ../abbrv.bib ../literatur.bib ../crossref-short.bib
+
 echo "All tests passed."

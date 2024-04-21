@@ -33,3 +33,5 @@ You can run some basic tests on the bibliography files with
 
     ./tests/run-tests.sh
 
+See [README.md](tests/README.md) in the `tests` directory for setup instructions.
+
