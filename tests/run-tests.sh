@@ -5,6 +5,7 @@ set -euxo pipefail
 function test() {
     prefix=${1}
 
+    make clean
     pdflatex ${prefix}.tex
     echo
 
