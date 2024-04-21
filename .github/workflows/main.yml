@@ -22,4 +22,4 @@ jobs:
 
     - name: Check bibtex files
       run: |
-        ./run-tests.sh
+        ./tests/run-tests.sh
