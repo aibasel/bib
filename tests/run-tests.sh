@@ -41,4 +41,8 @@ check_sorted literatur
 check_sorted crossref
 check_sorted crossref-short
 
+# Run some basic checks on the bibliography files.
+./lint.py ../abbrv.bib ../literatur.bib ../crossref.bib
+./lint.py ../abbrv.bib ../literatur.bib ../crossref-short.bib
+
 echo "All tests passed."
