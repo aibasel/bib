@@ -11,6 +11,22 @@ BIBTYPES = [
     "Misc", "PhdThesis", "Proceedings", "TechReport", "Unpublished",
 ]
 
+FIELDS = [
+    "address",
+    "author",
+    "booktitle",
+    "crossref",
+    "editor",
+    "journal",
+    "number",
+    "pages",
+    "publisher",
+    "series",
+    "title",
+    "volume",
+    "year",
+]
+
 
 def fix_bibtex(input_file: str, output_file: str):
     with open(input_file, "r") as f:
@@ -19,6 +35,11 @@ def fix_bibtex(input_file: str, output_file: str):
     # Fix capitalization of BibTeX entry types.
     for typ in BIBTYPES:
         content = re.sub("@" + typ + "\\{", "@" + typ + "{", content, flags=re.IGNORECASE)
+
+    # Fix whitespace.
+    for field in FIELDS:
+        content = re.sub(r"^\s*" + field + r"\s*=\s*\"", f"  {field} = {' ' * (12 - len(field))}\"", content, flags=re.IGNORECASE | re.MULTILINE)
+    content = re.sub(r"^(\s*journal\s*=\s*)\b", f"  journal =      ", content, flags=re.IGNORECASE | re.MULTILINE)
 
     with open(output_file, "w") as f:
         f.write(content)
