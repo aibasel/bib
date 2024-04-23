@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-""""Order BibTeX entries by bibkey."""
+"""Order BibTeX entries by bibkey."""
 
 import argparse
 import operator
