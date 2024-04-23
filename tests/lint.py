@@ -21,9 +21,6 @@ def main():
 
     db = biblib.bib.resolve_crossrefs(db, min_crossrefs=999)
 
-    types = {entry.typ for entry in db.values()}
-    print(f"Found {len(db)} entries of types: {types}")
-
     num_errors = 0
     for entry in db.values():
 
@@ -54,8 +51,6 @@ def main():
 
     if num_errors:
         sys.exit(f"Found {num_errors} errors.")
-    else:
-        print("No errors found.")
 
 
 if __name__ == "__main__":

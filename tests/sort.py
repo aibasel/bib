@@ -41,7 +41,6 @@ def reorder_bibtex(input_file: str, output_file: str):
         content = f.read()
 
     entries_dict = extract_key_comment_entry(content)
-    print(f"Found {len(entries_dict)} entries.")
     sorted_entries = dict(sorted(entries_dict.items(), key=operator.itemgetter(0)))
 
     with open(output_file, "w") as f:
