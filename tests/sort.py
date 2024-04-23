@@ -44,10 +44,12 @@ def reorder_bibtex(input_file: str, output_file: str):
     sorted_entries = dict(sorted(entries_dict.items(), key=operator.itemgetter(0)))
 
     with open(output_file, "w") as f:
-        for key, (comment, entry) in sorted_entries.items():
+        for index, (key, (comment, entry)) in enumerate(sorted_entries.items()):
             if comment.strip():
                 f.write(f"{comment.strip()}\n")
-            f.write(f"{entry}\n")
+            f.write(entry)
+            if index < len(sorted_entries) - 1:
+                f.write("\n")
 
 
 if __name__ == "__main__":
