@@ -41,6 +41,10 @@ def fix_bibtex(input_file: str, output_file: str):
         content = re.sub(r"^\s*" + field + r"\s*=\s*\"", f"  {field} = {' ' * (12 - len(field))}\"", content, flags=re.IGNORECASE | re.MULTILINE)
     content = re.sub(r"^(\s*journal\s*=\s*)\b", f"  journal =      ", content, flags=re.IGNORECASE | re.MULTILINE)
 
+    for field in FIELDS:
+        for line in re.findall(r"^\s*" + field + r"\s*=\s*\{.*?$", content, flags=re.IGNORECASE | re.MULTILINE):
+            raise SystemExit(f"[error] use quotation marks instead of curly braces: {line}")
+
     with open(output_file, "w") as f:
         f.write(content)
 

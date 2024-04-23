@@ -1,6 +1,6 @@
 #! /bin/bash
 
-set -euxo pipefail
+set -euo pipefail
 
 # Change into the directory of this script.
 cd "$(dirname "${BASH_SOURCE[0]}")"
