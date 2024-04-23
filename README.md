@@ -27,6 +27,12 @@ To add the bibliography files to your paper repo, you can use the following Make
             "$$(cat $${name}.bib)" > $${name}.bib; \
         done
 
+## Auto-format
+
+You can sort the bib files and fix some basic formatting errors with
+
+    ./tests/format-bib.sh
+
 ## Tests
 
 You can run some basic tests on the bibliography files with
