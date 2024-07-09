@@ -6,7 +6,7 @@ function test() {
     prefix=${1}
 
     make clean
-    pdflatex ${prefix}.tex
+    pdflatex -quiet ${prefix}.tex
     echo
 
     # Check for bibtex errors.
@@ -15,7 +15,9 @@ function test() {
     # Check for bibtex warnings.
     # Crossrefs without author/editor will show up as standalone entries at the beginning of the bibliography,
     # but they occur too often to be worth fixing.
-    (bibtex -min-crossrefs=99 ${prefix} | grep "Warning--" | grep -v "Warning--to sort, need") && return 1 || return 0
+    (bibtex -min-crossrefs=99 ${prefix} | grep "Warning--" | grep -v "Warning--to sort, need") && return 1
+
+    pdflatex -quiet ${prefix}.tex
 }
 
 function check_sorted() {

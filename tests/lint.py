@@ -29,6 +29,12 @@ def main():
             print(f"[{entry.key}] {msg}: {field}")
             num_errors += 1
 
+        if "author" in entry:
+            if len(entry.authors()) >= 3 and "-et-al-" not in entry.key:
+                print_error("use -et-al- in bibkey if there are three or more authors", entry["author"])
+            elif len(entry.authors()) < 3 and "-et-al-" in entry.key and " and others" not in entry["author"]:
+                print_error("use all surnames in bibkey (instead of -et-al-) for papers with 1-2 authors", entry["author"])
+
         if entry.typ != "proceedings":
             if ("author" in entry and "," in entry["author"] and
                 not any(x in entry["author"] for x in ["Jr.", "II", "III", "IV"])):
