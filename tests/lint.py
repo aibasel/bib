@@ -19,6 +19,12 @@ def main():
     except biblib.messages.InputError:
         sys.exit(1)
 
+    # Resolving crossrefs deletes the "crossref" field, so we duplicate it for the tests.
+    for entry in db.values():
+        crossref = entry.get("crossref")
+        if crossref:
+            entry["crossref-for-tests"] = crossref
+
     db = biblib.bib.resolve_crossrefs(db, min_crossrefs=999)
 
     num_errors = 0
@@ -34,6 +40,10 @@ def main():
                 print_error("use -et-al- in bibkey if there are three or more authors", entry["author"])
             elif len(entry.authors()) < 3 and "-et-al-" in entry.key and " and others" not in entry["author"]:
                 print_error("use all surnames in bibkey (instead of -et-al-) for papers with 1-2 authors", entry["author"])
+
+        crossref = entry.get("crossref-for-tests")
+        if crossref and not re.match(fr"\S*{crossref}[a-z]?", entry.key):
+            print_error("crossref does not match bibkey", crossref)
 
         if entry.typ != "proceedings":
             if ("author" in entry and "," in entry["author"] and
