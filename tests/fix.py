@@ -17,10 +17,12 @@ FIELDS = [
     "booktitle",
     "crossref",
     "editor",
+    "institution",
     "journal",
     "number",
     "pages",
     "publisher",
+    "school",
     "series",
     "title",
     "volume",
@@ -38,8 +40,7 @@ def fix_bibtex(input_file: str, output_file: str):
 
     # Fix whitespace.
     for field in FIELDS:
-        content = re.sub(r"^\s*" + field + r"\s*=\s*\"", f"  {field} = {' ' * (12 - len(field))}\"", content, flags=re.IGNORECASE | re.MULTILINE)
-    content = re.sub(r"^(\s*journal\s*=\s*)\b", f"  journal =      ", content, flags=re.IGNORECASE | re.MULTILINE)
+        content = re.sub(r"^\s*" + field + r"\s*=\s*(\S+)", f"  {field} = {' ' * (12 - len(field))}\\g<1>", content, flags=re.IGNORECASE | re.MULTILINE)
 
     for field in FIELDS:
         for line in re.findall(r"^\s*" + field + r"\s*=\s*\{.*?$", content, flags=re.IGNORECASE | re.MULTILINE):
