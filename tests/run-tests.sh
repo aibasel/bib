@@ -20,20 +20,24 @@ function test() {
     pdflatex -quiet ${prefix}.tex
 }
 
+function check_diff_and_remove() {
+    actual=${1}
+    expected=${2}
+    # diff exists with 1 if the files differ.
+    diff ${actual} ${expected} || (echo Files differ. Check diff with \"meld ${actual} ${expected}\" ; exit 1)
+    rm ${expected}
+}
+
 function check_sorted() {
     name=${1}
     ./sort.py ../${name}.bib ${name}-sorted.bib
-    # Exit with 1 if the sorted file is different.
-    diff  ../${name}.bib ${name}-sorted.bib
-    rm ${name}-sorted.bib
+    check_diff_and_remove ../${name}.bib ${name}-sorted.bib
 }
 
 function check_format() {
     name=${1}
     ./fix.py ../${name}.bib ${name}-fixed.bib
-    # Exit with 1 if the fixed file is different.
-    diff  ../${name}.bib ${name}-fixed.bib
-    rm ${name}-fixed.bib
+    check_diff_and_remove ../${name}.bib ${name}-fixed.bib
 }
 
 # Change into the directory of this script.
