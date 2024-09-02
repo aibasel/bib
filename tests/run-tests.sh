@@ -24,7 +24,7 @@ function check_diff_and_remove() {
     actual=${1}
     expected=${2}
     # diff exists with 1 if the files differ.
-    diff ${actual} ${expected} || (echo Files differ. Check diff with \"meld ${actual} ${expected}\" ; exit 1)
+    git diff --exit-code -- ${actual} ${expected} || (echo Files differ. Check diff with \"meld ${actual} ${expected}\" ; exit 1)
     rm ${expected}
 }
 
