@@ -34,6 +34,12 @@ def fix_bibtex(input_file: str, output_file: str):
     with open(input_file, "r") as f:
         content = f.read()
 
+    for i, line in enumerate(content.splitlines(), start=1):
+        try:
+            line.encode('ascii')
+        except UnicodeEncodeError:
+            raise SystemExit(f"[error] non-ASCII character in line {i}: {line}")    
+
     # Fix capitalization of BibTeX entry types.
     for typ in BIBTYPES:
         content = re.sub("@" + typ + "\\{", "@" + typ + "{", content, flags=re.IGNORECASE)
