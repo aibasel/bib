@@ -35,10 +35,14 @@ def fix_bibtex(input_file: str, output_file: str):
         content = f.read()
 
     for i, line in enumerate(content.splitlines(), start=1):
+        if re.search(r"TODO(?!\([^()]+\))", line):
+            raise SystemExit(f"[error] TODOs need the form \"TODO(John)\" (line {i}): {line}")
+
         try:
             line.encode('ascii')
         except UnicodeEncodeError:
-            raise SystemExit(f"[error] non-ASCII character in line {i}: {line}")    
+            raise SystemExit(f"[error] non-ASCII character in line {i}: {line}")
+
 
     # Fix capitalization of BibTeX entry types.
     for typ in BIBTYPES:
