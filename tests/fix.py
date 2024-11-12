@@ -17,10 +17,12 @@ FIELDS = [
     "booktitle",
     "crossref",
     "editor",
+    "institution",
     "journal",
     "number",
     "pages",
     "publisher",
+    "school",
     "series",
     "title",
     "volume",
@@ -32,14 +34,23 @@ def fix_bibtex(input_file: str, output_file: str):
     with open(input_file, "r") as f:
         content = f.read()
 
+    for i, line in enumerate(content.splitlines(), start=1):
+        if re.search(r"TODO(?!\([^()]+\))", line):
+            raise SystemExit(f"[error] TODOs need the form \"TODO(John)\" (line {i}): {line}")
+
+        try:
+            line.encode('ascii')
+        except UnicodeEncodeError:
+            raise SystemExit(f"[error] non-ASCII character in line {i}: {line}")
+
+
     # Fix capitalization of BibTeX entry types.
     for typ in BIBTYPES:
         content = re.sub("@" + typ + "\\{", "@" + typ + "{", content, flags=re.IGNORECASE)
 
     # Fix whitespace.
     for field in FIELDS:
-        content = re.sub(r"^\s*" + field + r"\s*=\s*\"", f"  {field} = {' ' * (12 - len(field))}\"", content, flags=re.IGNORECASE | re.MULTILINE)
-    content = re.sub(r"^(\s*journal\s*=\s*)\b", f"  journal =      ", content, flags=re.IGNORECASE | re.MULTILINE)
+        content = re.sub(r"^\s*" + field + r"\s*=\s*(\S+)", f"  {field} = {' ' * (12 - len(field))}\\g<1>", content, flags=re.IGNORECASE | re.MULTILINE)
 
     for field in FIELDS:
         for line in re.findall(r"^\s*" + field + r"\s*=\s*\{.*?$", content, flags=re.IGNORECASE | re.MULTILINE):

@@ -6,7 +6,7 @@ function test() {
     prefix=${1}
 
     make clean
-    pdflatex ${prefix}.tex
+    pdflatex -quiet ${prefix}.tex
     echo
 
     # Check for bibtex errors.
@@ -15,23 +15,29 @@ function test() {
     # Check for bibtex warnings.
     # Crossrefs without author/editor will show up as standalone entries at the beginning of the bibliography,
     # but they occur too often to be worth fixing.
-    (bibtex -min-crossrefs=99 ${prefix} | grep "Warning--" | grep -v "Warning--to sort, need") && return 1 || return 0
+    (bibtex -min-crossrefs=99 ${prefix} | grep "Warning--" | grep -v "Warning--to sort, need") && return 1
+
+    pdflatex -quiet ${prefix}.tex
+}
+
+function check_diff_and_remove() {
+    actual=${1}
+    expected=${2}
+    # diff exists with 1 if the files differ.
+    git diff --exit-code --no-index -- ${actual} ${expected} || (echo Files differ. Check diff with \"meld ${actual} ${expected}\" ; exit 1)
+    rm ${expected}
 }
 
 function check_sorted() {
     name=${1}
     ./sort.py ../${name}.bib ${name}-sorted.bib
-    # Exit with 1 if the sorted file is different.
-    diff  ../${name}.bib ${name}-sorted.bib
-    rm ${name}-sorted.bib
+    check_diff_and_remove ../${name}.bib ${name}-sorted.bib
 }
 
 function check_format() {
     name=${1}
     ./fix.py ../${name}.bib ${name}-fixed.bib
-    # Exit with 1 if the fixed file is different.
-    diff  ../${name}.bib ${name}-fixed.bib
-    rm ${name}-fixed.bib
+    check_diff_and_remove ../${name}.bib ${name}-fixed.bib
 }
 
 # Change into the directory of this script.
