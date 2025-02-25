@@ -62,8 +62,14 @@ def main():
             if pages and "-" in pages and not "--" in pages:
                 print_error("replace hyphen in pages field with double hyphen", entry["pages"])
 
-            if re.match(r"[^\{]*\b[A-Z]{2,}\b[^\}]*", entry.get("title", "")):
-                print_error("escape uppercase acronym in title field with curly braces", entry["title"])
+            # Match sequences with at least one uppercase letter after the first position that are not enclosed in curly braces:
+            # - (?<!\{) and (?!\}) are negative lookbehind and lookahead assertions to ensure that the match is not enclosed in curly braces
+            # - \b asserts a word boundary
+            # - [a-zA-Z0-9]+ matches one or more alphanumeric characters
+            # - [A-Z] matches an uppercase letter
+            # - \S* matches zero or more non-whitespace characters
+            if re.search(r"(?<!\{)\b[a-zA-Z0-9]+[A-Z]\S*\b(?!\})", entry.get("title", "")):
+                print_error("escape (partially) uppercase word in title field with curly braces", entry["title"])
 
     if num_errors:
         sys.exit(f"Found {num_errors} errors.")
