@@ -23,6 +23,9 @@ def main():
     for entry in db.values():
         crossref = entry.get("crossref")
         if crossref:
+            part_match = re.match(r"(.*\d+)part\d+$", crossref)
+            if part_match:
+                crossref = part_match.group(1)
             entry["crossref-for-tests"] = crossref
 
     db = biblib.bib.resolve_crossrefs(db, min_crossrefs=999)
