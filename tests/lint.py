@@ -50,7 +50,7 @@ def main():
                 not any(x in entry["author"] for x in ["Jr.", "II", "III", "IV"])):
                 print_error("remove commas from author field", entry["author"])
 
-            year_in_key = re.search(r"\d{4}", entry.key)
+            year_in_key = re.search(r"(?<!\d)\d{4}(?!\d)", entry.key)
             if not year_in_key:
                 print_error("add four-digit year to bibkey", entry.key)
             elif "year" not in entry:
