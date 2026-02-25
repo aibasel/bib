@@ -23,6 +23,9 @@ def main():
     for entry in db.values():
         crossref = entry.get("crossref")
         if crossref:
+            part_match = re.match(r"(.*\d+)part\d+$", crossref)
+            if part_match:
+                crossref = part_match.group(1)
             entry["crossref-for-tests"] = crossref
 
     db = biblib.bib.resolve_crossrefs(db, min_crossrefs=999)
@@ -50,7 +53,7 @@ def main():
                 not any(x in entry["author"] for x in ["Jr.", "II", "III", "IV"])):
                 print_error("remove commas from author field", entry["author"])
 
-            year_in_key = re.search(r"\d{4}", entry.key)
+            year_in_key = re.search(r"(?<!\d)\d{4}(?!\d)", entry.key)
             if not year_in_key:
                 print_error("add four-digit year to bibkey", entry.key)
             elif "year" not in entry:
