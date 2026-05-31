@@ -1,4 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.8"
+# dependencies = [
+#     "biblib @ git+https://github.com/jendrikseipp/biblib.git@17c4c63",
+# ]
+# ///
 
 """Run some checks on .bib database(s)."""
 
