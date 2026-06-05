@@ -54,6 +54,14 @@ def main():
         if crossref and not re.match(fr"\S*{crossref}[a-z]?", entry.key):
             print_error("crossref does not match bibkey", crossref)
 
+        # Theses must use a bibkey of the form surname-{bsc,msc,phd}YEAR (the
+        # surname may consist of multiple hyphen-separated parts). The German
+        # degree markers diplomarbeit/studienarbeit/habilitation are also allowed.
+        markers = "bsc|msc|phd|diplomarbeit|studienarbeit|habilitation"
+        is_thesis = entry.typ in ("mastersthesis", "phdthesis")
+        if (is_thesis or re.search(fr"-({markers})", entry.key, re.IGNORECASE)) and not re.fullmatch(fr"[a-z]+(?:-[a-z]+)*-({markers})\d{{4}}", entry.key):
+            print_error("thesis bibkey must have the form surname-{bsc,msc,phd}YEAR", entry.key)
+
         if entry.typ != "proceedings":
             if ("author" in entry and "," in entry["author"] and
                 not any(x in entry["author"] for x in ["Jr.", "II", "III", "IV"])):
