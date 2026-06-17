@@ -1,21 +1,23 @@
 # Installing dependencies
 
-Create a [virtual environment](https://docs.python.org/3/tutorial/venv.html),
-activate it and install all dependencies:
+The Python scripts (`sort.py`, `fix.py`, `lint.py`) declare their
+dependencies inline ([PEP 723](https://peps.python.org/pep-0723/)) and
+run themselves with [uv](https://docs.astral.sh/uv/). Install uv once:
 
-    sudo apt install python3 python3-venv
-    python3 -m venv --prompt myvenv .venv
-    source .venv/bin/activate
-    pip install --upgrade pip wheel
-    pip install -r requirements.txt
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+
+uv then creates an isolated environment and fetches the required
+packages automatically the first time a script runs -- no virtualenv or
+`pip install` step is needed.
+
+The paper-compilation checks in `run-tests.sh` additionally require a
+LaTeX installation (`pdflatex` and `bibtex`).
 
 
 # Running tests
 
-Activate the virtual environment with
-
-    source .venv/bin/activate
-
-Then run the tests with
-
     ./run-tests.sh
+
+Each script can also be run on its own, e.g.:
+
+    ./lint.py ../abbrv.bib ../literatur.bib ../crossref.bib
