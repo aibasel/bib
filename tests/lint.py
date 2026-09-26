@@ -62,6 +62,13 @@ def main():
         if (is_thesis or re.search(fr"-({markers})", entry.key, re.IGNORECASE)) and not re.fullmatch(fr"[a-z]+(?:-[a-z]+)*-({markers})\d{{4}}", entry.key):
             print_error("thesis bibkey must have the form surname-{bsc,msc,phd}YEAR", entry.key)
 
+        if entry.typ == "misc":
+            howpublished = entry.get("howpublished", "")
+            if not howpublished.strip():
+                print_error("add a nonempty howpublished field", howpublished)
+            if "url" in entry:
+                print_error("remove url field and use howpublished instead", entry["url"])
+
         if entry.typ != "proceedings":
             if ("author" in entry and "," in entry["author"] and
                 not any(x in entry["author"] for x in ["Jr.", "II", "III", "IV"])):
