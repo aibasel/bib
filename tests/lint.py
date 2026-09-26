@@ -62,6 +62,9 @@ def main():
         if (is_thesis or re.search(fr"-({markers})", entry.key, re.IGNORECASE)) and not re.fullmatch(fr"[a-z]+(?:-[a-z]+)*-({markers})\d{{4}}", entry.key):
             print_error("thesis bibkey must have the form surname-{bsc,msc,phd}YEAR", entry.key)
 
+        if "doi" in entry and not re.fullmatch(r"10\.\d+(?:\.\d+)*/\S+", entry["doi"]):
+            print_error(r"use a plain DOI (10.<prefix>/<suffix>) without a URL, doi: prefix, or \url{...}", entry["doi"])
+
         if entry.typ == "misc":
             howpublished = entry.get("howpublished", "")
             if not howpublished.strip():

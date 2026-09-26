@@ -38,14 +38,15 @@ def fix_bibtex(input_file: str, output_file: str):
     with open(input_file, "r") as f:
         content = f.read()
 
+    errors = []
     for i, line in enumerate(content.splitlines(), start=1):
         if re.search(r"TODO(?!\([^()]+\))", line):
-            raise SystemExit(f"[error] TODOs need the form \"TODO(John)\" (line {i}): {line}")
+            errors.append(f"[error] TODOs need the form \"TODO(John)\" (line {i}): {line}")
 
         try:
             line.encode('ascii')
         except UnicodeEncodeError:
-            raise SystemExit(f"[error] non-ASCII character in line {i}: {line}")
+            errors.append(f"[error] non-ASCII character in line {i}: {line}")
 
 
     # Fix capitalization of BibTeX entry types.
@@ -58,7 +59,10 @@ def fix_bibtex(input_file: str, output_file: str):
 
     for field in FIELDS:
         for line in re.findall(r"^\s*" + field + r"\s*=\s*\{.*?$", content, flags=re.IGNORECASE | re.MULTILINE):
-            raise SystemExit(f"[error] use quotation marks instead of curly braces: {line}")
+            errors.append(f"[error] use quotation marks instead of curly braces: {line}")
+
+    if errors:
+        raise SystemExit("\n".join(errors))
 
     with open(output_file, "w") as f:
         f.write(content)
