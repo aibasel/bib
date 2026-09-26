@@ -4,6 +4,8 @@ Before adding entries to any of the files in the bibliography
 repository, please carefully read the instructions at the beginning
 of `literatur.bib`!
 
+Do not add `url` or `doi` fields to bibliography entries.
+
 If you add conference papers of conferences which are likely to be
 cited multiple times, please add cross reference entries in both
 `crossref.bib` and `crossref-short.bib`. See also the instructions at
@@ -43,4 +45,3 @@ You can run some basic tests on the bibliography files with
     ./tests/run-tests.sh
 
 See [README.md](tests/README.md) in the `tests` directory for setup instructions.
-
