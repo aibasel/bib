@@ -1,15 +1,32 @@
 # Bibtex Repo
 
-Before adding entries to any of the files in the bibliography
-repository, please carefully read the instructions at the beginning
-of `literatur.bib`!
+## Adding bibliography entries
 
-Do not add `url` or `doi` fields to bibliography entries.
+Follow the syntax of existing entries use keys of the form `<authors>-<venue>`.
+Join two authors' surnames with `-`. For three or more authors, use
+`firstauthor-et-al`.
 
-If you add conference papers of conferences which are likely to be
-cited multiple times, please add cross reference entries in both
-`crossref.bib` and `crossref-short.bib`. See also the instructions at
-the beginning of these files.
+The venue part is the publication year for books and the venue abbreviation
+followed by the year for other publications. For workshops, append `ws`
+after the conference year, usually followed by a workshop abbreviation.
+Use `arxiv`, not `corr`, for arXiv papers.
+
+| Entry | Example key |
+| --- | --- |
+| Conference paper | `pommerening-et-al-icaps2014` |
+| Often cited workshop with abbreviation | `jonas-icaps2012wshsdip` |
+| Rarely cited workshop without abbreviation | `jonas-aaai2008wssearch` |
+| Single workshop at the conference | `jonas-nips2011ws` |
+| Book | `russell-norvig-2003` |
+
+For conferences likely to be cited multiple times, add matching proceedings
+entries to `crossref.bib` (long form) and `crossref-short.bib` (short form).
+Reference their shared key in each paper's `crossref` field, for example
+`crossref = "neurips2026"`. To cite the proceedings as a whole, add a `Book`
+entry in `literatur.bib`.
+
+Finally, use the [formatter](#auto-format) and [tests](#tests) to check
+formatting, sorting, and common key errors.
 
 ## Usage
 
