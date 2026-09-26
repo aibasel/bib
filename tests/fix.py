@@ -20,6 +20,7 @@ FIELDS = [
     "author",
     "booktitle",
     "crossref",
+    "doi",
     "editor",
     "institution",
     "journal",
