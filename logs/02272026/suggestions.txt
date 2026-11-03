@@ -1,0 +1,1397 @@
+# Suggested additions to literatur.bib
+# Found 56 new entries
+#
+# Each entry is shown in two forms:
+# 1. ORIGINAL: The entry as it appears in the source file
+# 2. FORMATTED: The entry formatted according to literatur.bib conventions
+#    with suggested key following naming conventions
+#
+# Please review these entries and add them to literatur.bib if appropriate.
+# Make sure to:
+# - Verify the key follows naming conventions
+# - Check that all fields are correct
+# - For arXiv entries: categories are fetched from arXiv API
+# - Add crossref if applicable
+# - Maintain alphabetical order by key
+
+# ============================================================================
+# ORIGINAL form of entry: llama3modelcard
+# SUGGESTED KEY: ai@meta-2024
+# ============================================================================
+# @article{llama3modelcard,
+# title={Llama 3 Model Card},
+# author={AI@Meta},
+# year={2024},
+# url = {https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Article{ai@meta-2024,
+  author =       "AI@Meta",
+  title =        "Llama 3 Model Card",
+  year =         "2024",
+  url =          "https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: aravindan2025code
+# SUGGESTED KEY: aravindan-et-al-arxiv2025
+# ============================================================================
+# @article{aravindan2025code,
+#   title={Code-Driven Planning in Grid Worlds with Large Language Models},
+#   author={Aravindan, Ashwath Vaithinathan and Tang, Zhisheng and Kejriwal, Mayank},
+#   journal={arXiv preprint arXiv:2505.10749},
+#   year={2025}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{aravindan-et-al-arxiv2025,
+  author =       "Ashwath Vaithinathan Aravindan and Zhisheng Tang and
+                  Mayank Kejriwal",
+  title =        "{Code-Driven} Planning in Grid Worlds with Large Language Models",
+  year =         "2025",
+  howpublished =  "arXiv:2505.10749 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: cao-et-al-neurips2024wsowa
+# ============================================================================
+# @InProceedings{cao-et-al-neurips2024wsowa,
+#   author =       "Daniel Cao and Michael Katz and Harsha Kokel and Kavitha Srinivas and Shirin Sohrabi",
+#   title =        "Automating {T}hought of {S}earch: A Journey Towards Soundness and Completeness",
+#   crossref =     "neurips2024wsowa"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{cao-et-al-neurips2024wsowa,
+  author =       "Daniel Cao and Michael Katz and Harsha Kokel and
+                  Kavitha Srinivas and Shirin Sohrabi",
+  title =        "Automating {T}hought of {S}earch: A Journey Towards Soundness and Completeness",
+  crossref =     "neurips2024wsowa"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: chencodet
+# SUGGESTED KEY: chen-et-al-
+# ============================================================================
+# @inproceedings{chencodet,
+#   title={CodeT: Code Generation with Generated Tests},
+#   author={Chen, Bei and Zhang, Fengji and Nguyen, Anh and Zan, Daoguang and Lin, Zeqi and Lou, Jian-Guang and Chen, Weizhu},
+#   booktitle={The Eleventh International Conference on Learning Representations}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{chen-et-al-,
+  author =       "Bei Chen and Fengji Zhang and Anh Nguyen and Daoguang Zan and
+                  Zeqi Lin and Jian-Guang Lou and Weizhu Chen",
+  title =        "{CodeT}: Code Generation with Generated Tests",
+  booktitle =    "The Eleventh International Conference on Learning Representations"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: colton2014countdown
+# SUGGESTED KEY: colton-2014
+# ============================================================================
+# @inproceedings{colton2014countdown,
+#   title={Countdown numbers game: Solved, analysed, extended},
+#   author={Colton, Simon},
+#   booktitle={Proceedings of the AISB Symposium on AI and Games},
+#   year={2014}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{colton-2014,
+  author =       "Simon Colton",
+  title =        "Countdown numbers game: Solved, analysed, extended",
+  booktitle =    "Proceedings of the AISB Symposium on AI and Games",
+  year =         "2014"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: correa2025frontierLLMs
+# SUGGESTED KEY: correa-et-al-arxiv2025
+# ============================================================================
+# @misc{correa2025frontierLLMs,
+#   title        = {The 2025 Planning Performance of Frontier Large Language Models},
+#   author       = {Corr{\^e}a, Augusto B. and Pereira, Andr{\'e} G. and Seipp, Jendrik},
+#   eprint       ={2511.09378},
+#   archivePrefix={arXiv},
+#   year         = {2025}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{correa-et-al-arxiv2025,
+  author =       "Augusto B. Corr{\^e}a and Andr{\'e} G. Pereira and
+                  Jendrik Seipp",
+  title =        "The 2025 Planning Performance of Frontier Large Language Models",
+  year =         "2025",
+  howpublished =  "arXiv:2511.09378 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: correa-et-al-icaps2024
+# ============================================================================
+# @InProceedings{correa-et-al-icaps2024,
+#   author =       "Augusto B. Corr{\^e}a and Giuseppe De Giacomo and Malte Helmert and Sasha Rubin",
+#   title =        "Planning with Object Creation",
+#   crossref =     "icaps2024",
+#   pages =        "104--113"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{correa-et-al-icaps2024,
+  author =       "Augusto B. Corr{\^e}a and Giuseppe De Giacomo and
+                  Malte Helmert and Sasha Rubin",
+  title =        "Planning with Object Creation",
+  crossref =     "icaps2024",
+  pages =        "104--113"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: deepseekai2025deepseekv3technicalreport
+# SUGGESTED KEY: deepseek-ai-et-al-arxiv2025
+# ============================================================================
+# @misc{deepseekai2025deepseekv3technicalreport,
+#       title={DeepSeek-V3 Technical Report}, 
+#       author={DeepSeek-AI and Aixin Liu and Bei Feng and Bing Xue and Bingxuan Wang and Bochao Wu and others},
+#       year={2025},
+#       eprint={2412.19437},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.CL},
+#       url={https://arxiv.org/abs/2412.19437}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{deepseek-ai-et-al-arxiv2025,
+  author =       "DeepSeek-AI and Aixin Liu and Bei Feng and Bing Xue and
+                  Bingxuan Wang and Bochao Wu and others",
+  title =        "{DeepSeek-V}3 Technical Report",
+  year =         "2025",
+  howpublished =  "arXiv:2412.19437 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: EchchahedC25
+# SUGGESTED KEY: echchahed-castro-2025
+# ============================================================================
+# @article{EchchahedC25,
+#   author       = {Ayoub Echchahed and
+#                   Pablo Samuel Castro},
+#   title        = {A Survey of State Representation Learning for Deep Reinforcement Learning},
+#   journal =      "Transactions on Machine Learning Research",
+#   volume       = {2025},
+#   year         = {2025}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Article{echchahed-castro-2025,
+  author =       "Ayoub Echchahed and Pablo Samuel Castro",
+  title =        "A Survey of State Representation Learning for Deep Reinforcement Learning",
+  journal =      "Transactions on Machine Learning Research",
+  volume =       "2025",
+  year =         "2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: edelkamp-puk2000
+# SUGGESTED KEY: edelkamp-2000
+# ============================================================================
+# @InProceedings{edelkamp-puk2000,
+#   author =       "Stefan Edelkamp",
+#   title =        "Heuristic Search Planning with {BDDs}",
+#   booktitle =    "14th Workshop on New Results in Planning, Scheduling
+#                   and Design (PuK 2000)",
+#   year =         "2000"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{edelkamp-2000,
+  author =       "Stefan Edelkamp",
+  title =        "Heuristic Search Planning with {BDDs}",
+  booktitle =    "14th Workshop on New Results in Planning, Scheduling and Design (PuK 2000)",
+  year =         "2000"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: fu2022complexity
+# SUGGESTED KEY: fu-et-al-iclr
+# ============================================================================
+# @inproceedings{fu2022complexity,
+#   title={Complexity-based prompting for multi-step reasoning},
+#   author={Fu, Yao and Peng, Hao and Sabharwal, Ashish and Clark, Peter and Khot, Tushar},
+#   booktitle= "iclr2022"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{fu-et-al-iclr,
+  author =       "Yao Fu and Hao Peng and Ashish Sabharwal and Peter Clark and
+                  Tushar Khot",
+  title =        "Complexity-based prompting for multi-step reasoning",
+  booktitle =    "iclr2022"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: gestrin-et-al-arxiv2024
+# ============================================================================
+# @misc{gestrin-et-al-arxiv2024,
+#       title={NL2Plan: Robust LLM-Driven Planning from Minimal Text Descriptions}, 
+#       author={Elliot Gestrin and Marco Kuhlmann and Jendrik Seipp},
+#       year={2024},
+#       eprint={2405.04215},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI},
+#       url={https://arxiv.org/abs/2405.04215}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: Accepted for the ICAPS 2024 Workshop on Human-Aware and Explainable Planning
+# ----------------------------------------------------------------------------
+@Misc{gestrin-et-al-arxiv2024,
+  author =       "Elliot Gestrin and Marco Kuhlmann and Jendrik Seipp",
+  title =        "{NL}2Plan: Robust {LLM-Driven} Planning from Minimal Text Descriptions",
+  year =         "2024",
+  howpublished =  "arXiv:2405.04215 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: HandaActionReasoningBench2024
+# SUGGESTED KEY: handa-et-al-iclr2025
+# ============================================================================
+# @inproceedings{HandaActionReasoningBench2024,
+#   author       = {Divij Handa and
+#                   Pavel Dolin and
+#                   Shrinidhi Kumbhar and
+#                   Chitta Baral and
+#                   Tran Cao Son},
+#   crossref =         "iclr2025",
+# year={2025},
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{handa-et-al-iclr2025,
+  author =       "Divij Handa and Pavel Dolin and Shrinidhi Kumbhar and
+                  Chitta Baral and Tran Cao Son",
+  crossref =     "iclr2025",
+  year =         "2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: he-etal-2023-exploring
+# SUGGESTED KEY: he-et-al-acl-findings2023
+# ============================================================================
+# @inproceedings{he-etal-2023-exploring,
+#     title = "Exploring the Capacity of Pretrained Language Models for Reasoning about Actions and Change",
+#     author = "He, Weinan  and
+#       Huang, Canming  and
+#       Xiao, Zhanhao  and
+#       Liu, Yongmei",
+#     crossref =         "acl-findings2023",
+#     year = "2023",
+#     pages = "4629--4643"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{he-et-al-acl-findings2023,
+  author =       "Weinan He and Canming Huang and Zhanhao Xiao and Yongmei Liu",
+  title =        "Exploring the Capacity of Pretrained Language Models for Reasoning about Actions and Change",
+  crossref =     "acl-findings2023",
+  pages =        "4629--4643",
+  year =         "2023"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: hodel-bsc2024
+# SUGGESTED KEY: hodel-2024
+# ============================================================================
+# @MastersThesis{hodel-bsc2024,
+#   author =       "Nils Hodel",
+#   title =        "Exploring the use of LLMs in generalized planning",
+#   school =       unisaar,
+#   type =         "Bachelor's thesis",
+#   year =         "2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Mastersthesis{hodel-2024,
+  author =       "Nils Hodel",
+  title =        "Exploring the use of {LLMs} in generalized planning",
+  school =       "",
+  year =         "2024",
+  type =         "Bachelor's thesis"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: hsiao2025proc
+# SUGGESTED KEY: hsiao-et-al-arxiv2025
+# ============================================================================
+# @misc{hsiao2025proc,
+#       title={Procedural Knowledge Improves Agentic LLM Workflows}, 
+#       author={Vincent Hsiao and Mark Roberts and Leslie Smith},
+#       year={2025},
+#       eprint={2511.07568},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI},
+#       url={https://arxiv.org/abs/2511.07568}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{hsiao-et-al-arxiv2025,
+  author =       "Vincent Hsiao and Mark Roberts and Leslie Smith",
+  title =        "Procedural Knowledge Improves Agentic {LLM} Workflows",
+  year =         "2025",
+  howpublished =  "arXiv:2511.07568 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: huang-et-al-aaai2025
+# ============================================================================
+# @InProceedings{huang-et-al-aaai2025,
+#   author =       "Sukai Huang and Nir Lipovetzky and Trevor Cohn",
+#   title =        "Planning in the Dark: LLM-Symbolic Planning Pipeline Without Experts",
+#   pages =        "26542--26550",
+#   crossref =     "aaai2025"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{huang-et-al-aaai2025,
+  author =       "Sukai Huang and Nir Lipovetzky and Trevor Cohn",
+  title =        "Planning in the Dark: {LLM-Symbolic} Planning Pipeline Without Experts",
+  crossref =     "aaai2025",
+  pages =        "26542--26550"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: sokoban1997
+# SUGGESTED KEY: junghanns-schaeffer-ijcai1997
+# ============================================================================
+# @inproceedings{sokoban1997,
+#   title={Sokoban: A Challenging Single-Agent Search Problem},
+#   author={Andreas Junghanns and Jonathan Schaeffer},
+#   crossref = "ijcai1997"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{junghanns-schaeffer-ijcai1997,
+  author =       "Andreas Junghanns and Jonathan Schaeffer",
+  title =        "Sokoban: A Challenging {Single-Agent} Search Problem",
+  crossref =     "ijcai1997"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: katz-et-al-arxiv2025
+# ============================================================================
+# @Misc{katz-et-al-arxiv2025,
+#   author =       "Michael Katz and  Harsha Kokel and Sarath Sreedharan",
+#   title =        "Seemingly Simple Planning Problems are Computationally Challenging: The Countdown Game",
+#   year =         "2025",
+#   howpublished = "arXiv:2508.02900 [cs.AI]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{katz-et-al-arxiv2025,
+  author =       "Michael Katz and Harsha Kokel and Sarath Sreedharan",
+  title =        "Seemingly Simple Planning Problems are Computationally Challenging: The Countdown Game",
+  year =         "2025",
+  howpublished =  "arXiv:2508.02900 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: kleinberg-tardos-2006
+# ============================================================================
+# @Book{kleinberg-tardos-2006,
+#   author =       "Jon Kleinberg and \'{E}va Tardos",
+#   publisher =    "Addison-Wesley",
+#   title =        "Algorithm Design",
+#   year =         "2006"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Book{kleinberg-tardos-2006,
+  author =       "Jon Kleinberg and \'{E}va Tardos",
+  title =        "Algorithm Design",
+  publisher =    "Addison-Wesley",
+  year =         "2006"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: koehler-hoffmann-puk2000
+# SUGGESTED KEY: kohler-hoffmann-ecai2000puk
+# ============================================================================
+# @InProceedings{koehler-hoffmann-puk2000,
+#   author =       "Jana K{\"o}hler and J{\"o}rg Hoffmann",
+#   title =        "On the Instantiation of {ADL} Operators Involving Arbitrary
+#                   First-Order Formulas",
+#   pages =        "74--82",
+#   crossref =     "ecai2000puk",
+#   editors =      "J{\"u}rgen Sauer, Jana K{\"o}hler"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{kohler-hoffmann-ecai2000puk,
+  author =       "Jana K{\"o}hler and J{\"o}rg Hoffmann",
+  title =        "On the Instantiation of {ADL} Operators Involving Arbitrary {First-Order} Formulas",
+  crossref =     "ecai2000puk",
+  pages =        "74--82",
+  editors =      "J{\"u}rgen Sauer, Jana K{\"o}hler"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: kokel-et-al-aaai2025
+# ============================================================================
+# @inproceedings{kokel-et-al-aaai2025,
+#   author =       "Harsha Kokel and Michael Katz and Kavitha Srinivas and Shirin Sohrabi",
+#   title =        "{ACPB}ench: Reasoning about Action, Change, and Planning",
+#   crossref =         "aaai2025",
+#   year={2025}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{kokel-et-al-aaai2025,
+  author =       "Harsha Kokel and Michael Katz and Kavitha Srinivas and
+                  Shirin Sohrabi",
+  title =        "{ACPB}ench: Reasoning about Action, Change, and Planning",
+  crossref =     "aaai2025",
+  year =         "2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: kokel-et-al-acphard
+# SUGGESTED KEY: kokel-et-al-arxiv2025
+# ============================================================================
+# @misc{kokel-et-al-acphard,
+#   title        = {ACPBench Hard: Unrestrained Reasoning about Action, Change, and Planning},
+#   author       = {Harsha Kokel and Michael Katz and Kavitha Srinivas and Shirin Sohrabi},
+#   eprint        ={2503.24378},
+#   archivePrefix={arXiv},
+#   year         = {2025}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: Accepted to LM4Plan@AAAI 2025
+# ----------------------------------------------------------------------------
+@Misc{kokel-et-al-arxiv2025,
+  author =       "Harsha Kokel and Michael Katz and Kavitha Srinivas and
+                  Shirin Sohrabi",
+  title =        "{ACPBench} Hard: Unrestrained Reasoning about Action, Change, and Planning",
+  year =         "2025",
+  howpublished =  "arXiv:2503.24378 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: konidaris2018skills
+# SUGGESTED KEY: konidaris-et-al-2018
+# ============================================================================
+# @article{konidaris2018skills,
+#   title={From skills to symbols: Learning symbolic representations for abstract high-level planning},
+#   author={Konidaris, George and Kaelbling, Leslie Pack and Lozano-Perez, Tomas},
+#   journal={Journal of Artificial Intelligence Research},
+#   volume={61},
+#   pages={215--289},
+#   year={2018}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Article{konidaris-et-al-2018,
+  author =       "George Konidaris and Leslie Pack Kaelbling and
+                  Tomas Lozano-Perez",
+  title =        "From skills to symbols: Learning symbolic representations for abstract high-level planning",
+  journal =      "Journal of Artificial Intelligence Research",
+  volume =       "61",
+  pages =        "215--289",
+  year =         "2018"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: lecodechain
+# SUGGESTED KEY: le-et-al-2024
+# ============================================================================
+# @inproceedings{lecodechain,
+#   title={CodeChain: Towards Modular Code Generation Through Chain of Self-revisions with Representative Sub-modules},
+#   author={Le, Hung and Chen, Hailin and Saha, Amrita and Gokul, Akash and Sahoo, Doyen and Joty, Shafiq},
+#   year={2024},
+#   booktitle={The Twelfth International Conference on Learning Representations}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{le-et-al-2024,
+  author =       "Hung Le and Hailin Chen and Amrita Saha and Akash Gokul and
+                  Doyen Sahoo and Shafiq Joty",
+  title =        "{CodeChain}: Towards Modular Code Generation Through Chain of Self-revisions with Representative Sub-modules",
+  booktitle =    "The Twelfth International Conference on Learning Representations",
+  year =         "2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: CodeAspolic
+# SUGGESTED KEY: liang-et-al-2023
+# ============================================================================
+# @INPROCEEDINGS{CodeAspolic,
+#   author={Liang, Jacky and Huang, Wenlong and Xia, Fei and Xu, Peng and Hausman, Karol and Ichter, Brian and Florence, Pete and Zeng, Andy},
+#   booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)}, 
+#   title={Code as Policies: Language Model Programs for Embodied Control}, 
+#   year={2023},
+#   volume={},
+#   number={},
+#   pages={9493-9500},
+#   keywords={Feedback loop;Codes;Natural languages;Process control;Detectors;Libraries;Impedance},
+#   doi={10.1109/ICRA48891.2023.10160591}}
+# 
+# 
+# @article{song2025coact,
+#   title={Coact-1: Computer-using agents with coding as actions},
+#   author={Song, Linxin and Dai, Yutong and Prabhu, Viraj and Zhang, Jieyu and Shi, Taiwei and Li, Li and Li, Junnan and Savarese, Silvio and Chen, Zeyuan and Zhao, Jieyu and others},
+#   journal={arXiv preprint arXiv:2508.03923},
+#   year={2025}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{liang-et-al-2023,
+  author =       "Jacky Liang and Wenlong Huang and Fei Xia and Peng Xu and
+                  Karol Hausman and Brian Ichter and Pete Florence and Andy Zeng",
+  title =        "Code as Policies: Language Model Programs for Embodied Control",
+  booktitle =    "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+  volume =       "",
+  number =       "",
+  pages =        "9493-9500",
+  year =         "2023",
+  doi =          "10.1109/ICRA48891.2023.10160591",
+  keywords =     "Feedback loop;Codes;Natural languages;Process control;Detectors;Libraries;Impedance"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: liu2018miniwobpp
+# SUGGESTED KEY: liu-et-al-iclr2018
+# ============================================================================
+# @inproceedings{liu2018miniwobpp,
+#   title        = {Reinforcement Learning on Web Interfaces Using Workflow-Guided Exploration},
+#   author       = {Evan Zheran Liu and Kelvin Guu and Panupong Pasupat and Tianlin Shi and Percy Liang},
+#   crossref =     "iclr2018",
+#   year         = {2018}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{liu-et-al-iclr2018,
+  author =       "Evan Zheran Liu and Kelvin Guu and Panupong Pasupat and
+                  Tianlin Shi and Percy Liang",
+  title =        "Reinforcement Learning on Web Interfaces Using {Workflow-Guided} Exploration",
+  crossref =     "iclr2018",
+  year =         "2018"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: openai2024gpt4
+# SUGGESTED KEY: openai-et-al-arxiv2024
+# ============================================================================
+# @misc{openai2024gpt4,
+#       title={{GPT}-4 Technical Report}, 
+#       author={OpenAI and Josh Achiam and Steven Adler and Sandhini Agarwal and others},
+#       year={2024},
+#       eprint={2303.08774},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.CL}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: 100 pages; updated authors list; fixed author names and added citation
+# ----------------------------------------------------------------------------
+@Misc{openai-et-al-arxiv2024,
+  author =       "OpenAI and Josh Achiam and Steven Adler and Sandhini Agarwal and
+                  others",
+  title =        "{GPT}-4 Technical Report",
+  year =         "2024",
+  howpublished =  "arXiv:2303.08774 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: openai2024openai4ocard
+# SUGGESTED KEY: openai-et-al-arxiv2024
+# ============================================================================
+# @misc{openai2024openai4ocard,
+#       title={OpenAI GPT-4o System Card}, 
+#       author={OpenAI and : and Aaron Hurst and Adam Lerer and Adam P Goucher and Adam Perelman and others},
+#       year={2024},
+#       eprint={2410.21276},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{openai-et-al-arxiv2024,
+  author =       "OpenAI and : and Aaron Hurst and Adam Lerer and Adam P Goucher and
+                  Adam Perelman and others",
+  title =        "{OpenAI} {GPT-}4o System Card",
+  year =         "2024",
+  howpublished =  "arXiv:2410.21276 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Puri0JZDZD0CDTB21_codenet
+# SUGGESTED KEY: puri-et-al-nips2021
+# ============================================================================
+# @inproceedings{Puri0JZDZD0CDTB21_codenet,
+#   author       = {Ruchir Puri and
+#                   David S. Kung and
+#                   Geert Janssen and
+#                   Wei Zhang and
+#                   Giacomo Domeniconi and
+#                   Vladimir Zolotov and
+#                   Julian Dolby and
+#                   Jie Chen and
+#                   Mihir R. Choudhury and
+#                   Lindsey Decker and
+#                   Veronika Thost and
+#                   Luca Buratti and
+#                   Saurabh Pujar and
+#                   Shyam Ramji and
+#                   Ulrich Finkler and
+#                   Susan Malaika and
+#                   Frederick Reiss},
+#   title        = {CodeNet: {A} Large-Scale {AI} for Code Dataset for Learning a Diversity
+#                   of Coding Tasks},
+#   booktitle    = {NeurIPS Datasets and Benchmarks},
+#   year         = {2021}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{puri-et-al-nips2021,
+  author =       "Ruchir Puri and David S. Kung and Geert Janssen and Wei Zhang and
+                  Giacomo Domeniconi and Vladimir Zolotov and Julian Dolby and
+                  Jie Chen and Mihir R. Choudhury and Lindsey Decker and
+                  Veronika Thost and Luca Buratti and Saurabh Pujar and
+                  Shyam Ramji and Ulrich Finkler and Susan Malaika and
+                  Frederick Reiss",
+  title =        "{CodeNet}: {A} {Large-Scale} {AI} for Code Dataset for Learning a Diversity of Coding Tasks",
+  booktitle =    "NeurIPS Datasets and Benchmarks",
+  year =         "2021"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: scala-et-al-jair2020
+# SUGGESTED KEY: scala-et-al-2020
+# ============================================================================
+# @Article{scala-et-al-jair2020,
+#   author =       "Enrico Scala and Patrik Haslum and 
+#                   Sylvie Thi{\'e}baux and Miquel Ramirez",
+#   title =        "Subgoaling Techniques for Satisficing and Optimal Numeric Planning",
+#   journal =      jair,
+#   volume =       "68",
+#   year =         "2020",
+#   pages =        "691--752"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Article{scala-et-al-2020,
+  author =       "Enrico Scala and Patrik Haslum and Sylvie Thi{\'e}baux and
+                  Miquel Ramirez",
+  title =        "Subgoaling Techniques for Satisficing and Optimal Numeric Planning",
+  journal =      "",
+  volume =       "68",
+  pages =        "691--752",
+  year =         "2020"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Algo_of_thoughts
+# SUGGESTED KEY: sel-et-al-arxiv2023
+# ============================================================================
+# @article{Algo_of_thoughts,
+#   author       = {Bilgehan Sel and
+#                   Ahmad Al{-}Tawaha and
+#                   Vanshaj Khattar and
+#                   Lu Wang and
+#                   Ruoxi Jia and
+#                   Ming Jin},
+#   title        = {Algorithm of Thoughts: Enhancing Exploration of Ideas in Large Language
+#                   Models},
+#   journal      = {CoRR},
+#   volume       = {abs/2308.10379},
+#   year         = {2023}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: ICML 2024
+# ----------------------------------------------------------------------------
+@Misc{sel-et-al-arxiv2023,
+  author =       "Bilgehan Sel and Ahmad Al{-}Tawaha and Vanshaj Khattar and
+                  Lu Wang and Ruoxi Jia and Ming Jin",
+  title =        "Algorithm of Thoughts: Enhancing Exploration of Ideas in Large Language Models",
+  year =         "2023",
+  howpublished =  "arXiv:2308.10379 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: progprompt
+# SUGGESTED KEY: singh-et-al-2023
+# ============================================================================
+# (Original text not found)
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{singh-et-al-2023,
+  author =       "Ishika Singh and Valts Blukis and Arsalan Mousavian and
+                  Ankit Goyal and Danfei Xu and Jonathan Tremblay and Dieter Fox and
+                  Jesse Thomason and Animesh Garg",
+  title =        "{ProgPrompt}: Generating Situated Robot Task Plans using Large Language Models",
+  booktitle =    "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+  volume =       "",
+  number =       "",
+  pages =        "11523-11530",
+  year =         "2023",
+  doi =          "10.1109/ICRA48891.2023.10161317"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: song2025coact
+# SUGGESTED KEY: song-et-al-arxiv2025
+# ============================================================================
+# @article{song2025coact,
+#   title={Coact-1: Computer-using agents with coding as actions},
+#   author={Song, Linxin and Dai, Yutong and Prabhu, Viraj and Zhang, Jieyu and Shi, Taiwei and Li, Li and Li, Junnan and Savarese, Silvio and Chen, Zeyuan and Zhao, Jieyu and others},
+#   journal={arXiv preprint arXiv:2508.03923},
+#   year={2025}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{song-et-al-arxiv2025,
+  author =       "Linxin Song and Yutong Dai and Viraj Prabhu and Jieyu Zhang and
+                  Taiwei Shi and Li Li and Junnan Li and Silvio Savarese and
+                  Zeyuan Chen and Jieyu Zhao and others",
+  title =        "Coact-1: Computer-using agents with coding as actions",
+  year =         "2025",
+  howpublished =  "arXiv:2508.03923 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: stein-et-al-arxiv2025
+# ============================================================================
+# @Misc{stein-et-al-arxiv2025,
+#   title =        "Improved Generalized Planning with LLMs through Strategy Refinement and Reflection", 
+#   author =       "Katharina Stein and Nils Hodel and Daniel Fišer and Jörg Hoffmann and Michael Katz and Alexander Koller",
+#   year =         "2025",
+#   eprint =       "2508.13876",
+#   archivePrefix ="arXiv",
+#   primaryClass = "cs.AI",
+#   url =          "https://arxiv.org/abs/2508.13876", 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{stein-et-al-arxiv2025,
+  author =       "Katharina Stein and Nils Hodel and Daniel Fišer and
+                  Jörg Hoffmann and Michael Katz and Alexander Koller",
+  title =        "Improved Generalized Planning with {LLMs} through Strategy Refinement and Reflection",
+  year =         "2025",
+  howpublished =  "arXiv:2508.13876 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: stein-et-al-icaps2025
+# ============================================================================
+# @InProceedings{stein-et-al-icaps2025,
+#   title =        {Automating the Generation of Prompts for LLM-based Action Choice in PDDL Planning}, 
+#   author =       "Katharina Stein and Daniel Fišer and Jörg Hoffmann and Alexander Koller",
+#   booktitle =        "Proceedings of the Fourteenth International Conference on
+#                   Automated Planning and Scheduling ({ICAPS} 2025)",
+#   publisher =    "AAAI Press",
+#   year =         "2025"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{stein-et-al-icaps2025,
+  author =       "Katharina Stein and Daniel Fišer and Jörg Hoffmann and
+                  Alexander Koller",
+  title =        "Automating the Generation of Prompts for {LLM-based} Action Choice in {PDDL} Planning",
+  booktitle =    "Proceedings of the Fourteenth International Conference on Automated Planning and Scheduling ({ICAPS} 2025)",
+  publisher =    "AAAI Press",
+  year =         "2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: stojanovski-et-al-arxiv2025
+# ============================================================================
+# @Misc{stojanovski-et-al-arxiv2025,
+#   author =       "Zafir Stojanovski and Oliver Stanley and Joe Sharratt and 
+#                   Richard Jones and Abdulhakeem Adefioye and Jean Kaddour 
+#                   and Andreas K{\"o}pf",
+#   title =        "{REASONING GYM}: Reasoning Environments for Reinforcement 
+#                   Learning with Verifiable Rewards",
+#   year =         "2025",
+#   howpublished = "arXiv:2505.24760 [cs.LG]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: NeurIPS 2025 Spotlight. For code, see https://github.com/open-thought/reasoning-gym
+# ----------------------------------------------------------------------------
+@Misc{stojanovski-et-al-arxiv2025,
+  author =       "Zafir Stojanovski and Oliver Stanley and Joe Sharratt and
+                  Richard Jones and Abdulhakeem Adefioye and Jean Kaddour and
+                  Andreas K{\"o}pf",
+  title =        "{REASONING GYM}: Reasoning Environments for Reinforcement Learning with Verifiable Rewards",
+  year =         "2025",
+  howpublished =  "arXiv:2505.24760 [cs.LG]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: AdaPlanner
+# SUGGESTED KEY: sun-et-al-2023
+# ============================================================================
+# (Original text not found)
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{sun-et-al-2023,
+  author =       "Haotian Sun and Yuchen Zhuang and Lingkai Kong and Bo Dai and
+                  Chao Zhang",
+  editor =       "A. Oh and T. Naumann and A. Globerson and K. Saenko and
+                  M. Hardt and S. Levine",
+  title =        "{AdaPlanner}: Adaptive Planning from Feedback with Language Models",
+  booktitle =    "Advances in Neural Information Processing Systems",
+  volume =       "36",
+  pages =        "58202--58245",
+  publisher =    "Curran Associates, Inc.",
+  year =         "2023",
+  url =          "https://proceedings.neurips.cc/paper_files/paper/2023/file/b5c8c1c117618267944b2617add0a766-Paper-Conference.pdf",
+  bdsk-url-1 =   "https://proceedings.neurips.cc/paper_files/paper/2023/file/b5c8c1c117618267944b2617add0a766-Paper-Conference.pdf"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: tantakoun-et-al-acl-findings2025
+# ============================================================================
+# @inproceedings{tantakoun-et-al-acl-findings2025,
+#   title =        "{LLM}s as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models",
+#   author =       "Marcus Tantakoun and Christian Muise and Xiaodan Zhu",
+#   crossref =     "acl-findings2025"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{tantakoun-et-al-acl-findings2025,
+  author =       "Marcus Tantakoun and Christian Muise and Xiaodan Zhu",
+  title =        "{LLM}s as Planning Formalizers: A Survey for Leveraging Large Language Models to Construct Automated Planning Models",
+  crossref =     "acl-findings2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: qwen2.5
+# SUGGESTED KEY: team-2024
+# ============================================================================
+# @misc{qwen2.5,
+#     title = {Qwen2.5: A Party of Foundation Models},
+#     url = {https://qwenlm.github.io/blog/qwen2.5/},
+#     author = {Qwen Team},
+#     month = {September},
+#     year = {2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{team-2024,
+  author =       "Qwen Team",
+  title =        "Qwen2.5: A Party of Foundation Models",
+  year =         "2024",
+  url =          "https://qwenlm.github.io/blog/qwen2.5/",
+  month =        "September"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: TrivediKHMDLGSB24
+# SUGGESTED KEY: trivedi-et-al-acl-findings2024
+# ============================================================================
+# @inproceedings{TrivediKHMDLGSB24,
+#   author       = {Harsh Trivedi and
+#                   Tushar Khot and
+#                   Mareike Hartmann and
+#                   Ruskin Manku and
+#                   Vinty Dong and
+#                   Edward Li and
+#                   Shashank Gupta and
+#                   Ashish Sabharwal and
+#                   Niranjan Balasubramanian},
+#   title        = {AppWorld: {A} Controllable World of Apps and People for Benchmarking
+#                   Interactive Coding Agents},
+#   crossref =     "acl-findings2024",
+#   pages        = {16022--16076},
+#   publisher    = {Association for Computational Linguistics},
+#   year         = {2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{trivedi-et-al-acl-findings2024,
+  author =       "Harsh Trivedi and Tushar Khot and Mareike Hartmann and
+                  Ruskin Manku and Vinty Dong and Edward Li and Shashank Gupta and
+                  Ashish Sabharwal and Niranjan Balasubramanian",
+  title =        "{AppWorld}: {A} Controllable World of Apps and People for Benchmarking Interactive Coding Agents",
+  crossref =     "acl-findings2024",
+  pages =        "16022--16076",
+  publisher =    "Association for Computational Linguistics",
+  year =         "2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: tuisov-et-al-arxiv2025
+# ============================================================================
+# @misc{tuisov-et-al-arxiv2025,
+#       title={LLM-Generated Heuristics for AI Planning: Do We Even Need Domain-Independence Anymore?}, 
+#       author={Alexander Tuisov and Yonatan Vernik and Alexander Shleyfman},
+#       year={2025},
+#       eprint={2501.18784},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI},
+#       url={https://arxiv.org/abs/2501.18784}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{tuisov-et-al-arxiv2025,
+  author =       "Alexander Tuisov and Yonatan Vernik and Alexander Shleyfman",
+  title =        "{LLM-Generated} Heuristics for {AI} Planning: Do We Even Need {Domain-Independence} Anymore?",
+  year =         "2025",
+  howpublished =  "arXiv:2501.18784 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: vafa-et-al-arxiv2024
+# ============================================================================
+# @misc{vafa-et-al-arxiv2024,
+#       title={Evaluating the World Model Implicit in a Generative Model}, 
+#       author={Keyon Vafa and Justin Y. Chen and Ashesh Rambachan and Jon Kleinberg and Sendhil Mullainathan},
+#       year={2024},
+#       eprint={2406.03689},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.CL},
+#       url={https://arxiv.org/abs/2406.03689}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{vafa-et-al-arxiv2024,
+  author =       "Keyon Vafa and Justin Y. Chen and Ashesh Rambachan and
+                  Jon Kleinberg and Sendhil Mullainathan",
+  title =        "Evaluating the World Model Implicit in a Generative Model",
+  year =         "2024",
+  howpublished =  "arXiv:2406.03689 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: vallati2025keps
+# SUGGESTED KEY: vallati-et-al-icaps2025
+# ============================================================================
+# @inproceedings{vallati2025keps,
+#     title = "Knowledge Engineering for Planning and Scheduling in the LLM Era",
+#     author = "Mauro Vallati and Roman Bart{\'{a}}k and Luk{\'{a}}s Chrpa and Thomas L. McCluskey and  Ronald P. A. Petrick",
+#     crossref =  "icaps2025",
+#     year = "2025",
+#     pages = "391--395"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{vallati-et-al-icaps2025,
+  author =       "Mauro Vallati and Roman Bart{\'{a}}k and Luk{\'{a}}s Chrpa and
+                  Thomas L. McCluskey and Ronald P. A. Petrick",
+  title =        "Knowledge Engineering for Planning and Scheduling in the {LLM} Era",
+  crossref =     "icaps2025",
+  pages =        "391--395",
+  year =         "2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: onplanningassess2023
+# SUGGESTED KEY: valmeekam-et-al-2023
+# ============================================================================
+# @inproceedings{onplanningassess2023,
+#  author = {Valmeekam, Karthik and Marquez, Matthew and Sreedharan, Sarath and Kambhampati, Subbarao},
+#  booktitle = {Advances in Neural Information Processing Systems},
+#  editor = {A. Oh and T. Naumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},
+#  pages = {75993--76005},
+#  publisher = {Curran Associates, Inc.},
+#  title = {On the Planning Abilities of Large Language Models - A Critical Investigation},
+#  url = {https://proceedings.neurips.cc/paper_files/paper/2023/file/efb2072a358cefb75886a315a6fcf880-Paper-Conference.pdf},
+#  volume = {36},
+#  year = {2023}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{valmeekam-et-al-2023,
+  author =       "Karthik Valmeekam and Matthew Marquez and Sarath Sreedharan and
+                  Subbarao Kambhampati",
+  editor =       "A. Oh and T. Naumann and A. Globerson and K. Saenko and
+                  M. Hardt and S. Levine",
+  title =        "On the Planning Abilities of Large Language Models - A Critical Investigation",
+  booktitle =    "Advances in Neural Information Processing Systems",
+  volume =       "36",
+  pages =        "75993--76005",
+  publisher =    "Curran Associates, Inc.",
+  year =         "2023",
+  url =          "https://proceedings.neurips.cc/paper_files/paper/2023/file/efb2072a358cefb75886a315a6fcf880-Paper-Conference.pdf"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: verma2025pddlinstruct
+# SUGGESTED KEY: verma-et-al-icaps2025
+# ============================================================================
+# @inproceedings{verma2025pddlinstruct,
+#   title        = {PDDL-Instruct: Enhancing Symbolic Planning Capabilities in LLMs through Logical Chain-of-Thought Instruction Tuning},
+#   author       = {Verma, Pulkit and La, Ngoc and Favier, Anthony and Mishra, Swaroop and Shah, Julie A.},
+#   booktitle    = {ICAPS 2025 Workshop on Large Models and Planning (LM4Plan)},
+#   year         = {2025},
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{verma-et-al-icaps2025,
+  author =       "Pulkit Verma and Ngoc La and Anthony Favier and Swaroop Mishra and
+                  Julie A. Shah",
+  title =        "{PDDL-Instruct}: Enhancing Symbolic Planning Capabilities in {LLMs} through Logical {Chain-of-Thought} Instruction Tuning",
+  booktitle =    "ICAPS 2025 Workshop on Large Models and Planning (LM4Plan)",
+  year =         "2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: codeact
+# SUGGESTED KEY: wang-et-al-icml2024
+# ============================================================================
+# @inproceedings{codeact,
+# title = {CodeAct: Your LLM Agent Acts Better when Generating Code},
+#  crossref =  "icml2024",
+# author = {Xingyao Wang and Yangyi Chen and Lifan Yuan and Yizhe Zhang and Yunzhu Li and Hao Peng and Ji Heng},
+# year = {2024},
+# URL = {https://arxiv.org/abs/2402.01030}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{wang-et-al-icml2024,
+  author =       "Xingyao Wang and Yangyi Chen and Lifan Yuan and Yizhe Zhang and
+                  Yunzhu Li and Hao Peng and Ji Heng",
+  title =        "{CodeAct}: Your {LLM} Agent Acts Better when Generating Code",
+  crossref =     "icml2024",
+  year =         "2024",
+  url =          "https://arxiv.org/abs/2402.01030"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: WangCY0L0J24
+# SUGGESTED KEY: wang-et-al-icml2024
+# ============================================================================
+# @inproceedings{WangCY0L0J24,
+#   author       = {Xingyao Wang and
+#                   Yangyi Chen and
+#                   Lifan Yuan and
+#                   Yizhe Zhang and
+#                   Yunzhu Li and
+#                   Hao Peng and
+#                   Heng Ji},
+#   title        = {Executable Code Actions Elicit Better {LLM} Agents},
+#   crossref =     "icml2024",
+#   publisher    = {OpenReview.net},
+#   year         = {2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{wang-et-al-icml2024,
+  author =       "Xingyao Wang and Yangyi Chen and Lifan Yuan and Yizhe Zhang and
+                  Yunzhu Li and Hao Peng and Heng Ji",
+  title =        "Executable Code Actions Elicit Better {LLM} Agents",
+  crossref =     "icml2024",
+  publisher =    "OpenReview.net",
+  year =         "2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: xie-et-al-icml2024
+# ============================================================================
+# @InProceedings{xie-et-al-icml2024,
+#   author       = {Jian Xie and
+#                   Kai Zhang and
+#                   Jiangjie Chen and
+#                   Tinghui Zhu and
+#                   Renze Lou and
+#                   Yuandong Tian and
+#                   Yanghua Xiao and
+#                   Yu Su},
+#   title        = "{TravelPlanner}: {A} Benchmark for Real-World Planning with Language
+#                   Agents",
+#   crossref =     "icml2024"
+#  }
+# 
+# @InProceedings{stein-et-al-icaps2025,
+#   title =        {Automating the Generation of Prompts for LLM-based Action Choice in PDDL Planning}, 
+#   author =       "Katharina Stein and Daniel Fišer and Jörg Hoffmann and Alexander Koller",
+#   booktitle =        "Proceedings of the Fourteenth International Conference on
+#                   Automated Planning and Scheduling ({ICAPS} 2025)",
+#   publisher =    "AAAI Press",
+#   year =         "2025"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{xie-et-al-icml2024,
+  author =       "Jian Xie and Kai Zhang and Jiangjie Chen and Tinghui Zhu and
+                  Renze Lou and Yuandong Tian and Yanghua Xiao and Yu Su",
+  title =        "{TravelPlanner}: {A} Benchmark for {Real-World} Planning with Language Agents",
+  crossref =     "icml2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: yaoreact
+# SUGGESTED KEY: yao-et-al-
+# ============================================================================
+# @inproceedings{yaoreact,
+#   title={ReAct: Synergizing Reasoning and Acting in Language Models},
+#   author={Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik R and Cao, Yuan},
+#   booktitle={The Eleventh International Conference on Learning Representations}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{yao-et-al-,
+  author =       "Shunyu Yao and Jeffrey Zhao and Dian Yu and Nan Du and
+                  Izhak Shafran and Karthik R Narasimhan and Yuan Cao",
+  title =        "{ReAct}: Synergizing Reasoning and Acting in Language Models",
+  booktitle =    "The Eleventh International Conference on Learning Representations"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: ZhangCSDTG23
+# SUGGESTED KEY: zhang-et-al-
+# ============================================================================
+# @inproceedings{ZhangCSDTG23,
+#   author       = {Shun Zhang and
+#                   Zhenfang Chen and
+#                   Yikang Shen and
+#                   Mingyu Ding and
+#                   Joshua B. Tenenbaum and
+#                   Chuang Gan},
+#   title        = {Planning with Large Language Models for Code Generation},
+#   crossref    = iclr2023
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{zhang-et-al-,
+  author =       "Shun Zhang and Zhenfang Chen and Yikang Shen and Mingyu Ding and
+                  Joshua B. Tenenbaum and Chuang Gan",
+  title =        "Planning with Large Language Models for Code Generation",
+  crossref =     ""
+}
+
+# ============================================================================
+# ORIGINAL form of entry: ZhangLLLJ23_selfedit
+# SUGGESTED KEY: zhang-et-al-2023
+# ============================================================================
+# @inproceedings{ZhangLLLJ23_selfedit,
+#   author       = {Kechi Zhang and
+#                   Zhuo Li and
+#                   Jia Li and
+#                   Ge Li and
+#                   Zhi Jin},
+#   title        = {Self-Edit: Fault-Aware Code Editor for Code Generation},
+#   booktitle    = {{ACL} {(1)}},
+#   pages        = {769--787},
+#   publisher    = {Association for Computational Linguistics},
+#   year         = {2023}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{zhang-et-al-2023,
+  author =       "Kechi Zhang and Zhuo Li and Jia Li and Ge Li and Zhi Jin",
+  title =        "{Self-Edit}: {Fault-Aware} Code Editor for Code Generation",
+  booktitle =    "ACL} {(1)",
+  pages =        "769--787",
+  publisher =    "Association for Computational Linguistics",
+  year =         "2023"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: zhousolving
+# SUGGESTED KEY: zhou-et-al-2024
+# ============================================================================
+# @inproceedings{zhousolving,
+#   title={Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification},
+#   author={Zhou, Aojun and Wang, Ke and Lu, Zimu and Shi, Weikang and Luo, Sichun and Qin, Zipeng and Lu, Shaoqing and Jia, Anya and Song, Linqi and Zhan, Mingjie and others},
+#   booktitle={The Twelfth International Conference on Learning Representations},
+#   year={2024},
+#   url={https://openreview.net/forum?id=c8McWs4Av0}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{zhou-et-al-2024,
+  author =       "Aojun Zhou and Ke Wang and Zimu Lu and Weikang Shi and
+                  Sichun Luo and Zipeng Qin and Shaoqing Lu and Anya Jia and
+                  Linqi Song and Mingjie Zhan and others",
+  title =        "Solving Challenging Math Word Problems Using {GPT-}4 Code Interpreter with Code-based {Self-Verification}",
+  booktitle =    "The Twelfth International Conference on Learning Representations",
+  year =         "2024",
+  url =          "https://openreview.net/forum?id=c8McWs4Av0"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: LATS
+# SUGGESTED KEY: zhou-et-al-arxiv2023
+# ============================================================================
+# @article{LATS,
+#   author       = {Andy Zhou and
+#                   Kai Yan and
+#                   Michal Shlapentokh{-}Rothman and
+#                   Haohan Wang and
+#                   Yu{-}Xiong Wang},
+#   title        = {Language Agent Tree Search Unifies Reasoning Acting and Planning in
+#                   Language Models},
+#   journal      = {CoRR},
+#   volume       = {abs/2310.04406},
+#   year         = {2023}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: Code at https://github.com/lapisrocks/LanguageAgentTreeSearch
+# ----------------------------------------------------------------------------
+@Misc{zhou-et-al-arxiv2023,
+  author =       "Andy Zhou and Kai Yan and Michal Shlapentokh{-}Rothman and
+                  Haohan Wang and Yu{-}Xiong Wang",
+  title =        "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
+  year =         "2023",
+  howpublished =  "arXiv:2310.04406 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Zuo_planetarium
+# SUGGESTED KEY: zuo-et-al-arxiv2024
+# ============================================================================
+# @article{Zuo_planetarium,
+#   author       = {Max Zuo and
+#                   Francisco Piedrahita Velez and
+#                   Xiaochen Li and
+#                   Michael L. Littman and
+#                   Stephen H. Bach},
+#   title        = {Planetarium: {A} Rigorous Benchmark for Translating Text to Structured
+#                   Planning Languages},
+#   journal      = {CoRR},
+#   volume       = {abs/2407.03321},
+#   year         = {2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv journal reference: Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)
+# arXiv comment: NAACL Main Conference 2025
+# ----------------------------------------------------------------------------
+@Misc{zuo-et-al-arxiv2024,
+  author =       "Max Zuo and Francisco Piedrahita Velez and Xiaochen Li and
+                  Michael L. Littman and Stephen H. Bach",
+  title =        "Planetarium: {A} Rigorous Benchmark for Translating Text to Structured Planning Languages",
+  year =         "2024",
+  howpublished =  "arXiv:2407.03321 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: openaiPerformanceAnalysis
+# SUGGESTED KEY: {openaidev.forum}-2024
+# ============================================================================
+# @misc{openaiPerformanceAnalysis,
+# 	author = {{OpenAI Dev. Forum}},
+# 	title = {{P}erformance analysis of {A}ssistants versus {C}hat completion},
+# 	howpublished = {\url{https://community.openai.com/t/performance-analysis-of-assistants-versus-chat-completion-chat-completion-seems-somewhat-faster-for-complete-message-generation-streaming-taken-into-account/628368}},
+# 	year = {2024},
+#     month ={Feb}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{{openaidev.forum}-2024,
+  author =       "OpenAI Dev. Forum",
+  title =        "{P}erformance analysis of {A}ssistants versus {C}hat completion",
+  year =         "2024",
+  howpublished =  "\url{https://community.openai.com/t/performance-analysis-of-assistants-versus-chat-completion-chat-completion-seems-somewhat-faster-for-complete-message-generation-streaming-taken-into-account/628368}",
+  month =        "Feb"
+}

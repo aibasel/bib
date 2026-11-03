@@ -1,0 +1,1376 @@
+# Suggested additions to literatur.bib
+# Found 60 new entries
+#
+# Each entry is shown in two forms:
+# 1. ORIGINAL: The entry as it appears in the source file
+# 2. FORMATTED: The entry formatted according to literatur.bib conventions
+#    with suggested key following naming conventions
+#
+# Please review these entries and add them to literatur.bib if appropriate.
+# Make sure to:
+# - Verify the key follows naming conventions
+# - Check that all fields are correct
+# - For arXiv entries: categories are fetched from arXiv API
+# - Add crossref if applicable
+# - Maintain alphabetical order by key
+
+# ============================================================================
+# ORIGINAL form of entry: achiam2023gpt
+# SUGGESTED KEY: achiam-et-al-arxiv2023
+# ============================================================================
+# @article{achiam2023gpt,
+#   title={Gpt-4 technical report},
+#   author={Achiam, Josh and Adler, Steven and Agarwal, Sandhini and Ahmad, Lama and Akkaya, Ilge and Aleman, Florencia Leoni and Almeida, Diogo and Altenschmidt, Janko and Altman, Sam and Anadkat, Shyamal and others},
+#   journal={arXiv preprint arXiv:2303.08774},
+#   year={2023}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: 100 pages; updated authors list; fixed author names and added citation
+# ----------------------------------------------------------------------------
+@Misc{achiam-et-al-arxiv2023,
+  author =      "Achiam, Josh and Adler, Steven and Agarwal, Sandhini and Ahmad, Lama and Akkaya, Ilge and Aleman, Florencia Leoni and Almeida, Diogo and Altenschmidt, Janko and Altman, Sam and Anadkat, Shyamal and others",
+  title =       "Gpt-4 technical report",
+  year =        "2023",
+  howpublished = "arXiv:2303.08774 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: llama3modelcard
+# SUGGESTED KEY: ai@meta-2024
+# ============================================================================
+# @article{llama3modelcard,
+# title={Llama 3 Model Card},
+# author={AI@Meta},
+# year={2024},
+# url = {https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Article{ai@meta-2024,
+  author =      "AI@Meta",
+  title =       "Llama 3 Model Card",
+  year =        "2024",
+  url =         "https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: besta2024graph
+# SUGGESTED KEY: besta-et-al-aaai2024
+# ============================================================================
+# @inproceedings{besta2024graph,
+#   title={Graph of thoughts: Solving elaborate problems with large language models},
+#   author={Besta, Maciej and Blach, Nils and Kubicek, Ales and Gerstenberger, Robert and Podstawski, Michal and Gianinazzi, Lukas and Gajda, Joanna and Lehmann, Tomasz and Niewiadomski, Hubert and Nyczyk, Piotr and Hoefler, Torsten},
+#   crossref = "aaai2024",
+#   pages={17682--17690}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{besta-et-al-aaai2024,
+  author =      "Besta, Maciej and Blach, Nils and Kubicek, Ales and Gerstenberger, Robert and Podstawski, Michal and Gianinazzi, Lukas and Gajda, Joanna and Lehmann, Tomasz and Niewiadomski, Hubert and Nyczyk, Piotr and Hoefler, Torsten",
+  title =       "Graph of thoughts: Solving elaborate problems with large language models",
+  crossref =    "aaai2024",
+  pages =       "17682--17690"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: brown2020language
+# SUGGESTED KEY: brown-et-al-neurips2020
+# ============================================================================
+# @inproceedings{brown2020language,
+#   title={Language models are few-shot learners},
+#   author={Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others},
+#   crossref= "neurips2020",
+#   pages={1877--1901}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{brown-et-al-neurips2020,
+  author =      "Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others",
+  title =       "Language models are few-shot learners",
+  crossref =    "neurips2020",
+  pages =       "1877--1901"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: caglar2024llms
+# SUGGESTED KEY: caglar-et-al-arxiv2024
+# ============================================================================
+# @misc{caglar2024llms,
+#       title={Can LLMs Fix Issues with Reasoning Models? Towards More Likely Models for AI Planning}, 
+#       author={Turgay Caglar and Sirine Belhaj and Tathagata Chakraborti and Michael Katz and Sarath Sreedharan},
+#       year={2024},
+#       eprint={2311.13720},
+#       archivePrefix={arXiv},
+#       primaryClass={id='cs.AI' full_name='Artificial Intelligence' is_active=True alt_name=None in_archive='cs' is_general=False description='Covers all areas of AI except Vision, Robotics, Machine Learning, Multiagent Systems, and Computation and Language (Natural Language Processing), which have separate subject areas. In particular, includes Expert Systems, Theorem Proving (although this may overlap with Logic in Computer Science), Knowledge Representation, Planning, and Uncertainty in AI. Roughly includes material in ACM Subject Classes I.2.0, I.2.1, I.2.3, I.2.4, I.2.8, and I.2.11.'}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: 24 pages
+# ----------------------------------------------------------------------------
+@Misc{caglar-et-al-arxiv2024,
+  author =      "Turgay Caglar and Sirine Belhaj and Tathagata Chakraborti and Michael Katz and Sarath Sreedharan",
+  title =       "Can LLMs Fix Issues with Reasoning Models? Towards More Likely Models for AI Planning",
+  year =        "2024",
+  howpublished = "arXiv:2311.13720 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: chen2024learning
+# SUGGESTED KEY: chen-et-al-2024
+# ============================================================================
+# (Original text not found)
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Article{chen-et-al-2024,
+  author =      "Angelica Chen and J{\'e}r{\'e}my Scheurer and Jon Ander Campos and Tomasz Korbak and Jun Shern Chan and Samuel R. Bowman and Kyunghyun Cho and Ethan Perez",
+  title =       "Learning from Natural Language Feedback",
+  journal =     "Transactions on Machine Learning Research",
+  year =        "2024",
+  note =        "",
+  url =         "https://openreview.net/forum?id=xo3hI5MwvU",
+  issn =        "2835-8856"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: humaneval
+# SUGGESTED KEY: chen-et-al-arxiv2021
+# ============================================================================
+# @misc{humaneval,
+#   author       = "Mark Chen and Jerry Tworek and Heewoo Jun and Qiming Yuan and others",
+#   title        = "Evaluating Large Language Models Trained on Code",
+#   year         = "2021",
+#   howpublished = "arXiv:2107.03374 [cs.LG]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: corrected typos, added references, added authors, added acknowledgements
+# ----------------------------------------------------------------------------
+@Misc{chen-et-al-arxiv2021,
+  author =      "Mark Chen and Jerry Tworek and Heewoo Jun and Qiming Yuan and others",
+  title =       "Evaluating Large Language Models Trained on Code",
+  year =        "2021",
+  howpublished = "arXiv:2107.03374 [cs.LG]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: chencodet
+# SUGGESTED KEY: chen-et-al-iclr2023
+# ============================================================================
+# @inproceedings{chencodet,
+#   title={CodeT: Code Generation with Generated Tests},
+#   author={Chen, Bei and Zhang, Fengji and Nguyen, Anh and Zan, Daoguang and Lin, Zeqi and Lou, Jian-Guang and Chen, Weizhu},
+#   crossref = "iclr2023"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{chen-et-al-iclr2023,
+  author =      "Chen, Bei and Zhang, Fengji and Nguyen, Anh and Zan, Daoguang and Lin, Zeqi and Lou, Jian-Guang and Chen, Weizhu",
+  title =       "CodeT: Code Generation with Generated Tests",
+  crossref =    "iclr2023"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: chen2024teaching
+# SUGGESTED KEY: chen-et-al-iclr2024
+# ============================================================================
+# (Original text not found)
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{chen-et-al-iclr2024,
+  author =      "Xinyun Chen and Maxwell Lin and Nathanael Sch{\"a}rli and Denny Zhou",
+  title =       "Teaching Large Language Models to Self-Debug",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: ChenLSZ24_selfdebug
+# SUGGESTED KEY: chen-et-al-iclr2024
+# ============================================================================
+# @inproceedings{ChenLSZ24_selfdebug,
+#   author       = {Xinyun Chen and
+#                   Maxwell Lin and
+#                   Nathanael Sch{\"{a}}rli and
+#                   Denny Zhou},
+#   title        = {Teaching Large Language Models to Self-Debug},
+#   crossref = "iclr2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{chen-et-al-iclr2024,
+  author =      "Xinyun Chen and Maxwell Lin and Nathanael Sch{\"{a}}rli and Denny Zhou",
+  title =       "Teaching Large Language Models to Self-Debug",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: deepseekv2
+# SUGGESTED KEY: deepseek-ai-et-al-arxiv2024
+# ============================================================================
+# @misc{deepseekv2,
+#       title={DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model}, 
+#       author={DeepSeek-AI and Aixin Liu and Bei Feng and Bin Wang and Bingxuan Wang and Bo Liu and Chenggang Zhao and Chengqi Dengr and Chong Ruan and others},
+#       year={2024},
+#       eprint={2405.04434},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.CL},
+#       url={https://arxiv.org/abs/2405.04434}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{deepseek-ai-et-al-arxiv2024,
+  author =      "DeepSeek-AI and Aixin Liu and Bei Feng and Bin Wang and Bingxuan Wang and Bo Liu and Chenggang Zhao and Chengqi Dengr and Chong Ruan and others",
+  title =       "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+  year =        "2024",
+  howpublished = "arXiv:2405.04434 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: dubey2024llama3herdmodels
+# SUGGESTED KEY: dubey-et-al-arxiv2024
+# ============================================================================
+# @misc{dubey2024llama3herdmodels,
+#       title={The Llama 3 Herd of Models}, 
+#       author={Abhimanyu Dubey and Abhinav Jauhri and Abhinav Pandey and Abhishek Kadian and Ahmad Al-Dahle and Aiesha Letman and Akhil Mathur and Alan Schelten and Amy Yang and Angela Fan and Anirudh Goyal and others},
+#       year={2024},
+#       eprint={2407.21783},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI},
+#       url={https://arxiv.org/abs/2407.21783}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{dubey-et-al-arxiv2024,
+  author =      "Abhimanyu Dubey and Abhinav Jauhri and Abhinav Pandey and Abhishek Kadian and Ahmad Al-Dahle and Aiesha Letman and Akhil Mathur and Alan Schelten and Amy Yang and Angela Fan and Anirudh Goyal and others",
+  title =       "The Llama 3 Herd of Models",
+  year =        "2024",
+  howpublished = "arXiv:2407.21783 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: edelkamp-puk2000
+# SUGGESTED KEY: edelkamp-2000
+# ============================================================================
+# @InProceedings{edelkamp-puk2000,
+#   author =       "Stefan Edelkamp",
+#   title =        "Heuristic Search Planning with {BDDs}",
+#   booktitle =    "14th Workshop on New Results in Planning, Scheduling
+#                   and Design (PuK 2000)",
+#   year =         "2000"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{edelkamp-2000,
+  author =      "Stefan Edelkamp",
+  title =       "Heuristic Search Planning with {BDDs}",
+  booktitle =   "14th Workshop on New Results in Planning, Scheduling and Design (PuK 2000)",
+  year =        "2000"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: fu2022complexity
+# SUGGESTED KEY: fu-et-al-iclr2022
+# ============================================================================
+# @inproceedings{fu2022complexity,
+#   title={Complexity-based prompting for multi-step reasoning},
+#   author={Fu, Yao and Peng, Hao and Sabharwal, Ashish and Clark, Peter and Khot, Tushar},
+#   crossref= "iclr2022"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{fu-et-al-iclr2022,
+  author =      "Fu, Yao and Peng, Hao and Sabharwal, Ashish and Clark, Peter and Khot, Tushar",
+  title =       "Complexity-based prompting for multi-step reasoning",
+  crossref =    "iclr2022"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: SoS
+# SUGGESTED KEY: gandhi-et-al-arxiv2024
+# ============================================================================
+# @misc{SoS,
+#       title={Stream of {S}earch ({SoS}): Learning to Search in Language}, 
+#       author={Kanishk Gandhi and Denise Lee and Gabriel Grand and Muxin Liu and Winson Cheng and Archit Sharma and Noah D. Goodman},
+#       year={2024},
+#       howpublished = "arXiv:2404.03683 [cs.LG]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{gandhi-et-al-arxiv2024,
+  author =      "Kanishk Gandhi and Denise Lee and Gabriel Grand and Muxin Liu and Winson Cheng and Archit Sharma and Noah D. Goodman",
+  title =       "Stream of {S}earch ({SoS}): Learning to Search in Language",
+  year =        "2024",
+  howpublished = "arXiv:2404.03683 [cs.LG]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: gestrin-et-al-arxiv2024
+# ============================================================================
+# @misc{gestrin-et-al-arxiv2024,
+#       title={NL2Plan: Robust LLM-Driven Planning from Minimal Text Descriptions}, 
+#       author={Elliot Gestrin and Marco Kuhlmann and Jendrik Seipp},
+#       year={2024},
+#       eprint={2405.04215},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI},
+#       url={https://arxiv.org/abs/2405.04215}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: Accepted for the ICAPS 2024 Workshop on Human-Aware and Explainable Planning
+# ----------------------------------------------------------------------------
+@Misc{gestrin-et-al-arxiv2024,
+  author =      "Elliot Gestrin and Marco Kuhlmann and Jendrik Seipp",
+  title =       "NL2Plan: Robust LLM-Driven Planning from Minimal Text Descriptions",
+  year =        "2024",
+  howpublished = "arXiv:2405.04215 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: gou2024critic
+# SUGGESTED KEY: gou-et-al-iclr2024
+# ============================================================================
+# (Original text not found)
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{gou-et-al-iclr2024,
+  author =      "Zhibin Gou and Zhihong Shao and Yeyun Gong and yelong shen and Yujiu Yang and Nan Duan and Weizhu Chen",
+  title =       "{CRITIC}: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: guan-et-al-neurips2023
+# ============================================================================
+# @inproceedings{guan-et-al-neurips2023,
+#   title={Leveraging pre-trained large language models to construct and utilize world models for model-based task planning},
+#   author={Guan, Lin and Valmeekam, Karthik and Sreedharan, Sarath and Kambhampati, Subbarao},
+#   crossref = "neurips2023",
+#   pages={79081--79094}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{guan-et-al-neurips2023,
+  author =      "Guan, Lin and Valmeekam, Karthik and Sreedharan, Sarath and Kambhampati, Subbarao",
+  title =       "Leveraging pre-trained large language models to construct and utilize world models for model-based task planning",
+  crossref =    "neurips2023",
+  pages =       "79081--79094"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: guo-et-al-arxiv2024
+# ============================================================================
+# @Misc{guo-et-al-arxiv2024,
+#   author =       "Daya Guo and Qihao Zhu and Dejian Yang and Zhenda Xie 
+#                   and Kai Dong and Wentao Zhang and Guanting Chen 
+#                   and Xiao Bi and Y. Wu and Y. K. Li and Fuli Luo 
+#                   and Yingfei Xiong and Wenfeng Liang",
+#   title =        "Deep{S}eek-Coder: When the Large Language Model Meets Programming -- The Rise of Code Intelligence",
+#   year =         "2024",
+#   howpublished = "arXiv:2401.14196 [cs.SE]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{guo-et-al-arxiv2024,
+  author =      "Daya Guo and Qihao Zhu and Dejian Yang and Zhenda Xie and Kai Dong and Wentao Zhang and Guanting Chen and Xiao Bi and Y. Wu and Y. K. Li and Fuli Luo and Yingfei Xiong and Wenfeng Liang",
+  title =       "Deep{S}eek-Coder: When the Large Language Model Meets Programming -- The Rise of Code Intelligence",
+  year =        "2024",
+  howpublished = "arXiv:2401.14196 [cs.SE]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Hu2024LeveragingPD
+# SUGGESTED KEY: hu-et-al-arxiv2024
+# ============================================================================
+# @article{Hu2024LeveragingPD,
+#   title={Leveraging Print Debugging to Improve Code Generation in Large Language Models},
+#   author={Xueyu Hu and Kun Kuang and Jiankai Sun and Hongxia Yang and Fei Wu},
+#   journal={ArXiv},
+#   year={2024},
+#   volume={abs/2401.05319},
+#   url={https://api.semanticscholar.org/CorpusID:266903083}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{hu-et-al-arxiv2024,
+  author =      "Xueyu Hu and Kun Kuang and Jiankai Sun and Hongxia Yang and Fei Wu",
+  title =       "Leveraging Print Debugging to Improve Code Generation in Large Language Models",
+  year =        "2024",
+  howpublished = "arXiv:2401.05319 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: huang2024large
+# SUGGESTED KEY: huang-et-al-iclr2024
+# ============================================================================
+# (Original text not found)
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{huang-et-al-iclr2024,
+  author =      "Jie Huang and Xinyun Chen and Swaroop Mishra and Huaixiu Steven Zheng and Adams Wei Yu and Xinying Song and Denny Zhou",
+  title =       "Large Language Models Cannot Self-Correct Reasoning Yet",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: jiang2023selfevolve
+# SUGGESTED KEY: jiang-et-al-arxiv2023
+# ============================================================================
+# @misc{jiang2023selfevolve,
+#       title={SelfEvolve: A Code Evolution Framework via Large Language Models}, 
+#       author={Shuyang Jiang and Yuhao Wang and Yu Wang},
+#       year={2023},
+#       eprint={2306.02907},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.CL},
+#       url={https://arxiv.org/abs/2306.02907}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{jiang-et-al-arxiv2023,
+  author =      "Shuyang Jiang and Yuhao Wang and Yu Wang",
+  title =       "SelfEvolve: A Code Evolution Framework via Large Language Models",
+  year =        "2023",
+  howpublished = "arXiv:2306.02907 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: jiang2024mixtralexperts
+# SUGGESTED KEY: jiang-et-al-arxiv2024
+# ============================================================================
+# @misc{jiang2024mixtralexperts,
+#       title={Mixtral of Experts}, 
+#       author={Albert Q. Jiang and Alexandre Sablayrolles and Antoine Roux and Arthur Mensch and others},
+#       year={2024},
+#       eprint={2401.04088},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.LG},
+#       url={https://arxiv.org/abs/2401.04088}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: See more details at https://mistral.ai/news/mixtral-of-experts/
+# ----------------------------------------------------------------------------
+@Misc{jiang-et-al-arxiv2024,
+  author =      "Albert Q. Jiang and Alexandre Sablayrolles and Antoine Roux and Arthur Mensch and others",
+  title =       "Mixtral of Experts",
+  year =        "2024",
+  howpublished = "arXiv:2401.04088 [cs.LG]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: JimenezYWYPPN24
+# SUGGESTED KEY: jimenez-et-al-iclr2024
+# ============================================================================
+# @inproceedings{JimenezYWYPPN24,
+#   author       = {Carlos E. Jimenez and
+#                   John Yang and
+#                   Alexander Wettig and
+#                   Shunyu Yao and
+#                   Kexin Pei and
+#                   Ofir Press and
+#                   Karthik R. Narasimhan},
+#   title        = {SWE-bench: Can Language Models Resolve Real-world Github Issues?},
+#   crossref = "iclr2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{jimenez-et-al-iclr2024,
+  author =      "Carlos E. Jimenez and John Yang and Alexander Wettig and Shunyu Yao and Kexin Pei and Ofir Press and Karthik R. Narasimhan",
+  title =       "SWE-bench: Can Language Models Resolve Real-world Github Issues?",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: sokoban1997
+# SUGGESTED KEY: junghanns-schaeffer-ijcai1997
+# ============================================================================
+# @inproceedings{sokoban1997,
+#   title={Sokoban: A Challenging Single-Agent Search Problem},
+#   author={Andreas Junghanns and Jonathan Schaeffer},
+#   crossref = "ijcai1997"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{junghanns-schaeffer-ijcai1997,
+  author =      "Andreas Junghanns and Jonathan Schaeffer",
+  title =       "Sokoban: A Challenging Single-Agent Search Problem",
+  crossref =    "ijcai1997"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: LLM-Modulo
+# SUGGESTED KEY: kambhampati-et-al-arxiv2024
+# ============================================================================
+# @article{LLM-Modulo,
+#   author       = {Subbarao Kambhampati and
+#                   Karthik Valmeekam and
+#                   Lin Guan and
+#                   Kaya Stechly and
+#                   Mudit Verma and
+#                   Siddhant Bhambri and
+#                   Lucas Saldyt and
+#                   Anil Murthy},
+#   title        = {{LLMs} Can't Plan, But Can Help Planning in {LLM-Modulo} Frameworks},
+#   journal      = {CoRR},
+#   volume       = {abs/2402.01817},
+#   year         = {2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv journal reference: Proceedings of the 41 st International Conference on Machine Learning, Vienna, Austria. PMLR 235, 2024
+# ----------------------------------------------------------------------------
+@Misc{kambhampati-et-al-arxiv2024,
+  author =      "Subbarao Kambhampati and Karthik Valmeekam and Lin Guan and Kaya Stechly and Mudit Verma and Siddhant Bhambri and Lucas Saldyt and Anil Murthy",
+  title =       "{LLMs} Can't Plan, But Can Help Planning in {LLM-Modulo} Frameworks",
+  year =        "2024",
+  howpublished = "arXiv:2402.01817 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: kambhampati-et-al-icml2024
+# ============================================================================
+# @inproceedings{kambhampati-et-al-icml2024,
+# title={Position: {LLM}s Can{\textquoteright}t Plan, But Can Help Planning in {LLM}-Modulo Frameworks},
+# author={Subbarao Kambhampati and Karthik Valmeekam and Lin Guan and Mudit Verma and Kaya Stechly and Siddhant Bhambri and Lucas Paul Saldyt and Anil B Murthy},
+# crossref = "icml2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{kambhampati-et-al-icml2024,
+  author =      "Subbarao Kambhampati and Karthik Valmeekam and Lin Guan and Mudit Verma and Kaya Stechly and Siddhant Bhambri and Lucas Paul Saldyt and Anil B Murthy",
+  title =       "Position: {LLM}s Can{\textquoteright}t Plan, But Can Help Planning in {LLM}-Modulo Frameworks",
+  crossref =    "icml2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: katz-et-al-icaps2025wslm4plan
+# ============================================================================
+# @InProceedings{katz-et-al-icaps2025wslm4plan,
+#   author =       "Michael Katz and Harsha Kokel and Sarath Sreedharan",
+#   title =        "Seemingly Simple Planning Problems are Computationally Challenging: The Countdown Game",
+#   crossref =     "icaps2025wslm4plan"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{katz-et-al-icaps2025wslm4plan,
+  author =      "Michael Katz and Harsha Kokel and Sarath Sreedharan",
+  title =       "Seemingly Simple Planning Problems are Computationally Challenging: The Countdown Game",
+  crossref =    "icaps2025wslm4plan"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: kojima2022large
+# SUGGESTED KEY: kojima-et-al-neurips2022
+# ============================================================================
+# @inproceedings{kojima2022large,
+#   title={Large language models are zero-shot reasoners},
+#   author={Kojima, Takeshi and Gu, Shixiang Shane and Reid, Machel and Matsuo, Yutaka and Iwasawa, Yusuke},
+#   crossref= "neurips2022",
+#   pages={22199--22213}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{kojima-et-al-neurips2022,
+  author =      "Kojima, Takeshi and Gu, Shixiang Shane and Reid, Machel and Matsuo, Yutaka and Iwasawa, Yusuke",
+  title =       "Large language models are zero-shot reasoners",
+  crossref =    "neurips2022",
+  pages =       "22199--22213"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: koehler-hoffmann-puk2000
+# SUGGESTED KEY: k{\"o}hler-hoffmann-ecai2000puk
+# ============================================================================
+# @InProceedings{koehler-hoffmann-puk2000,
+#   author =       "Jana K{\"o}hler and J{\"o}rg Hoffmann",
+#   title =        "On the Instantiation of {ADL} Operators Involving Arbitrary
+#                   First-Order Formulas",
+#   pages =        "74--82",
+#   crossref =     "ecai2000puk",
+#   editors =      "J{\"u}rgen Sauer, Jana K{\"o}hler"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{k{\"o}hler-hoffmann-ecai2000puk,
+  author =      "Jana K{\"o}hler and J{\"o}rg Hoffmann",
+  title =       "On the Instantiation of {ADL} Operators Involving Arbitrary First-Order Formulas",
+  crossref =    "ecai2000puk",
+  pages =       "74--82",
+  editors =     "J{\"u}rgen Sauer, Jana K{\"o}hler"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: lecodechain
+# SUGGESTED KEY: le-et-al-iclr2024
+# ============================================================================
+# @inproceedings{lecodechain,
+#   title={CodeChain: Towards Modular Code Generation Through Chain of Self-revisions with Representative Sub-modules},
+#   author={Le, Hung and Chen, Hailin and Saha, Amrita and Gokul, Akash and Sahoo, Doyen and Joty, Shafiq},
+#   crossref = "iclr2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{le-et-al-iclr2024,
+  author =      "Le, Hung and Chen, Hailin and Saha, Amrita and Gokul, Akash and Sahoo, Doyen and Joty, Shafiq",
+  title =       "CodeChain: Towards Modular Code Generation Through Chain of Self-revisions with Representative Sub-modules",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: LiPP24_MBPP
+# SUGGESTED KEY: li-et-al-cav2024
+# ============================================================================
+# @inproceedings{LiPP24_MBPP,
+#   author       = {Yixuan Li and
+#                   Julian Parsert and
+#                   Elizabeth Polgreen},
+#   title        = {Guiding Enumerative Program Synthesis with Large Language Models},
+#   crossref    = "cav2024",
+#   pages        = {280--301}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{li-et-al-cav2024,
+  author =      "Yixuan Li and Julian Parsert and Elizabeth Polgreen",
+  title =       "Guiding Enumerative Program Synthesis with Large Language Models",
+  crossref =    "cav2024",
+  pages =       "280--301"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: agentBench
+# SUGGESTED KEY: liu-et-al-arxiv2023
+# ============================================================================
+# @article{agentBench,
+#   author       = {Xiao Liu and
+#                   Hao Yu and
+#                   Hanchen Zhang and
+#                   Yifan Xu and
+#                   Xuanyu Lei and
+#                   Hanyu Lai and
+#                   Yu Gu and
+#                   Hangliang Ding and
+#                   Kaiwen Men and
+#                   Kejuan Yang and
+#                   Shudan Zhang and
+#                   Xiang Deng and
+#                   Aohan Zeng and
+#                   Zhengxiao Du and
+#                   Chenhui Zhang and
+#                   Sheng Shen and
+#                   Tianjun Zhang and
+#                   Yu Su and
+#                   Huan Sun and
+#                   Minlie Huang and
+#                   Yuxiao Dong and
+#                   Jie Tang},
+#   title        = {AgentBench: Evaluating LLMs as Agents},
+#   journal      = {CoRR},
+#   volume       = {abs/2308.03688},
+#   year         = {2023}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: Published in ICLR 2024
+# ----------------------------------------------------------------------------
+@Misc{liu-et-al-arxiv2023,
+  author =      "Xiao Liu and Hao Yu and Hanchen Zhang and Yifan Xu and Xuanyu Lei and Hanyu Lai and Yu Gu and Hangliang Ding and Kaiwen Men and Kejuan Yang and Shudan Zhang and Xiang Deng and Aohan Zeng and Zhengxiao Du and Chenhui Zhang and Sheng Shen and Tianjun Zhang and Yu Su and Huan Sun and Minlie Huang and Yuxiao Dong and Jie Tang",
+  title =       "AgentBench: Evaluating LLMs as Agents",
+  year =        "2023",
+  howpublished = "arXiv:2308.03688 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Liu_LLMP
+# SUGGESTED KEY: liu-et-al-arxiv2023
+# ============================================================================
+# @misc{Liu_LLMP,
+#   author       = {Bo Liu and
+#                   Yuqian Jiang and
+#                   Xiaohan Zhang and
+#                   Qiang Liu and
+#                   Shiqi Zhang and
+#                   Joydeep Biswas and
+#                   Peter Stone},
+#   title        = {{LLM+P:} Empowering Large Language Models with Optimal Planning Proficiency},
+#   year         = {2023},
+#   howpublished = "arXiv:2304.11477 [cs.AI]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{liu-et-al-arxiv2023,
+  author =      "Bo Liu and Yuqian Jiang and Xiaohan Zhang and Qiang Liu and Shiqi Zhang and Joydeep Biswas and Peter Stone",
+  title =       "{LLM+P:} Empowering Large Language Models with Optimal Planning Proficiency",
+  year =        "2023",
+  howpublished = "arXiv:2304.11477 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: agentBoard
+# SUGGESTED KEY: ma-et-al-arxiv2024
+# ============================================================================
+# @article{agentBoard,
+#   author       = {Chang Ma and
+#                   Junlei Zhang and
+#                   Zhihao Zhu and
+#                   Cheng Yang and
+#                   Yujiu Yang and
+#                   Yaohui Jin and
+#                   Zhenzhong Lan and
+#                   Lingpeng Kong and
+#                   Junxian He},
+#   title        = {AgentBoard: An Analytical Evaluation Board of Multi-turn {LLM} Agents},
+#   journal      = {CoRR},
+#   volume       = {abs/2401.13178},
+#   year         = {2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: NeurIPS 2024 (Oral)
+# ----------------------------------------------------------------------------
+@Misc{ma-et-al-arxiv2024,
+  author =      "Chang Ma and Junlei Zhang and Zhihao Zhu and Cheng Yang and Yujiu Yang and Yaohui Jin and Zhenzhong Lan and Lingpeng Kong and Junxian He",
+  title =       "AgentBoard: An Analytical Evaluation Board of Multi-turn {LLM} Agents",
+  year =        "2024",
+  howpublished = "arXiv:2401.13178 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: selfrefine
+# SUGGESTED KEY: madaan-et-al-neurips2023
+# ============================================================================
+# @inproceedings{selfrefine,
+#  author = {Madaan, Aman and Tandon, Niket and Gupta, Prakhar and Hallinan, Skyler and Gao, Luyu and Wiegreffe, Sarah and Alon, Uri and Dziri, Nouha and Prabhumoye, Shrimai and Yang, Yiming and Gupta, Shashank and Majumder, Bodhisattwa Prasad and Hermann, Katherine and Welleck, Sean and Yazdanbakhsh, Amir and Clark, Peter},
+#  crossref = "neurips2023",
+#  pages = {46534--46594},
+#  title = {Self-Refine: Iterative Refinement with Self-Feedback}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{madaan-et-al-neurips2023,
+  author =      "Madaan, Aman and Tandon, Niket and Gupta, Prakhar and Hallinan, Skyler and Gao, Luyu and Wiegreffe, Sarah and Alon, Uri and Dziri, Nouha and Prabhumoye, Shrimai and Yang, Yiming and Gupta, Shashank and Majumder, Bodhisattwa Prasad and Hermann, Katherine and Welleck, Sean and Yazdanbakhsh, Amir and Clark, Peter",
+  title =       "Self-Refine: Iterative Refinement with Self-Feedback",
+  crossref =    "neurips2023",
+  pages =       "46534--46594"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: MuennighoffLZZH24_octopack
+# SUGGESTED KEY: muennighoff-et-al-iclr2024
+# ============================================================================
+# @inproceedings{MuennighoffLZZH24_octopack,
+#   author       = {Niklas Muennighoff and
+#                   Qian Liu and
+#                   Armel Randy Zebaze and
+#                   Qinkai Zheng and
+#                   Binyuan Hui and
+#                   Terry Yue Zhuo and
+#                   Swayam Singh and
+#                   Xiangru Tang and
+#                   Leandro von Werra and
+#                   Shayne Longpre},
+#   title        = {OctoPack: Instruction Tuning Code Large Language Models},
+#   crossref    = "iclr2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{muennighoff-et-al-iclr2024,
+  author =      "Niklas Muennighoff and Qian Liu and Armel Randy Zebaze and Qinkai Zheng and Binyuan Hui and Terry Yue Zhuo and Swayam Singh and Xiangru Tang and Leandro von Werra and Shayne Longpre",
+  title =       "OctoPack: Instruction Tuning Code Large Language Models",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: openai2024gpt4
+# SUGGESTED KEY: openai-et-al-arxiv2024
+# ============================================================================
+# @misc{openai2024gpt4,
+#       title={{GPT}-4 Technical Report}, 
+#       author={OpenAI and Josh Achiam and Steven Adler and Sandhini Agarwal and others},
+#       year={2024},
+#       eprint={2303.08774},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.CL}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: 100 pages; updated authors list; fixed author names and added citation
+# ----------------------------------------------------------------------------
+@Misc{openai-et-al-arxiv2024,
+  author =      "OpenAI and Josh Achiam and Steven Adler and Sandhini Agarwal and others",
+  title =       "{GPT}-4 Technical Report",
+  year =        "2024",
+  howpublished = "arXiv:2303.08774 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: openai2024openai4ocard
+# SUGGESTED KEY: openai-et-al-arxiv2024
+# ============================================================================
+# @misc{openai2024openai4ocard,
+#       title={OpenAI GPT-4o System Card}, 
+#       author={OpenAI and : and Aaron Hurst and Adam Lerer and Adam P Goucher and Adam Perelman and others},
+#       year={2024},
+#       eprint={2410.21276},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{openai-et-al-arxiv2024,
+  author =      "OpenAI and : and Aaron Hurst and Adam Lerer and Adam P Goucher and Adam Perelman and others",
+  title =       "OpenAI GPT-4o System Card",
+  year =        "2024",
+  howpublished = "arXiv:2410.21276 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: pallagani-et-al-arxiv2022
+# ============================================================================
+# @Misc{pallagani-et-al-arxiv2022,
+#   title =        "Plansformer: Generating Symbolic Plans using Transformers", 
+#   author =       "Vishal Pallagani and Bharath Muppasani and Keerthiram Murugesan 
+#                   and Francesca Rossi and Lior Horesh and Biplav Srivastava and 
+#                   Francesco Fabiano and Andrea Loreggia",
+#   year =         "2022",
+#   howpublished = "arXiv:2212.08681 [cs.AI]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: 44 pages including supplementary material
+# ----------------------------------------------------------------------------
+@Misc{pallagani-et-al-arxiv2022,
+  author =      "Vishal Pallagani and Bharath Muppasani and Keerthiram Murugesan and Francesca Rossi and Lior Horesh and Biplav Srivastava and Francesco Fabiano and Andrea Loreggia",
+  title =       "Plansformer: Generating Symbolic Plans using Transformers",
+  year =        "2022",
+  howpublished = "arXiv:2212.08681 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Pallagani_plangeneration
+# SUGGESTED KEY: pallagani-et-al-arxiv2023
+# ============================================================================
+# @misc{Pallagani_plangeneration,
+#   author       = {Vishal Pallagani and
+#                   Bharath Muppasani and
+#                   Keerthiram Murugesan and
+#                   Francesca Rossi and
+#                   Biplav Srivastava and
+#                   Lior Horesh and
+#                   Francesco Fabiano and
+#                   Andrea Loreggia},
+#   title        = {Understanding the Capabilities of Large Language Models for Automated
+#                   Planning},
+#   year         = {2023},
+#   howpublished = "arXiv:2305.16151 [cs.AI]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: 12 pages
+# ----------------------------------------------------------------------------
+@Misc{pallagani-et-al-arxiv2023,
+  author =      "Vishal Pallagani and Bharath Muppasani and Keerthiram Murugesan and Francesca Rossi and Biplav Srivastava and Lior Horesh and Francesco Fabiano and Andrea Loreggia",
+  title =       "Understanding the Capabilities of Large Language Models for Automated Planning",
+  year =        "2023",
+  howpublished = "arXiv:2305.16151 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: pan-et-al-icse2025
+# ============================================================================
+# @inproceedings{pan-et-al-icse2025,
+#   title={ASTER: Natural and Multi-language Unit Test Generation with LLMs},
+#   author={Pan, Rangeet and Kim, Myeongsoo and Krishna, Rahul and Pavuluri, Raju and Sinha, Saurabh},
+#   crossref = "icse2025"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{pan-et-al-icse2025,
+  author =      "Pan, Rangeet and Kim, Myeongsoo and Krishna, Rahul and Pavuluri, Raju and Sinha, Saurabh",
+  title =       "ASTER: Natural and Multi-language Unit Test Generation with LLMs",
+  crossref =    "icse2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Puri0JZDZD0CDTB21_codenet
+# SUGGESTED KEY: puri-et-al-neurips2021db
+# ============================================================================
+# @inproceedings{Puri0JZDZD0CDTB21_codenet,
+#   author       = {Ruchir Puri and
+#                   David S. Kung and
+#                   Geert Janssen and
+#                   Wei Zhang and
+#                   Giacomo Domeniconi and
+#                   Vladimir Zolotov and
+#                   Julian Dolby and
+#                   Jie Chen and
+#                   Mihir R. Choudhury and
+#                   Lindsey Decker and
+#                   Veronika Thost and
+#                   Luca Buratti and
+#                   Saurabh Pujar and
+#                   Shyam Ramji and
+#                   Ulrich Finkler and
+#                   Susan Malaika and
+#                   Frederick Reiss},
+#   title        = {CodeNet: {A} Large-Scale {AI} for Code Dataset for Learning a Diversity
+#                   of Coding Tasks},
+#   crossref = "neurips2021db"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{puri-et-al-neurips2021db,
+  author =      "Ruchir Puri and David S. Kung and Geert Janssen and Wei Zhang and Giacomo Domeniconi and Vladimir Zolotov and Julian Dolby and Jie Chen and Mihir R. Choudhury and Lindsey Decker and Veronika Thost and Luca Buratti and Saurabh Pujar and Shyam Ramji and Ulrich Finkler and Susan Malaika and Frederick Reiss",
+  title =       "CodeNet: {A} Large-Scale {AI} for Code Dataset for Learning a Diversity of Coding Tasks",
+  crossref =    "neurips2021db"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: raman2022planning
+# SUGGESTED KEY: raman-et-al-neurips2022wsfmdm
+# ============================================================================
+# (Original text not found)
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{raman-et-al-neurips2022wsfmdm,
+  author =      "Shreyas Sundara Raman and Vanya Cohen and Eric Rosen and Ifrah Idrees and David Paulius and Stefanie Tellex",
+  title =       "Planning With Large Language Models Via Corrective Re-Prompting",
+  crossref =    "neurips2022wsfmdm"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Algo_of_thoughts
+# SUGGESTED KEY: sel-et-al-icml2024
+# ============================================================================
+# @inproceedings{Algo_of_thoughts,
+#   author       = {Bilgehan Sel and
+#                   Ahmad Al{-}Tawaha and
+#                   Vanshaj Khattar and
+#                   Lu Wang and
+#                   Ruoxi Jia and
+#                   Ming Jin},
+#   title        = {Algorithm of Thoughts: Enhancing Exploration of Ideas in Large Language
+#                   Models},
+#   crossref =     "icml2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{sel-et-al-icml2024,
+  author =      "Bilgehan Sel and Ahmad Al{-}Tawaha and Vanshaj Khattar and Lu Wang and Ruoxi Jia and Ming Jin",
+  title =       "Algorithm of Thoughts: Enhancing Exploration of Ideas in Large Language Models",
+  crossref =    "icml2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Reflexion_ShinnCGNY23
+# SUGGESTED KEY: shinn-et-al-neurips2023
+# ============================================================================
+# @inproceedings{Reflexion_ShinnCGNY23,
+#   author       = {Noah Shinn and
+#                   Federico Cassano and
+#                   Ashwin Gopinath and
+#                   Karthik Narasimhan and
+#                   Shunyu Yao},
+#   title        = {Reflexion: language agents with verbal reinforcement learning},
+#   crossref    = "neurips2023"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{shinn-et-al-neurips2023,
+  author =      "Noah Shinn and Federico Cassano and Ashwin Gopinath and Karthik Narasimhan and Shunyu Yao",
+  title =       "Reflexion: language agents with verbal reinforcement learning",
+  crossref =    "neurips2023"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: silver-et-al-nurips2022-wsfmdm
+# SUGGESTED KEY: silver-et-al-neurips2022wsfmdm
+# ============================================================================
+# @inproceedings{silver-et-al-nurips2022-wsfmdm,
+# title={{PDDL} Planning with Pretrained Large Language Models},
+# author={Tom Silver and Varun Hariprasad and Reece S Shuttleworth and Nishanth Kumar and Tom{\'a}s Lozano-P{\'e}rez and Leslie Pack Kaelbling},
+# crossref = "neurips2022wsfmdm"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{silver-et-al-neurips2022wsfmdm,
+  author =      "Tom Silver and Varun Hariprasad and Reece S Shuttleworth and Nishanth Kumar and Tom{\'a}s Lozano-P{\'e}rez and Leslie Pack Kaelbling",
+  title =       "{PDDL} Planning with Pretrained Large Language Models",
+  crossref =    "neurips2022wsfmdm"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: stechly2024self
+# SUGGESTED KEY: stechly-et-al-arxiv2024
+# ============================================================================
+# @Misc{stechly2024self,
+#   title={On the Self-Verification Limitations of Large Language Models on Reasoning and Planning Tasks},
+#   author={Stechly, Kaya and Valmeekam, Karthik and Kambhampati, Subbarao},
+#   year={2024},
+#   howpublished = "arXiv:2402.08115 [cs.AI]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: arXiv admin note: text overlap with arXiv:2310.12397
+# ----------------------------------------------------------------------------
+@Misc{stechly-et-al-arxiv2024,
+  author =      "Stechly, Kaya and Valmeekam, Karthik and Kambhampati, Subbarao",
+  title =       "On the Self-Verification Limitations of Large Language Models on Reasoning and Planning Tasks",
+  year =        "2024",
+  howpublished = "arXiv:2402.08115 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: stein-et-al-icaps2026
+# ============================================================================
+# @InProceedings{stein-et-al-icaps2026,
+#   title =        "Improved Generalized Planning with LLMs through Strategy Refinement and Reflection", 
+#   author =       "Katharina Stein and Nils Hodel and Daniel Fi{\v{s}}er and J{\"o}rg Hoffmann and Michael Katz and Alexander Koller",
+#   crossref =     "icaps2026"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{stein-et-al-icaps2026,
+  author =      "Katharina Stein and Nils Hodel and Daniel Fi{\v{s}}er and J{\"o}rg Hoffmann and Michael Katz and Alexander Koller",
+  title =       "Improved Generalized Planning with LLMs through Strategy Refinement and Reflection",
+  crossref =    "icaps2026"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: tuisov-et-al-arxiv2025
+# ============================================================================
+# @misc{tuisov-et-al-arxiv2025,
+#       title={LLM-Generated Heuristics for AI Planning: Do We Even Need Domain-Independence Anymore?}, 
+#       author={Alexander Tuisov and Yonatan Vernik and Alexander Shleyfman},
+#       year={2025},
+#       eprint={2501.18784},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.AI},
+#       url={https://arxiv.org/abs/2501.18784}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{tuisov-et-al-arxiv2025,
+  author =      "Alexander Tuisov and Yonatan Vernik and Alexander Shleyfman",
+  title =       "LLM-Generated Heuristics for AI Planning: Do We Even Need Domain-Independence Anymore?",
+  year =        "2025",
+  howpublished = "arXiv:2501.18784 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: tuisov-et-al-icaps2026
+# ============================================================================
+# @InProceedings{tuisov-et-al-icaps2026,
+#   title =        "Successor-Generator Planning with {LLM}-Generated Heuristics", 
+#   author =       "Alexander Tuisov and Yonatan Vernik and Alexander Shleyfman",
+#   crossref =     "icaps2026"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{tuisov-et-al-icaps2026,
+  author =      "Alexander Tuisov and Yonatan Vernik and Alexander Shleyfman",
+  title =       "Successor-Generator Planning with {LLM}-Generated Heuristics",
+  crossref =    "icaps2026"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Xie_goal2pddl
+# SUGGESTED KEY: xie-et-al-arxiv2023
+# ============================================================================
+# @article{Xie_goal2pddl,
+#   author       = {Yaqi Xie and
+#                   Chen Yu and
+#                   Tongyao Zhu and
+#                   Jinbin Bai and
+#                   Ze Gong and
+#                   Harold Soh},
+#   title        = {Translating Natural Language to Planning Goals with Large-Language
+#                   Models},
+#   year         = {2023},
+#   howpublished = "arXiv:2302.05128 [cs.CL]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{xie-et-al-arxiv2023,
+  author =      "Yaqi Xie and Chen Yu and Tongyao Zhu and Jinbin Bai and Ze Gong and Harold Soh",
+  title =       "Translating Natural Language to Planning Goals with Large-Language Models",
+  year =        "2023",
+  howpublished = "arXiv:2302.05128 [cs.CL]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: yang2024swe
+# SUGGESTED KEY: yang-et-al-arxiv2024
+# ============================================================================
+# @Misc{yang2024swe,
+#   author =       "John Yang and Carlos E Jimenez and Alexander Wettig and Kilian Lieret and Shunyu Yao and Karthik Narasimhan and Ofir Press",
+#   title =        "{SWE}-agent: Agent-computer Interfaces Enable Automated Software Engineering",
+#   year =         "2024",
+#   howpublished = "arXiv:2405.15793 [cs.SE]"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: Code, data, and demo available at https://swe-agent.com
+# ----------------------------------------------------------------------------
+@Misc{yang-et-al-arxiv2024,
+  author =      "John Yang and Carlos E Jimenez and Alexander Wettig and Kilian Lieret and Shunyu Yao and Karthik Narasimhan and Ofir Press",
+  title =       "{SWE}-agent: Agent-computer Interfaces Enable Automated Software Engineering",
+  year =        "2024",
+  howpublished = "arXiv:2405.15793 [cs.SE]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: ZhangLLLJ23_selfedit
+# SUGGESTED KEY: zhang-et-al-acl2023
+# ============================================================================
+# @inproceedings{ZhangLLLJ23_selfedit,
+#   author       = {Kechi Zhang and
+#                   Zhuo Li and
+#                   Jia Li and
+#                   Ge Li and
+#                   Zhi Jin},
+#   title        = {Self-Edit: Fault-Aware Code Editor for Code Generation},
+#   crossref = "acl2023"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{zhang-et-al-acl2023,
+  author =      "Kechi Zhang and Zhuo Li and Jia Li and Ge Li and Zhi Jin",
+  title =       "Self-Edit: Fault-Aware Code Editor for Code Generation",
+  crossref =    "acl2023"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: ZhangCSDTG23
+# SUGGESTED KEY: zhang-et-al-iclr2023
+# ============================================================================
+# @inproceedings{ZhangCSDTG23,
+#   author       = {Shun Zhang and
+#                   Zhenfang Chen and
+#                   Yikang Shen and
+#                   Mingyu Ding and
+#                   Joshua B. Tenenbaum and
+#                   Chuang Gan},
+#   title        = {Planning with Large Language Models for Code Generation},
+#   crossref    = "iclr2023"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{zhang-et-al-iclr2023,
+  author =      "Shun Zhang and Zhenfang Chen and Yikang Shen and Mingyu Ding and Joshua B. Tenenbaum and Chuang Gan",
+  title =       "Planning with Large Language Models for Code Generation",
+  crossref =    "iclr2023"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: zhong2024debuglikehuman
+# SUGGESTED KEY: zhong-et-al-arxiv2024
+# ============================================================================
+# @misc{zhong2024debuglikehuman,
+#       title={Debug like a Human: A Large Language Model Debugger via Verifying Runtime Execution Step-by-step}, 
+#       author={Li Zhong and Zilong Wang and Jingbo Shang},
+#       year={2024},
+#       eprint={2402.16906},
+#       archivePrefix={arXiv},
+#       primaryClass={cs.SE},
+#       url={https://arxiv.org/abs/2402.16906}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# arXiv comment: Preprint
+# ----------------------------------------------------------------------------
+@Misc{zhong-et-al-arxiv2024,
+  author =      "Li Zhong and Zilong Wang and Jingbo Shang",
+  title =       "Debug like a Human: A Large Language Model Debugger via Verifying Runtime Execution Step-by-step",
+  year =        "2024",
+  howpublished = "arXiv:2402.16906 [cs.SE]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: zhousolving
+# SUGGESTED KEY: zhou-et-al-iclr2024
+# ============================================================================
+# @inproceedings{zhousolving,
+#   title={Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification},
+#   author={Zhou, Aojun and Wang, Ke and Lu, Zimu and Shi, Weikang and Luo, Sichun and Qin, Zipeng and Lu, Shaoqing and Jia, Anya and Song, Linqi and Zhan, Mingjie and others},
+#   crossref = "iclr2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{zhou-et-al-iclr2024,
+  author =      "Zhou, Aojun and Wang, Ke and Lu, Zimu and Shi, Weikang and Luo, Sichun and Qin, Zipeng and Lu, Shaoqing and Jia, Anya and Song, Linqi and Zhan, Mingjie and others",
+  title =       "Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification",
+  crossref =    "iclr2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: LATS
+# SUGGESTED KEY: zhou-et-al-icml2024
+# ============================================================================
+# @inproceedings{LATS,
+#   author       = {Andy Zhou and
+#                   Kai Yan and
+#                   Michal Shlapentokh{-}Rothman and
+#                   Haohan Wang and
+#                   Yu{-}Xiong Wang},
+#   title        = {Language Agent Tree Search Unifies Reasoning Acting and Planning in
+#                   Language Models},
+#   crossref     = "icml2024"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{zhou-et-al-icml2024,
+  author =      "Andy Zhou and Kai Yan and Michal Shlapentokh{-}Rothman and Haohan Wang and Yu{-}Xiong Wang",
+  title =       "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
+  crossref =    "icml2024"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: Zuo_planetarium
+# SUGGESTED KEY: zuo-et-al-naacl2025
+# ============================================================================
+# @article{Zuo_planetarium,
+#   author       = {Max Zuo and
+#                   Francisco Piedrahita Velez and
+#                   Xiaochen Li and
+#                   Michael L. Littman and
+#                   Stephen H. Bach},
+#   title        = {Planetarium: {A} Rigorous Benchmark for Translating Text to Structured
+#                   Planning Languages},
+#   crossref     = "naacl2025"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Article{zuo-et-al-naacl2025,
+  author =      "Max Zuo and Francisco Piedrahita Velez and Xiaochen Li and Michael L. Littman and Stephen H. Bach",
+  title =       "Planetarium: {A} Rigorous Benchmark for Translating Text to Structured Planning Languages",
+  crossref =    "naacl2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: openaiPerformanceAnalysis
+# SUGGESTED KEY: {openaidev.forum}-2024
+# ============================================================================
+# @misc{openaiPerformanceAnalysis,
+# 	author = {{OpenAI Dev. Forum}},
+# 	title = {{P}erformance analysis of {A}ssistants versus {C}hat completion},
+# 	howpublished = {\url{https://community.openai.com/t/performance-analysis-of-assistants-versus-chat-completion-chat-completion-seems-somewhat-faster-for-complete-message-generation-streaming-taken-into-account/628368}},
+# 	year = {2024},
+#     month ={Feb}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{{openaidev.forum}-2024,
+  author =      "OpenAI Dev. Forum",
+  title =       "{P}erformance analysis of {A}ssistants versus {C}hat completion",
+  year =        "2024",
+  howpublished = "\url{https://community.openai.com/t/performance-analysis-of-assistants-versus-chat-completion-chat-completion-seems-somewhat-faster-for-complete-message-generation-streaming-taken-into-account/628368}",
+  month =       "Feb"
+}

@@ -1,0 +1,197 @@
+# Suggested additions to literatur.bib
+# Found 7 new entries
+#
+# Each entry is shown in two forms:
+# 1. ORIGINAL: The entry as it appears in the source file
+# 2. FORMATTED: The entry formatted according to literatur.bib conventions
+#    with suggested key following naming conventions
+#
+# Please review these entries and add them to literatur.bib if appropriate.
+# Make sure to:
+# - Verify the key follows naming conventions
+# - Check that all fields are correct
+# - For arXiv entries: categories are fetched from arXiv API
+# - Add crossref if applicable
+# - Maintain alphabetical order by key
+
+# ============================================================================
+# ORIGINAL form of entry: bohnet-et-al-arxiv2024
+# ============================================================================
+# @Misc{bohnet-et-al-arxiv2024,
+#   author       = {Bernd Bohnet and
+#                   Azade Nova and
+#                   Aaron T. Parisi and
+#                   Kevin Swersky and
+#                   Katayoon Goshvadi and
+#                   Hanjun Dai and
+#                   Dale Schuurmans and
+#                   Noah Fiedel and
+#                   Hanie Sedghi},
+#   title        = {Exploring and Benchmarking the Planning Capabilities of Large Language
+#                   Models},
+#   journal      = {CoRR},
+#   volume       = {abs/2406.13094},
+#   year         = {2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# NOTE: Using default category [cs.AI] (arXiv API unavailable)
+# Please verify the correct category at https://arxiv.org/abs/2406.13094
+# ----------------------------------------------------------------------------
+@Misc{bohnet-et-al-arxiv2024,
+  author =       "Bernd Bohnet and Azade Nova and Aaron T. Parisi and
+                  Kevin Swersky and Katayoon Goshvadi and Hanjun Dai and
+                  Dale Schuurmans and Noah Fiedel and Hanie Sedghi",
+  title =        "Exploring and Benchmarking the Planning Capabilities of Large Language Models",
+  year =         "2024",
+  howpublished =  "arXiv:2406.13094 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: butt2024benchagents
+# SUGGESTED KEY: butt-et-al-arxiv2024
+# ============================================================================
+# @Article{butt2024benchagents,
+#   title={BENCHAGENTS: Automated Benchmark Creation with Agent Interaction},
+#   author={Natasha Butt and Varun Chandrasekaran and Neel Joshi and Besmira Nushi and Vidhisha Balachandran},
+#   journal={arXiv preprint arXiv:2410.22584},
+#   year={2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# NOTE: Using default category [cs.AI] (arXiv API unavailable)
+# Please verify the correct category at https://arxiv.org/abs/2410.22584
+# ----------------------------------------------------------------------------
+@Misc{butt-et-al-arxiv2024,
+  author =       "Natasha Butt and Varun Chandrasekaran and Neel Joshi and
+                  Besmira Nushi and Vidhisha Balachandran",
+  title =        "{BENCHAGENTS}: Automated Benchmark Creation with Agent Interaction",
+  year =         "2024",
+  howpublished =  "arXiv:2410.22584 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: text2world
+# SUGGESTED KEY: hu-et-al-arxiv2025
+# ============================================================================
+# @misc{text2world,
+#   title={Text2World: Benchmarking Large Language Models for Symbolic World Model Generation}, 
+#   author={Mengkang Hu and Tianxing Chen and Yude Zou and Yuheng Lei and Qiguang Chen and Ming Li and Yao Mu and Hongyuan Zhang and Wenqi Shao and Ping Luo},
+#   year={2025},
+#   eprint={2502.13092},
+#   archivePrefix={arXiv},
+#   primaryClass={cs.CL},
+#   url={https://arxiv.org/abs/2502.13092}, 
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# NOTE: Using default category [cs.AI] (arXiv API unavailable)
+# Please verify the correct category at https://arxiv.org/abs/2502.13092
+# ----------------------------------------------------------------------------
+@Misc{hu-et-al-arxiv2025,
+  author =       "Mengkang Hu and Tianxing Chen and Yude Zou and Yuheng Lei and
+                  Qiguang Chen and Ming Li and Yao Mu and Hongyuan Zhang and
+                  Wenqi Shao and Ping Luo",
+  title =        "Text2World: Benchmarking Large Language Models for Symbolic World Model Generation",
+  year =         "2025",
+  howpublished =  "arXiv:2502.13092 [cs.AI]"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: gpt4o
+# SUGGESTED KEY: openai-2024
+# ============================================================================
+# @misc{gpt4o,
+#     author = {OpenAI},
+#     title = {GPT 4o},
+#     howpublished = {https://openai.com/index/hello-gpt-4o/},
+# year={2024}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Misc{openai-2024,
+  author =       "OpenAI",
+  title =        "{GPT} 4o",
+  year =         "2024",
+  howpublished =  "https://openai.com/index/hello-gpt-4o/"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: saha-et-al-iclr2025
+# ============================================================================
+# @InProceedings{saha-et-al-iclr2025,
+#   title = {System 1.x: Learning to Balance Fast and Slow Planning with Language Models},
+#   author = {Swarnadeep Saha and Archiki Prasad and Justin Chen and Peter Hase and Elias Stengel-Eskin and Mohit Bansal},
+#   crossref = "iclr2025"
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{saha-et-al-iclr2025,
+  author =       "Swarnadeep Saha and Archiki Prasad and Justin Chen and
+                  Peter Hase and Elias Stengel-Eskin and Mohit Bansal",
+  title =        "System 1.x: Learning to Balance Fast and Slow Planning with Language Models",
+  crossref =     "iclr2025"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: simonis2005sudoku
+# SUGGESTED KEY: simonis-2005
+# ============================================================================
+# @inproceedings{simonis2005sudoku,
+#   title={Sudoku as a constraint problem},
+#   author={Simonis, Helmut},
+#   booktitle={CP Workshop on modeling and reformulating Constraint Satisfaction Problems},
+#   volume={12},
+#   pages={13--27},
+#   year={2005},
+#   organization={Citeseer Sitges, Spain}
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# ----------------------------------------------------------------------------
+@Inproceedings{simonis-2005,
+  author =       "Helmut Simonis",
+  title =        "Sudoku as a constraint problem",
+  booktitle =    "CP Workshop on modeling and reformulating Constraint Satisfaction Problems",
+  volume =       "12",
+  pages =        "13--27",
+  year =         "2005",
+  organization =  "Citeseer Sitges, Spain"
+}
+
+# ============================================================================
+# ORIGINAL form of entry: tantaakoun-et-al-arxiv2025
+# SUGGESTED KEY: tantakoun-et-al-arxiv2025
+# ============================================================================
+# @Article{tantaakoun-et-al-arxiv2025,
+#   author       = {Marcus Tantakoun and
+#                   Xiaodan Zhu and
+#                   Christian Muise},
+#   title        = "{LLMs} as Planning Modelers: {A} Survey for Leveraging Large Language Models to Construct Automated Planning Models",
+#   journal      = {CoRR},
+#   volume       = {abs/2503.18971},
+#   year         = {2025},
+#   eprinttype    = {arXiv},
+#   eprint       = {2503.18971},
+# }
+
+# ----------------------------------------------------------------------------
+# FORMATTED form (ready to add to literatur.bib):
+# NOTE: Using default category [cs.AI] (arXiv API unavailable)
+# Please verify the correct category at https://arxiv.org/abs/2503.18971
+# ----------------------------------------------------------------------------
+@Misc{tantakoun-et-al-arxiv2025,
+  author =       "Marcus Tantakoun and Xiaodan Zhu and Christian Muise",
+  title =        "{LLMs} as Planning Modelers: {A} Survey for Leveraging Large Language Models to Construct Automated Planning Models",
+  year =         "2025",
+  howpublished =  "arXiv:2503.18971 [cs.AI]",
+  eprinttype =   "arXiv"
+}
